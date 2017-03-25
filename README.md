@@ -1,4 +1,4 @@
-# kodigt
+
 
 Hur ska man kunna hålla reda på alla designmönster, principer, riktlinjer, konventioner, akronymer och praxis när man kodar? För att inte tala om företagsstandarder, teamöverenskommelser och besynnerliga saker som externa beroenden försätter dig i?
 
