@@ -1,3 +1,5 @@
+# Checklista för C# utvecklare
+
 ![https://www.gizmodo.com.au/2016/01/this-woman-was-a-bored-button-pusher-before-jane-jetson-was-even-born/](https://github.com/crippe/kodigt/blob/master/wiki/images/RCA-computer-room-1959.jpg)
 ### Innehåll
 * [Introduktion](#introduktion)
