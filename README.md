@@ -559,7 +559,7 @@ Sätt typer (klasser, medlemmar, metoder etc) till **private** som standard, om 
     * [Access Modifiers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ms173121.aspx)
 
 1. Använd string.Empty  
-Använd String.Empty istället för två "" (citationstecken), för att tilldela en sträng tomt värde eller jämföra strängar. 
+Använd **string.Empty** istället för två "" (citationstecken), för att tilldela en sträng tomt värde eller jämföra strängar. 
 Se vidare i [SA1122: UseStringEmptyForEmptyStrings](http://stylecop.soyuz5.com/SA1122.html)
 
 1. Använd inte .ToLower()  
@@ -571,7 +571,7 @@ Använd inte **.ToLower()** när du jämför strängar. Det skapas då ytterliga
 1. Objektinitialiserare  
 Använd objektinitialiserare när nytt objekt initieras vars medlemmar kräver värden.
 
-    Men använd ännu hellre konstruktorer från klassen som ska konsumera objekttypen. Och om du har en klass med många medlemmar, undersök om de hör ihop eller kan kapslas in i mindre klasser för att uppnå att typen bara har ett ansvarsområde.
+    En rekommendation är att hellre konstruktorer från klassen som ska konsumera objekttypen. Om du har en klass med många medlemmar, undersök om de hör ihop eller kan kapslas in i mindre klasser för att uppnå att typen bara har ett ansvarsområde.
 
     * [Object and Collection Initializers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384062.aspx)
 
@@ -600,7 +600,7 @@ Använd "named argument" för metoder där man inte har variabler/enums som man 
     * [Named and Optional Arguments (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/dd264739.aspx)
 
 1. Metoder och många parametrar  
-Håll nere antal parametrar i metodsignaturer. Om det inte inte redan finns en passande klass, skapa en ny "Wrapper"-klass. Använd konstruktorn i wrapper-klassen framför att objektinitialisera den.
+Håll nere antal parametrar i metodsignaturer. Om det inte redan finns en passande klass, skapa en ny "wrapper"-klass. Använd konstruktorn i wrapper-klassen framför att objektinitialisera den.
 
     * [How many parameters are too many?](http://stackoverflow.com/questions/174968/how-many-parameters-are-too-many)
     * [How many parameters in C# method are acceptable?](http://stackoverflow.com/questions/12431932/how-many-parameters-in-c-sharp-method-are-acceptable)
@@ -704,7 +704,7 @@ Använd **var** när typen är uppenbar eller vetskapen om vilken typ det är in
 1. Undvik backendkod i vyer  
 Undvik att placera backendlogik i vyer (cshtml). Det finns dock två undantag:
     1. Val av CSS-klasser utifrån objekt som kommer från backend.
-    1. switch-satser för att välja partials att visa.
+    1. **switch**-satser för att välja partials att visa.
 
 1. Små kontrollermetoder  
 Låt kontrollermetoderna vara små vilket gör att det blir enklare att testa logiken med att hämta modell i en separat metod. På det här sättet tydliggörs dessutom Model-View-Controller-konventionen.
