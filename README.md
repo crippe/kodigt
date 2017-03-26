@@ -84,7 +84,7 @@ Sträva efter att ordna medlemmar i en fil enligt StyleCop regel [SA1201: Elemen
     | På rotnivån ser det ut så här:<ul><li>Extern Alias Directives</li><li>Using Directives</li><li>Namespaces</li><li>Delegates</li><li>Enums</li><li>Interfaces</li><li>Structs</li><li>Classes</li></ul>  <br>Inuti en class, struct eller interface ordnas det enligt följande:<ul><li>Inuti en class, struct eller interface ordnas det enligt följande:</li><li>Fields</li><li>Constructors</li><li>Finalizers (Destructors)</li><li>Delegates</li><li>Events</li><li>Enums</li><li>Interfaces</li><li>Properties</li><li>Indexers</li><li>Methods</li><li>Structs</li><li>Classes</li></ul>   	| ![File layout - ReSharper - StyleCop](https://github.com/crippe/kodigt/blob/master/wiki/images/file-layout-resharper-stylecop.png?raw=true) 	|
 
     Två saker kan man fokusera på:
-    1. Sorteras metoder i bokstavsordning och placera alla publika först.
+    1. Sortera metoder i bokstavsordning och placera alla publika först.
     1. Sortera medlemmar i klasser i bokstavsordning.
 
 1. Klasser läggs i separata filer  
@@ -370,7 +370,7 @@ Att använda **as** ger bättre prestanda och kräver mindre kod än **try**/**c
  
 1. Undvik boxing/unboxing  
 Ibland är boxing nödvändigt, men du bör undvika det om möjligt eftersom det ger sämre prestanda och ökar minneskraven.  
-    _(Typkonvertering är inte boxing eller unboxing, men det kan orsaka det ena eller det andra. En **int** är inte en **Class1**, det vill säga int ärver inte eller utökar inte **Class1**. Det betyder att du inte kan konvertera **int** till **Class1**. Typkonvertering orsakar konvertering bara om det är möjligt att göra det. Du kan gå från en int till en **double** och vice versa. Men du kan inte gå från en int till **Class1**.)_
+    _(Typkonvertering är inte boxing eller unboxing, men det kan orsaka det ena eller det andra. En **int** är inte en **Class1**, det vill säga **int** ärver inte eller utökar inte **Class1**. Det betyder att du inte kan konvertera **int** till **Class1**. Typkonvertering orsakar konvertering bara om det är möjligt att göra det. Du kan gå från en **int** till en **double** och vice versa. Men du kan inte gå från en **int** till **Class1**.)_
  
     * [Understanding Boxing and Unboxing in C#](http://www.dotnettricks.com/learn/csharp/understanding-boxing-and-unboxing-in-csharp)
     * [Boxing and Unboxing (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx)
