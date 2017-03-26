@@ -1,5 +1,4 @@
 # Checklista för C# utvecklare - beta 0.5
-
 ![https://www.gizmodo.com.au/2016/01/this-woman-was-a-bored-button-pusher-before-jane-jetson-was-even-born/](https://github.com/crippe/kodigt/blob/master/wiki/images/RCA-computer-room-1959.jpg)
 ### Innehåll
 * [Introduktion](#introduktion)
@@ -30,7 +29,7 @@ _"Any fool can write code that a computer can understand. Good programmers write
 ***
 ### Namnkonventioner
 
-Om inget annat sägs eller andra teamöverenskommelser finns, följ Microsofts namngivning, dokumentation och guider. Harmonisera med .NET ramverket. För att backa upp det, och vara ännu mera precis, använd [StylCop](https://github.com/StyleCop/StyleCop) som vägledning. 
+Om inget annat sägs eller andra teamöverenskommelser finns, följ Microsofts namngivning, dokumentation och guider. Harmonisera med .NET ramverket. För att backa upp det, och vara ännu mera precis, använd [StyleCop](https://github.com/StyleCop/StyleCop) som vägledning. 
 
 1. Namn på olika typer  
     Namnge typer enligt nedan.
@@ -80,7 +79,7 @@ Referenser:
 1. Ordning i fil  
 Sträva efter att ordna medlemmar i en fil enligt StyleCop regel [SA1201: ElementsMustAppearInTheCorrectOrder](http://stylecop.soyuz5.com/SA1201.html).  
     
-    | StylCop                                                                                                                                                                                                                                                                                                                        	| ReSharper 	|
+    | StyleCop                                                                                                                                                                                                                                                                                                                        	| ReSharper 	|
     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------	|
     | På rotnivån ser det ut så här:<ul><li>Extern Alias Directives</li><li>Using Directives</li><li>Namespaces</li><li>Delegates</li><li>Enums</li><li>Interfaces</li><li>Structs</li><li>Classes</li></ul>  <br>Inuti en class, struct eller interface ordnas det enligt följande:<ul><li>Inuti en class, struct eller interface ordnas det enligt följande:</li><li>Fields</li><li>Constructors</li><li>Finalizers (Destructors)</li><li>Delegates</li><li>Events</li><li>Enums</li><li>Interfaces</li><li>Properties</li><li>Indexers</li><li>Methods</li><li>Structs</li><li>Classes</li></ul>   	| ![File layout - ReSharper - StyleCop](https://github.com/crippe/kodigt/blob/master/wiki/images/file-layout-resharper-stylecop.png?raw=true) 	|
 
