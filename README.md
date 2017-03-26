@@ -1,4 +1,14 @@
 ![https://www.gizmodo.com.au/2016/01/this-woman-was-a-bored-button-pusher-before-jane-jetson-was-even-born/](https://github.com/crippe/kodigt/blob/master/wiki/images/RCA-computer-room-1959.jpg)
+### Innehåll
+* [Introduktion](#introduktion)
+* [Mindset](#mindset)
+* [Namnkonventioner](#namnkonventioner)
+* [Layoutkonventioner](#layoutkonventioner)
+* [Kommentarkonventioner](#kommentarkonventioner)
+* [Språkkonventioner och checklista](#språkkonventioner-och-checklista)  
+    * [Generellt](#generellt)  
+    * [ASP.NET MVC](#aspnet-mvc)
+***
 ### Introduktion
 Hur ska man kunna hålla reda på alla designmönster, principer, riktlinjer, konventioner, akronymer och praxis när man kodar? För att inte tala om företagsstandarder, teamöverenskommelser och besynnerliga saker som externa beroenden försätter dig i?
 
@@ -116,11 +126,12 @@ Sträva efter att ha en tomrad innan det sista retur-uttrycket i metoder, det g�
 
     &#x274C; UNDVIK:
     ```csharp
+    // Placeholder.
     ```
     &#x2705; GÖR SÅ HÄR:
     ```csharp
+    // Placeholder.
     ```
-
 ***
 ### Kommentarkonventioner
 
@@ -179,7 +190,7 @@ Skriv så att en utvecklare som börjar i teamet om sex månader förstår. Kode
     ```
     &#x2705; GÖR SÅ HÄR:
     ```csharp
-    // Platshållare
+    // Placeholder.
     ```
 
 1. Onårbar kod  
@@ -699,7 +710,9 @@ Låt kontrollermetoderna vara små vilket gör att det blir enklare att testa lo
 
     &#x274C; UNDVIK:
     ```csharp
+    // Placeholder.
     ```
     &#x2705; GÖR SÅ HÄR:
     ```csharp
+    // Placeholder.
     ```
