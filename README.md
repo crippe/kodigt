@@ -19,9 +19,17 @@ Så, hur är denna artikel tänkt att fungera och användas? Vad är den och vad
 ***
 ### Mindset
 
-_"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."_ / John F. Woods, 1991-09-25
+* _"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."_  
+-- John F. Woods, 1991-09-25
 
-_"Any fool can write code that a computer can understand. Good programmers write code that humans understand."_ / Martin Fowler. Refactoring: Improving the design of existing code.
+* _"Any fool can write code that a computer can understand. Good programmers write code that humans understand."_  
+-- Martin Fowler. Refactoring: Improving the design of existing code.
+
+* _"The act of leaving a mess in the code should be as socially unacceptable as littering."_  
+-- Robert C. “Uncle Bob” Martin
+
+* _"Leave the code in a better state than you found it."_  
+(Originalet skrevs av Robert Stephenson Smyth Baden-Powell, pappa till scoutrörelsen, och löd "Try and leave this world a little better than you found it.")
 
 [Secrets of Maintainable Codebases](http://www.daedtech.com/secrets-maintainable-codebases/)  
 [Static Code Analysis and Quality Metrics](http://ardalis.com/static-code-analysis-and-quality-metrics)
@@ -136,7 +144,7 @@ Sträva efter att ha en tomrad innan det sista retur-uttrycket i metoder, det g�
 ***
 ### Kommentarkonventioner
 
-I möjligaste mån, undvik att skriva kommentarer. Lägg isället energi på att beskriva din intension i namn på metoder,  variabler och dela upp kod på ett förståligt sätt. Det finns två undantag till rekommendationen:
+I möjligaste mån, undvik att skriva kommentarer. Lägg isället energi på att beskriva din intention i namn på metoder,  variabler och dela upp kod på ett förståeligt sätt. Det några undantag till rekommendationen:
 1. Märkning av kod som behöver förändras med "TODO".  
 TODO-kommentarer skrivs enligt mönstret: **[//][mellanslag][TODO:][mellanslag][Text som börjar med stor bokstav och slutar med punkt.]** 
 
@@ -145,6 +153,13 @@ TODO-kommentarer skrivs enligt mönstret: **[//][mellanslag][TODO:][mellanslag][
     // TODO: En kommentar.
     ```
 1. Beskrivning av skeenden, flöden etc som ligger utanför lösningens kontroll och som inte på ett bra och enkelt sätt kan beskrivas i kod.
+
+1. Vid skapande av API  
+Om du skapar ett ASP.NET Web API är dokumentation en del av lösningen.
+
+    * [Creating Help Pages for ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages) 
+    * [Swashbuckle - Swagger for WebApi 5.5.3](https://github.com/domaindrivendev/Swashbuckle)
+    * [RESTful Web API Help Documentation using Swagger UI and Swashbuckle](https://www.codeproject.com/Articles/1078249/RESTful-Web-API-Help-Documentation-using-Swagger-U)
 
 Referenser:  
 * [SA1005: SingleLineCommentsMustBeginWithSingleSpace](http://stylecop.soyuz5.com/SA1005.html)
@@ -212,6 +227,7 @@ Sortera och ta bort **using**-direktiv som inte längre används.
 Returnera instansierade objekt framför null i metoder. Var noga att kontrollera objekt som ändå kan vara null.
     * [How to Avoid Returning Null from a Method](http://www.codinghelmet.com/?path=howto/avoid-returning-null)
     * [Tactical Design Patterns in .NET: Control Flow -&gt; Motivation to Avoid Null Reference](https://app.pluralsight.com/player?course=tactical-design-patterns-dot-net-control-flow&author=zoran-horvat&name=tactical-design-patterns-dot-net-control-flow-m2&clip=0&mode=live)
+    * [Is it Really Better to 'Return an Empty List Instead of null'? / Part 1](https://www.codeproject.com/Articles/794448/Is-it-Really-Better-to-Return-an-Empty-List-Instea), [Part 2](https://www.codeproject.com/Articles/797453/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 3](https://www.codeproject.com/Articles/820066/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 4](https://www.codeproject.com/Articles/834677/Is-it-Really-Better-to-Return-an-Empty-List-Inst)
 
 1. Konsekvent kod  
 Deklarera typer på samma sätt genom hela lösningen. Använd inte både **Int32** och **int** eller **String** och **string**.
@@ -412,8 +428,9 @@ Använd **Any()** för läsbarhetens skull, det är ett sätt att förklara sin 
     * [List Any or Count?](http://stackoverflow.com/questions/5741617/listt-any-or-count)
 
 1. Välj rätt kollektionstyp  
-Försök så långt det går att använda **IEnumerable** framför **IList<>**/**List<>** etc som returvärde från metoder. Är prestanda, storlek eller ordning viktig, undersök närmare vilken som passar bäst.
+Försök så långt det går att använda **IEnumerable** framför **IList<>**/**List<>** etc som returvärde från metoder. Är prestanda, storlek eller ordning viktig, undersök närmare vilken kollektionstyp som passar bäst tilländamålet.
 
+    * [Guidelines for Collections](https://msdn.microsoft.com/en-us/library/dn169389%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396)
     * [Selecting a Collection Class](https://msdn.microsoft.com/en-us/library/6tc79sx1(v=vs.110).aspx)
     * [Commonly Used Collection Types](https://msdn.microsoft.com/en-us/library/0ytkdh4s(v=vs.110).aspx)
     * [When To Use IEnumerable, ICollection, IList And List](http://www.claudiobernasconi.ch/2013/07/22/when-to-use-ienumerable-icollection-ilist-and-list/)
