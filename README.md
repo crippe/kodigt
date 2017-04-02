@@ -21,6 +21,28 @@ Så, hur är denna artikel tänkt att fungera och användas? Vad är den och vad
 
 * _"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."_  
 -- John F. Woods, 1991-09-25
+![https://www.gizmodo.com.au/2016/01/this-woman-was-a-bored-button-pusher-before-jane-jetson-was-even-born/](https://github.com/crippe/kodigt/blob/master/wiki/images/RCA-computer-room-1959.jpg)
+### Innehåll
+* [Introduktion](#introduktion)
+* [Mindset](#mindset)
+* [Namnkonventioner](#namnkonventioner)
+* [Layoutkonventioner](#layoutkonventioner)
+* [Kommentarkonventioner](#kommentarkonventioner)
+* [Språkkonventioner och checklista](#språkkonventioner-och-checklista)  
+    * [Generellt](#generellt)  
+    * [ASP.NET MVC](#aspnet-mvc)
+***
+### Introduktion
+Hur ska man kunna hålla reda på alla designmönster, principer, riktlinjer, konventioner, akronymer och praxis när man kodar? För att inte tala om företagsstandarder, teamöverenskommelser och besynnerliga saker som externa beroenden försätter dig i?
+
+Alla utvecklares dröm är att få börja på ett nytt blankt blad. Med nyvunnen erfarenhet från senaste projektet vill man den här gången göra rätt från början. I realiteten har man inte den möjligheten särskilt ofta. Jag skulle vilja påstå att det  finns massor med roliga saker att göra i en lösning som förvaltas. Refaktorera, skala bort, namnändra, prestandaförbättra och skriva fler tester gör dig till en hjälte/hjältinna. Det kommer bli ett nöje för andra att kodgranska. Ingen är emot förbättrad kodkvalité!
+
+Så, hur är denna artikel tänkt att fungera och användas? Vad är den och vad är den inte? Punkterna utgår oftast från en typisk webblösning med Visual Studio, C#, ASP.NET och ReSharper. Artikeln tar upp ämnen som ofta diskuteras i team eller är typiska detaljer som missas i kod. Artikeln kan också fungera som underlag när man vill sätta upp kodpraxis i team. Tänker man samma? Mest av allt är det en kom-ihåg-lista att gå igenom innan man gör pull request/checka in/merga. Det är inte en komplett redogörelse för språket C#, SOLID, designmönster eller TDD. De finns andra mer djuplodade böcker och kurser för det. Den tar inte heller upp några riktlinjer för frontend-utveckling med JavaScript-ramverk, CSS etcetera. 
+***
+### Mindset
+
+* _"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."_  
+-- John F. Woods, 1991-09-25
 
 * _"Any fool can write code that a computer can understand. Good programmers write code that humans understand."_  
 -- Martin Fowler, "Refactoring: Improving the design of existing code"
@@ -153,7 +175,7 @@ Sträva efter att ha en tomrad innan det sista retur-uttrycket i metoder, det g�
 ***
 ### Kommentarkonventioner
 
-I möjligaste mån, undvik att skriva kommentarer. Lägg isället energi på att beskriva din intention i namn på metoder,  variabler och dela upp kod på ett förståeligt sätt. Det några undantag till rekommendationen:
+I möjligaste mån, undvik att skriva kommentarer. Lägg istället energi på att beskriva din intention i namn på metoder,  variabler och dela upp kod på ett förståeligt sätt. Det finns några undantag till rekommendationen:
 1. Märkning av kod som behöver förändras med "TODO".  
 TODO-kommentarer skrivs enligt mönstret:  
     **[//][mellanslag][TODO:][mellanslag][Text som börjar med stor bokstav och slutar med punkt.]** 
@@ -346,8 +368,8 @@ Använd **try**-**catch** och **finally** där du vet att det finns risk att und
  
 1. Lägga ihop strängar  
 Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
-    1. Sex eller färre strängar: använd "**+**", string interpolation eller **String.Format**.
-    1. Över sex strängar men där man på förhand vet antal element: använd **String.Concat**.
+    1. Sex eller färre strängar: använd "**+**", string interpolation eller **string.Format**.
+    1. Över sex strängar men där man på förhand vet antal element: använd **string.Concat**.
     1. Över sex strängar och okänt antal: använd **StringBuilder**.  
     
     * [5 ways to concatenate strings with C# .NET](https://dotnetcodr.com/2015/11/27/5-ways-to-concatenate-strings-with-c-net-2/)
@@ -447,8 +469,35 @@ Ibland är boxing nödvändigt, men du bör undvika det om möjligt eftersom det
     * [Performance (C# and Visual Basic)](https://msdn.microsoft.com/en-us/library/ms173196.aspx)
 
 1. Undvik out och ref  
-Användning av **out**- eller **ref**-parametrar kräver erfarenhet av pekare, förståelse för hur värdetyper och referenstyper skiljer sig åt samt att man kan hantera metoder med flera returvärden. Dessutom är skillnaden mellan **out** och **ref** inte allmänt förstått.
+Användning av **out**- eller **ref**-parametrar kräver erfarenhet av pekare, förståelse för hur värdetyper och referenstyper skiljer sig åt samt att man kan hantera metoder med flera returvärden. Dessutom är skillnaden mellan **out** och **ref** inte allmänt förstått. TryParse-metoder är ett undantag till regeln.
     
+
+    &#x274C; UNDVIK:
+    ```csharp
+    public static void PassTheReference(ref string argument)
+    {
+        argument = argument + " ABCDE";
+    }
+    
+    var argument = "12345";
+    PassTheReference(ref argument);
+
+    // argument = 12345 ABCDE
+    ```  
+
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    public static string BetterThanPassTheReference(string argument)
+    {
+        return argument + " ABCDE";
+    }
+    
+    var argument = "12345";
+    var newArgumentValue = BetterThanPassTheReference(argument);
+
+    // newArgumentValue = 12345 ABCDE
+    ```
+
     * [CA1021: Avoid out parameters](https://msdn.microsoft.com/en-us/library/ms182131.aspx)
     * [CA1045: Do not pass types by reference](https://msdn.microsoft.com/en-us/library/ms182146.aspx)
     * [Parameter Design -&gt; Parameter Passing](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx)
@@ -634,7 +683,7 @@ Använd **string.Empty** istället för två "" (citationstecken), för att till
 Se vidare i [SA1122: UseStringEmptyForEmptyStrings](http://stylecop.soyuz5.com/SA1122.html)
 
 1. Använd inte .ToLower()  
-Använd inte **.ToLower()** när du jämför strängar. Det skapas då ytterligare en temporär sträng i bakgrunden. Använd istället String.Compare som har inbyggt stöd för skiftkänslighet och kultur.
+Använd inte **.ToLower()** när du jämför strängar. Det skapas då ytterligare en temporär sträng i bakgrunden. Använd istället **string.Compare** som har inbyggt stöd för skiftkänslighet och kultur.
 
     * [String.Compare Method](https://msdn.microsoft.com/en-us/library/system.string.compare(v=vs.110).aspx)
     * [How to: Compare Strings (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/cc165449.aspx)
