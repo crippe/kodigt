@@ -681,14 +681,14 @@ Använd "named argument" för metoder där man inte har variabler/enums som man 
 
     &#x274C; UNDVIK:
     ```csharp
-    using (StreamWriter streamWriter = new StreamWriter("test.txt", false))
+    using (var streamWriter = new StreamWriter("test.txt", false))
     { 
         // ...
     }
     ```
     &#x2705; GÖR SÅ HÄR:
     ```csharp
-    using (StreamWriter streamWriter = new StreamWriter("test.txt", append: false))
+    using (var streamWriter = new StreamWriter("test.txt", append: false))
     { 
         // ...
     }
@@ -698,7 +698,7 @@ Använd "named argument" för metoder där man inte har variabler/enums som man 
     * [Named and Optional Arguments (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/dd264739.aspx)
 
 1. Metoder och många parametrar  
-Håll nere antal parametrar i metodsignaturer. Om det inte redan finns en passande klass, skapa en ny "wrapper"-klass. Använd konstruktorn i wrapper-klassen framför att objektinitialisera den.
+Antal parametrar i metodsignaturer bör vara runt fyra (4). Om det blir fler, skapa en s.k. "wrapper"-klass istället som används som parameter. Använd konstruktorn i wrapper-klassen framför att objektinitialisera den.
 
     * [How many parameters are too many?](http://stackoverflow.com/questions/174968/how-many-parameters-are-too-many)
     * [How many parameters in C# method are acceptable?](http://stackoverflow.com/questions/12431932/how-many-parameters-in-c-sharp-method-are-acceptable)
