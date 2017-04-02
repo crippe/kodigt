@@ -23,13 +23,22 @@ Så, hur är denna artikel tänkt att fungera och användas? Vad är den och vad
 -- John F. Woods, 1991-09-25
 
 * _"Any fool can write code that a computer can understand. Good programmers write code that humans understand."_  
--- Martin Fowler. Refactoring: Improving the design of existing code.
+-- Martin Fowler, "Refactoring: Improving the design of existing code"
 
 * _"The act of leaving a mess in the code should be as socially unacceptable as littering."_  
 -- Robert C. “Uncle Bob” Martin
 
 * _"Leave the code in a better state than you found it."_  
-(Originalet skrevs av Robert Stephenson Smyth Baden-Powell, pappa till scoutrörelsen, och löd "Try and leave this world a little better than you found it.")
+(Originalet skrevs av Robert Stephenson Smyth Baden-Powell, pappa till scoutrörelsen, och löd "Try and leave this world a little better than you found it.”)
+
+* _"Comments are evil. The goal of comments is to compensate for our failure or to help express ourselves better. They are always sign of failure."_   
+-- Robert C. “Uncle Bob” Martin, "Clean Code" 
+
+* _"Code formatting is important because it is part of communication. It also makes the reader trust the code more."_  
+-- Robert C. “Uncle Bob” Martin, "Clean Code"  
+
+* _"We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%."_  
+-- Donald Knuth, "Structured Programming With Go To Statements"  
 
 [Secrets of Maintainable Codebases](http://www.daedtech.com/secrets-maintainable-codebases/)  
 [Static Code Analysis and Quality Metrics](http://ardalis.com/static-code-analysis-and-quality-metrics)
@@ -146,7 +155,8 @@ Sträva efter att ha en tomrad innan det sista retur-uttrycket i metoder, det g�
 
 I möjligaste mån, undvik att skriva kommentarer. Lägg isället energi på att beskriva din intention i namn på metoder,  variabler och dela upp kod på ett förståeligt sätt. Det några undantag till rekommendationen:
 1. Märkning av kod som behöver förändras med "TODO".  
-TODO-kommentarer skrivs enligt mönstret: **[//][mellanslag][TODO:][mellanslag][Text som börjar med stor bokstav och slutar med punkt.]** 
+TODO-kommentarer skrivs enligt mönstret:  
+    **[//][mellanslag][TODO:][mellanslag][Text som börjar med stor bokstav och slutar med punkt.]** 
 
     &#x2139; EXEMPEL:
     ```csharp
@@ -227,6 +237,7 @@ Sortera och ta bort **using**-direktiv som inte längre används.
 Returnera instansierade objekt framför null i metoder. Var noga att kontrollera objekt som ändå kan vara null.
     * [How to Avoid Returning Null from a Method](http://www.codinghelmet.com/?path=howto/avoid-returning-null)
     * [Tactical Design Patterns in .NET: Control Flow -&gt; Motivation to Avoid Null Reference](https://app.pluralsight.com/player?course=tactical-design-patterns-dot-net-control-flow&author=zoran-horvat&name=tactical-design-patterns-dot-net-control-flow-m2&clip=0&mode=live)
+    * [My takeaways from “Clean Code” -> Don’t Pass Null](https://medium.com/@webprolific/my-takeaways-from-clean-code-a70ca8382884)
     * [Is it Really Better to 'Return an Empty List Instead of null'? / Part 1](https://www.codeproject.com/Articles/794448/Is-it-Really-Better-to-Return-an-Empty-List-Instea), [Part 2](https://www.codeproject.com/Articles/797453/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 3](https://www.codeproject.com/Articles/820066/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 4](https://www.codeproject.com/Articles/834677/Is-it-Really-Better-to-Return-an-Empty-List-Inst)
 
 1. Konsekvent kod  
@@ -387,7 +398,50 @@ Att använda **as** ger bättre prestanda och kräver mindre kod än **try**/**c
 1. Undvik boxing/unboxing  
 Ibland är boxing nödvändigt, men du bör undvika det om möjligt eftersom det ger sämre prestanda och ökar minneskraven.  
     _(Typkonvertering är inte boxing eller unboxing, men det kan orsaka det ena eller det andra. En **int** är inte en **Class1**, det vill säga **int** ärver inte eller utökar inte **Class1**. Det betyder att du inte kan konvertera **int** till **Class1**. Typkonvertering orsakar konvertering bara om det är möjligt att göra det. Du kan gå från en **int** till en **double** och vice versa. Men du kan inte gå från en **int** till **Class1**.)_
- 
+
+
+    &#x274C; UNDVIK:
+    ```csharp
+    public class ClassA
+    {
+        public string Name {get; set;}
+    }
+    
+    public class ClassB : ClassA
+    {
+    }
+
+    private ClassA TransformClassBToClassA()
+    {
+        var classB = new ClassB {Name = "Name from classB"};
+        
+        var classA = (ClassA)classB;
+
+        return classA;
+    }
+    ```  
+
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    public class ClassA
+    {
+        public string Name {get; set;}
+    }
+    
+    public class ClassB : ClassA
+    {
+    }
+
+    private ClassA TransformClassBToClassA()
+    {
+        var classB = new ClassB {Name = "Name from classB"};
+            
+        var classA = classB as ClassA;
+
+        return classA;
+    }
+    ```
+
     * [Understanding Boxing and Unboxing in C#](http://www.dotnettricks.com/learn/csharp/understanding-boxing-and-unboxing-in-csharp)
     * [Boxing and Unboxing (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx)
     * [Performance (C# and Visual Basic)](https://msdn.microsoft.com/en-us/library/ms173196.aspx)
