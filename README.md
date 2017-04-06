@@ -354,7 +354,7 @@ Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
     &#x2139; EXEMPEL:
     ```csharp
     // "+"
-    var stringFormat = "Lorem " + "ipsum " + "dolor " + "sit " + "amet";
+    var stringPlus = "Lorem " + "ipsum " + "dolor " + "sit " + "amet";
 
     // string.Format
     var stringFormat = string.Format({0} {1} {2} {3} {4}, "Lorem", "ipsum", "dolor", "sit", "amet");
