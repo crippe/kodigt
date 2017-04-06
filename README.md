@@ -343,21 +343,86 @@ Använd **try**-**catch** och **finally** där du vet att det finns risk att und
     * [Handling Errors and Exceptions. Part 2 – Discussion.](http://www.engineerspock.com/2015/10/02/handling-errors-and-exceptions-part-2-discussion/)
     * [Handling Errors and Exceptions in C#. Part 3](http://www.engineerspock.com/2016/10/24/handling-error-and-exceptions-part-3/)
     * [Throw Often, Catch Rarely](https://helloacm.com/throw-often-catch-rarely/)
+    * [C# Exception Handling Best Practices](https://stackify.com/csharp-exception-handling-best-practices/)
  
 1. Lägga ihop strängar  
 Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
     1. Sex eller färre strängar: använd "**+**", string interpolation eller **string.Format**.
     1. Över sex strängar men där man på förhand vet antal element: använd **string.Concat**.
     1. Över sex strängar och okänt antal: använd **StringBuilder**.  
-    
+
+    &#x2139; EXEMPEL:
+    ```csharp
+    // "+"
+    var stringFormat = "Lorem " + "ipsum " + "dolor " + "sit " + "amet";
+
+    // string.Format
+    var stringFormat = string.Format({0} {1} {2} {3} {4}, "Lorem", "ipsum", "dolor", "sit", "amet");
+            
+    // String interpolation
+    var person = GetPersion(id);
+    var stringInterpolation = $"Name: {person.FirstName} {person.LastName}, age: {person.Age}";
+            
+    // string.Concat
+    var stringConcat = string.Concat("Lorem ", "ipsum ", "dolor ", "sit ", "amet, ", "consectetur ", "adipiscing ", "elit. ", "Morbi ", "lacinia ", "auctor ", "augue, ", "ac ", "tempus ");
+               
+    // StringBuilder
+    var products = GetProducts();
+    var stringBuilder = new StringBuilder();
+    foreach (var product in products)
+    {
+        stringBuilder.Append(product.Name).AppendLine();
+    }
+    ```    
+
     * [5 ways to concatenate strings with C# .NET](https://dotnetcodr.com/2015/11/27/5-ways-to-concatenate-strings-with-c-net-2/)
     * [Adventures in Benchmarking - Memory Allocations](http://mattwarren.org/2016/02/17/adventures-in-benchmarking-memory-allocations/)
-    * [String concatenation behind the scenes, part one](https://ericlippert.com/2013/06/17/string-concatenation-behind-the-scenes-part-one/)
+    * [String concatenation behind the scenes, part one](https://ericlippert.com/2013/06/17/string-concatenation-behind-the-scenes-part-one/), [part two](https://ericlippert.com/2013/06/24/string-concatenation-behind-the-scenes-part-two/)
     * [Most efficient way to concatenate strings?](http://stackoverflow.com/questions/21078/most-efficient-way-to-concatenate-strings)
 
 1. Magiska strängar  
 Undvik magiska strängar och tal eftersom det oftast är svårt att förstå dess innebörd. Använd const- och readonly medlemmar där det är möjligt. Ett tips är också att placera ofta använda konstanter i en egen konstantklass.
 
+    &#x274C; UNDVIK:
+    ```csharp
+    if (role == "Architect")
+    {
+                ...
+    }
+    else if (role == "Tester")
+    {
+        ...
+    }
+    else if (role == "Developer")
+    {
+        ...
+    }
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp 
+    public static class Role
+    {
+        public const string Architect = "Architect";
+        public const string Tester = "Tester";
+        public const string Developer = "Developer";
+    }
+
+    if (role == Role.Architect)
+    {
+        ...
+    }
+    else if (role == Role.Tester)
+    {
+        ...
+    }
+    else if (role == Role.Developer)
+    {
+        ...
+    }
+    ```
+
+    * [Magic Strings – No More!](https://blog.goyello.com/2014/12/30/magic-strings-no-more/)
+    * [Eliminating Magic Strings in ASP.NET MVC](https://daveaglick.com/posts/eliminating-magic-strings)
     * [const (C# Reference)](https://msdn.microsoft.com/en-us/library/e6w8fe1b(v=vs.140).aspx)
     * [readonly (C# Reference)](https://msdn.microsoft.com/en-us/library/acdd6hb7(v=vs.100).aspx)
     * [C# CONSTANTS BEST PRACTICE](http://codebender.denniland.com/c-constants-best-practice/)
