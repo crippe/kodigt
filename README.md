@@ -385,17 +385,36 @@ Undvik magiska strängar och tal eftersom det oftast är svårt att förstå des
 
     &#x274C; UNDVIK:
     ```csharp
+    if (currentOrderAmount > 10000)
+    {
+        return true;
+    }
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp 
+    int const OrderAmountLimit = 10000;
+    
+    if (currentOrderAmount > OrderAmountLimit)
+    {
+        return true;
+    }
+    ```
+
+    &#x274C; UNDVIK:
+    ```csharp
     if (role == "Architect")
     {
-                ...
+        return ...
     }
-    else if (role == "Tester")
+    
+    if (role == "Tester")
     {
-        ...
+        return ...
     }
-    else if (role == "Developer")
+    
+    if (role == "Developer")
     {
-        ...
+        return ...
     }
     ```
     &#x2705; GÖR SÅ HÄR:
@@ -409,15 +428,17 @@ Undvik magiska strängar och tal eftersom det oftast är svårt att förstå des
 
     if (role == Role.Architect)
     {
-        ...
+        return ...
     }
-    else if (role == Role.Tester)
+    
+    if (role == Role.Tester)
     {
-        ...
+        return ...
     }
-    else if (role == Role.Developer)
+    
+    if (role == Role.Developer)
     {
-        ...
+        return ...
     }
     ```
 
