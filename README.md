@@ -13,7 +13,16 @@
 ### Introduktion
 Hur ska man kunna hålla reda på alla designmönster, principer, riktlinjer, konventioner, akronymer och praxis när man kodar? För att inte tala om företagsstandarder, teamöverenskommelser och besynnerliga saker som externa beroenden försätter dig i?
 
-Alla utvecklares dröm är att få börja på ett nytt blankt blad. Med nyvunnen erfarenhet från senaste projektet vill man den här gången göra rätt från början. I realiteten har man inte den möjligheten särskilt ofta. Jag skulle vilja påstå att det  finns massor med roliga saker att göra i en lösning som förvaltas. Refaktorera, skala bort, namnändra, prestandaförbättra och skriva fler tester gör dig till en hjälte/hjältinna. Det kommer bli ett nöje för andra att kodgranska. Ingen är emot förbättrad kodkvalité!
+Alla utvecklares dröm är att få börja på ett nytt blankt blad. Med nyvunnen erfarenhet från senaste projektet vill man den här gången göra rätt från början. I realiteten har man inte den möjligheten särskilt ofta. Jag skulle vilja påstå att det  finns massor med roliga saker att göra i en lösning som förvaltas. Refaktorera, skala bort, namnändra, prestandaförbättra och skriva fler tester gör dig till en hjälte/hjältinna. Det kommer bli ett nöje för andra att kodgranska. Ingen är emot förbättrad kvalité!
+
+Bra kod kan karakteriseras så här:
+* Enkel, men inte förenklad
+* Läsbar och lätt att förstå
+* Underhållningsbar
+* Oberoende/frikopplad
+* Effektiv
+* Självdokumenterande
+* Testbar
 
 Så, hur är denna artikel tänkt att fungera och användas? Vad är den och vad är den inte? Punkterna utgår oftast från en typisk webblösning med Visual Studio, C#, ASP.NET och ReSharper. Artikeln tar upp ämnen som ofta diskuteras i team eller är typiska detaljer som missas i kod. Artikeln kan också fungera som underlag när man vill sätta upp kodpraxis i team. Tänker man samma? Mest av allt är det en kom-ihåg-lista att gå igenom innan man gör pull request/checka in/merga. Det är inte en komplett redogörelse för språket C#, SOLID, designmönster eller TDD. De finns andra mer djuplodade böcker och kurser för det. Den tar inte heller upp några riktlinjer för frontend-utveckling med JavaScript-ramverk, CSS etcetera. 
 ***
