@@ -11,11 +11,9 @@
     * [ASP.NET MVC](#aspnet-mvc)
 ***
 ### Introduktion
-Hur ska man kunna hålla reda på alla designmönster, principer, riktlinjer, konventioner, akronymer och praxis när man kodar? För att inte tala om företagsstandarder, teamöverenskommelser och besynnerliga saker som externa beroenden försätter dig i?
+Alla utvecklares dröm är att få börja på ett nytt blankt blad. Med nyvunnen erfarenhet från senaste projektet vill man den här gången göra rätt från början. I realiteten har man inte den möjligheten särskilt ofta. Men ha förtröstan, det finns massor med roliga och utmanande saker att göra i en lösning som förvaltas. Refaktorera, skala bort, kapsla in, namnändra, prestandaförbättra och skriva fler tester kommer göra dig till en hjälte/hjältinna. Det kommer bli ett nöje för andra att kodgranska. Utkomsten av checklistan är förbättrad kvalité.
 
-Alla utvecklares dröm är att få börja på ett nytt blankt blad. Med nyvunnen erfarenhet från senaste projektet vill man den här gången göra rätt från början. I realiteten har man inte den möjligheten särskilt ofta. Jag skulle vilja påstå att det  finns massor med roliga saker att göra i en lösning som förvaltas. Refaktorera, skala bort, namnändra, prestandaförbättra och skriva fler tester gör dig till en hjälte/hjältinna. Det kommer bli ett nöje för andra att kodgranska. Ingen är emot förbättrad kvalité!
-
-Bra kod kan karakteriseras så här:
+Bra kod är:
 * Enkel, men inte förenklad
 * Läsbar och lätt att förstå
 * Underhållningsbar
@@ -24,7 +22,7 @@ Bra kod kan karakteriseras så här:
 * Självdokumenterande
 * Testbar
 
-Så, hur är denna artikel tänkt att fungera och användas? Vad är den och vad är den inte? Punkterna utgår oftast från en typisk webblösning med Visual Studio, C#, ASP.NET och ReSharper. Artikeln tar upp ämnen som ofta diskuteras i team eller är typiska detaljer som missas i kod. Artikeln kan också fungera som underlag när man vill sätta upp kodpraxis i team. Tänker man samma? Mest av allt är det en kom-ihåg-lista att gå igenom innan man gör pull request/checka in/merga. Det är inte en komplett redogörelse för språket C#, SOLID, designmönster eller TDD. De finns andra mer djuplodade böcker och kurser för det. Den tar inte heller upp några riktlinjer för frontend-utveckling med JavaScript-ramverk, CSS etcetera. 
+Hur är denna artikel tänkt att fungera och användas? Vad är den och vad är den inte? Punkterna utgår oftast från en typisk webblösning med Visual Studio, C#, ASP.NET och ReSharper. Artikeln tar upp ämnen som ofta diskuteras i team eller är typiska detaljer som ofta förbises i kod. Artikeln kan också fungera som underlag när man vill sätta upp kodpraxis i team. Tänker man samma? Mest av allt är det en kom-ihåg-lista att gå igenom innan man gör kodgranskningar och migrerar ihop kod. Det är inte en komplett redogörelse för språket C#, SOLID, designmönster eller TDD. De finns andra mer djuplodade böcker och kurser för det. Den tar inte heller upp några riktlinjer för frontend-utveckling med JavaScript-ramverk, CSS etcetera.
 ***
 ### Mindset
 
@@ -457,6 +455,7 @@ Undvik magiska strängar och tal eftersom det oftast är svårt att förstå des
     * [readonly (C# Reference)](https://msdn.microsoft.com/en-us/library/acdd6hb7(v=vs.100).aspx)
     * [C# CONSTANTS BEST PRACTICE](http://codebender.denniland.com/c-constants-best-practice/)
     * [Difference Between Const, ReadOnly and Static ReadOnly in C#](http://www.c-sharpcorner.com/UploadFile/c210df/difference-between-const-readonly-and-static-readonly-in-C-Sharp/)
+    * [Some ways to tame magical strings in .NET and C#](https://danielwertheim.se/some-ways-to-tame-magical-strings-in-net-and-c/)
 
  1. Använd as vid typekonvertering  
 Att använda **as** ger bättre prestanda och kräver mindre kod än **try**/**catch**-metoden. Använd inte **is** och **as** i kombination eftersom det inte behövs.
