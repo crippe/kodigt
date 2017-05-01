@@ -351,6 +351,7 @@ Använd **try**-**catch** och **finally** där du vet att det finns risk att und
     * [Handling Errors and Exceptions in C#. Part 3](http://www.engineerspock.com/2016/10/24/handling-error-and-exceptions-part-3/)
     * [Throw Often, Catch Rarely](https://helloacm.com/throw-often-catch-rarely/)
     * [C# Exception Handling Best Practices](https://stackify.com/csharp-exception-handling-best-practices/)
+    * [Custom exception types](http://enterprisecraftsmanship.com/2016/12/08/custom-exception-types/)
  
 1. Lägga ihop strängar  
 Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
@@ -790,6 +791,7 @@ Använd "named argument" för metoder där man inte har variabler/enums som man 
 
     * [Specify optional parameter names even though not required?](http://softwareengineering.stackexchange.com/questions/307773/specify-optional-parameter-names-even-though-not-required)
     * [Named and Optional Arguments (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/dd264739.aspx)
+    * [Boolean parameters and code readability](https://www.codeproject.com/Articles/1182980/Boolean-parameters-and-code-readability)
 
 1. Metoder och många parametrar  
 Antal parametrar i metodsignaturer bör vara runt fyra (4). Om det blir fler, skapa en s.k. "wrapper"-klass istället som används som parameter. Använd konstruktorn i wrapper-klassen framför att objektinitialisera den.
@@ -892,11 +894,76 @@ Använd **var** när typen är uppenbar eller vetskapen om vilken typ det är in
 
     * [Implicitly Typed Local Variables (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384061.aspx)
 
+1. Använd "ternary operator"  
+Använd s.k. ternary operator för att minska antal kodrader.
+
+
+    &#x274C; UNDVIK:
+    ```csharp
+    var greeting = "Good”;
+    const string evening = "evening";
+    const string day = "day”;
+    const int eveningLimit = 17;
+            
+    var now = DateTime.UtcNow;
+    if (now.Hour > eveningLimit)
+    {   
+        greeting += " " + evening + ".";
+    }
+    else
+    {   
+        greeting += " " + day + ".";
+    }
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    var greeting = "Good";
+    const string evening = "evening";
+    const string day = "day”;
+    const int eveningLimit = 17;
+            
+    var now = DateTime.UtcNow;
+    greeting = now.Hour > eveningLimit ? $"{greeting} {evening}." : $"{greeting} {day}.";
+    ```
+
 #### ASP.NET MVC
 1. Undvik backendkod i vyer  
 Undvik att placera backendlogik i vyer (cshtml). Det finns dock två undantag:
     1. Val av CSS-klasser utifrån objekt som kommer från backend.
     1. **switch**-satser för att välja partials att visa.
+
+1. Metoder i Razor-vyer  
+Om backendkoden blir lite längre enligt punkt ett ovan, använd functions och helpers för att kapsla in logik och rendering.
+
+    &#x2139; EXEMPEL:
+    ```html
+
+    <div class="button-with-popup" style="text-align: @GetButtonAlign()">
+    ...
+    </div>
+
+    @functions {
+	
+        public string GetButtonAlign()
+        {
+            var align = string.Empty;
+            switch (Model.ButtonAlign)
+            {
+                case ButtonAlign.Left:
+                    align = "left";
+                    break;
+                case ButtonAlign.Center:
+		    align = "center";
+                    break;
+                case ButtonAlign.Right:
+                    align = "right";
+                    break;
+            }
+
+            return align;
+        }
+    }
+    ```
 
 1. Små kontrollermetoder  
 Låt kontrollermetoderna vara små vilket gör att det blir enklare att testa logiken med att hämta modell i en separat metod. På det här sättet tydliggörs dessutom Model-View-Controller-konventionen.
@@ -909,3 +976,6 @@ Låt kontrollermetoderna vara små vilket gör att det blir enklare att testa lo
     ```csharp
     // Placeholder.
     ```
+
+1. Ingen logik i vymodller  
+En vymodell bör aldrig vara ansvarig för att populera sig själv. Dvs, det ska aldrig finnas logik i dessa. Det kan göras undantag för exempelvis properties, för att exempelvis trimma en text eller liknande.
