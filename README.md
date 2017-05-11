@@ -619,6 +619,7 @@ Sträva efter att spendera så lite tid som möjligt i en metod och placera den 
     1. Undvik **else** genom att returnera värdet i samma ögonblick du vet vad det är.
     1. Försök undvika negationer i uttryck.
     1. Undvik nestlad kod med **if**-satser inuti **if**-satser (s.k. Arrow Anti Pattern).  
+    1. Om det är möjligt, använd ternary operatorn framför if-else.
 
     &#x274C; UNDVIK:
     ```csharp
@@ -666,6 +667,22 @@ Sträva efter att spendera så lite tid som möjligt i en metod och placera den 
  
         return true;
     }
+    ```
+
+    &#x274C; UNDVIK:
+    ```csharp
+    if(employee.Department  == Department.Engineering)
+    {
+        employee.Salary = 200;
+    }
+    else
+    {
+        employee.Salary = 250;
+    }
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    employee.Salary = employee.Department == Department.Engineering ? 200 : 250;
     ```
 
     * [Flattening Arrow Code](https://blog.codinghorror.com/flattening-arrow-code/)
@@ -764,7 +781,7 @@ Använd inte **.ToLower()** när du jämför strängar. Det skapas då ytterliga
 1. Objektinitialiserare  
 Använd objektinitialiserare när nytt objekt initieras vars medlemmar kräver värden.
 
-    En rekommendation är att hellre konstruktorer från klassen som ska konsumera objekttypen. Om du har en klass med många medlemmar, undersök om de hör ihop eller kan kapslas in i mindre klasser för att uppnå att typen bara har ett ansvarsområde.
+    Men använd ännu hellre konstruktorer från klassen som ska konsumera objekttypen. Och om du har en klass med många medlemmar, undersök om de hör ihop eller kan kapslas in i mindre klasser för att uppnå att typen bara har ett ansvarsområde.
 
     * [Object and Collection Initializers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384062.aspx)
 
