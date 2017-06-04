@@ -1,4 +1,4 @@
-# Checklista för C# utvecklare  🛠  beta 0.6
+# Checklista för C# utvecklare  🛠  beta 0.6.1
 ![https://www.gizmodo.com.au/2016/01/this-woman-was-a-bored-button-pusher-before-jane-jetson-was-even-born/](https://github.com/crippe/kodigt/blob/master/wiki/images/RCA-computer-room-1959.jpg)
 ### Innehåll
 * [Introduktion](#introduktion)
@@ -58,7 +58,7 @@ Om inget annat sägs eller andra teamöverenskommelser finns, följ Microsofts n
 1. Namn på olika typer  
     Namnge typer enligt nedan.
 
-    Language element&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Casing&nbsp;&nbsp;&nbsp;&nbsp;|Example
+    Språk element&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Format&nbsp;&nbsp;&nbsp;&nbsp;|Exempel
     --------------------|----------|:-----------
     Class, Struct|Pascal|`AppDomain`
     Interface | Pascal | `IBusinessService`
@@ -221,9 +221,28 @@ Skriv så att en utvecklare som börjar i teamet om sex månader förstår. Kode
         }
     }
     ```
-    &#x2705; GÖR SÅ HÄR:
+    &#x2705; EXEMPEL PÅ LÖSNING:
     ```csharp
-    // Placeholder.
+    public class DiscountManager
+    {
+        private readonly IAccountDiscountCalculatorFactory factory;
+        private readonly ILoyaltyDiscountCalculator loyaltyDiscountCalculator;
+ 
+        public DiscountManager(IAccountDiscountCalculatorFactory factory, ILoyaltyDiscountCalculator loyaltyDiscountCalculator)
+        {
+           factory = factory;
+           loyaltyDiscountCalculator = loyaltyDiscountCalculator;
+        }
+ 
+       public decimal ApplyDiscount(decimal price, AccountStatus accountStatus, int timeOfHavingAccountInYears)
+       {
+           decimal priceAfterDiscount = 0;
+           priceAfterDiscount = factory.GetAccountDiscountCalculator(accountStatus).ApplyDiscount(price);
+           priceAfterDiscount = loyaltyDiscountCalculator.ApplyDiscount(priceAfterDiscount, timeOfHavingAccountInYears);
+    
+          return priceAfterDiscount;
+       }
+    }
     ```
 
 1. Onårbar kod  
@@ -604,7 +623,7 @@ Använd **Any()** för läsbarhetens skull, det är ett sätt att förklara sin 
     * [List Any or Count?](http://stackoverflow.com/questions/5741617/listt-any-or-count)
 
 1. Välj rätt kollektionstyp  
-Försök så långt det går att använda **IEnumerable** framför **IList<>**/**List<>** etc som returvärde från metoder. Är prestanda, storlek eller ordning viktig, undersök närmare vilken kollektionstyp som passar bäst tilländamålet.
+Försök så långt det går att använda **IEnumerable** eller **IReadOnlyList** framför **IList<>**/**List<>** etc som returvärde från metoder. Är prestanda, storlek eller ordning viktig, undersök närmare vilken kollektionstyp som passar bäst tilländamålet.
 
     * [Guidelines for Collections](https://msdn.microsoft.com/en-us/library/dn169389%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396)
     * [Selecting a Collection Class](https://msdn.microsoft.com/en-us/library/6tc79sx1(v=vs.110).aspx)
@@ -613,13 +632,13 @@ Försök så långt det går att använda **IEnumerable** framför **IList<>**/*
     * [C# Best Practices: Collections and Generics](https://app.pluralsight.com/library/courses/csharp-best-practices-collections-generics/table-of-contents)
     * [Difference Between IEnumerable, ICollection and IList Interface in C#](https://www.codeproject.com/Articles/1070991/Difference-Between-IEnumerable-ICollection-and-ILi)
     * [Best Practices Implementing IEnumerable Interface in C#](http://codinghelmet.com/?path=howto/best-practices-implementing-ienumerable-interface-in-cs)
+    * [IEnumerable vs IReadOnlyList](http://enterprisecraftsmanship.com/2017/05/24/ienumerable-vs-ireadonlylist/)
 
 1. Villkor (if-syntax)  
 Sträva efter att spendera så lite tid som möjligt i en metod och placera den mest väntade processen först - det gör att det också blir mer lättläst.
     1. Undvik **else** genom att returnera värdet i samma ögonblick du vet vad det är.
     1. Försök undvika negationer i uttryck.
     1. Undvik nestlad kod med **if**-satser inuti **if**-satser (s.k. Arrow Anti Pattern).  
-    1. Om det är möjligt, använd ternary operatorn framför if-else.
 
     &#x274C; UNDVIK:
     ```csharp
@@ -667,22 +686,6 @@ Sträva efter att spendera så lite tid som möjligt i en metod och placera den 
  
         return true;
     }
-    ```
-
-    &#x274C; UNDVIK:
-    ```csharp
-    if(employee.Department  == Department.Engineering)
-    {
-        employee.Salary = 200;
-    }
-    else
-    {
-        employee.Salary = 250;
-    }
-    ```
-    &#x2705; GÖR SÅ HÄR:
-    ```csharp
-    employee.Salary = employee.Department == Department.Engineering ? 200 : 250;
     ```
 
     * [Flattening Arrow Code](https://blog.codinghorror.com/flattening-arrow-code/)
@@ -782,6 +785,25 @@ Använd inte **.ToLower()** när du jämför strängar. Det skapas då ytterliga
 Använd objektinitialiserare när nytt objekt initieras vars medlemmar kräver värden.
 
     Men använd ännu hellre konstruktorer från klassen som ska konsumera objekttypen. Och om du har en klass med många medlemmar, undersök om de hör ihop eller kan kapslas in i mindre klasser för att uppnå att typen bara har ett ansvarsområde.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    var person = new Person();
+    person.Id = Guid.NewGuid(); 
+    person.FirstName = "Stefan";
+    person.LastName = "Johansson";
+    person.Phone = "+46701234567";
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    var person = new Person();
+    {
+        Id = Guid.NewGuid(); 
+        FirstName = "Stefan";
+        LastName = "Johansson";
+        Phone = "+46701234567";
+    }
+    ```
 
     * [Object and Collection Initializers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384062.aspx)
 
@@ -942,6 +964,21 @@ Använd s.k. ternary operator för att minska antal kodrader.
     var now = DateTime.UtcNow;
     greeting = now.Hour > eveningLimit ? $"{greeting} {evening}." : $"{greeting} {day}.";
     ```
+
+    * [Ternary operator](https://www.dotnetperls.com/ternary)
+
+1. Egenskaper vs metoder  
+Generellt sätt representerar metoder handlingar och egenskaper data. Egenskaper är avsedda att användas som fält, vilket betyder att de inte bör vara beräkningsmässigt komplexa eller skapa sidoeffekter. Använd egenskap när medlemmen är en logisk datamedlem, använd metoder i alla andra fall. Exempel på användningsområde kan vara att sätta ihop för- och efternamn för att bilda en ny egenskap. Man kan också tänka sig att trimma texter eller göra avrundningar, för att att visa i gränssnitt.
+
+    * [Property Design](https://msdn.microsoft.com/en-us/library/ms229006(v=vs.110).aspx)
+    * [C# Property vs. Method Guidelines](http://firebreaksice.com/csharp-property-vs-method-guidelines/)
+    * [Properties vs. Methods](http://geekswithblogs.net/abhi/archive/2013/11/20/properties-vs.-methods.aspx)
+    * [Properties vs Methods](https://stackoverflow.com/questions/601621/properties-vs-methods)
+    * [Exposing Member Objects As Properties or Methods in .NET](https://stackoverflow.com/questions/601621/properties-vs-methods)
+    * [When to use a property vs a method?](https://stackoverflow.com/questions/1854352/when-to-use-a-property-vs-a-method)
+    * [Best practices: throwing exceptions from properties](https://stackoverflow.com/questions/1488472/best-practices-throwing-exceptions-from-properties)
+    * [Using Properties (C# Programming Guide)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties)
+
 
 #### ASP.NET MVC
 1. Undvik backendkod i vyer  
