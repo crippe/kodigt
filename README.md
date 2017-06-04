@@ -41,7 +41,8 @@ Hur är denna artikel tänkt att fungera och användas? Vad är den och vad är 
 * _"Comments are evil. The goal of comments is to compensate for our failure or to help express ourselves better. They are always sign of failure."_   
 -- Robert C. “Uncle Bob” Martin, "Clean Code" 
 
-* _"Code formatting is important because it is part of communication. It also makes the reader trust the code more."_  
+* _"Code 
+ting is important because it is part of communication. It also makes the reader trust the code more."_  
 -- Robert C. “Uncle Bob” Martin, "Clean Code"  
 
 * _"We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%."_  
@@ -58,7 +59,7 @@ Om inget annat sägs eller andra teamöverenskommelser finns, följ Microsofts n
 1. Namn på olika typer  
     Namnge typer enligt nedan.
 
-    Språk element&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Format&nbsp;&nbsp;&nbsp;&nbsp;|Exempel
+    Språkelement&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Format&nbsp;&nbsp;&nbsp;&nbsp;|Exempel
     --------------------|----------|:-----------
     Class, Struct|Pascal|`AppDomain`
     Interface | Pascal | `IBusinessService`
