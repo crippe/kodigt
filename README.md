@@ -41,8 +41,7 @@ Hur är denna artikel tänkt att fungera och användas? Vad är den och vad är 
 * _"Comments are evil. The goal of comments is to compensate for our failure or to help express ourselves better. They are always sign of failure."_   
 -- Robert C. “Uncle Bob” Martin, "Clean Code" 
 
-* _"Code 
-ting is important because it is part of communication. It also makes the reader trust the code more."_  
+* _"Code formatting is important because it is part of communication. It also makes the reader trust the code more."_  
 -- Robert C. “Uncle Bob” Martin, "Clean Code"  
 
 * _"We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%."_  
@@ -59,40 +58,27 @@ Om inget annat sägs eller andra teamöverenskommelser finns, följ Microsofts n
 1. Namn på olika typer  
     Namnge typer enligt nedan.
 
-    Språkelement&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Format&nbsp;&nbsp;&nbsp;&nbsp;|Exempel
-    --------------------|----------|:-----------
-    Class, Struct|Pascal|`AppDomain`
-    Interface | Pascal | `IBusinessService`
-    Enumeration type | Pascal | `ErrorLevel` |
-    Enumeration values | Pascal | `FatalError` |
-    Event | Pascal | `Click` |
-    Private field | Camel | `listItem` |
-    Protected field | Pascal | `MainPanel` |
-    Constant field | Pascal | `MaximumItems` |
-    Constant Local variable | Camel | `maximumItems` |
-    Read-only static field | Pascal | `RedValue` |
-    Local Variable | Camel | `listOfValues` |
-    Method | Pascal | `ToString` |
-    Namespace | Pascal | `System.Drawing` |
-    Parameter | Camel | `typeName` |
-    Type Parameter | Pascal | `TView` |
-    Property | Pascal | `BackColor` |
+    | Språkelement                                    | Format                        | Exempel | StyleCop-regler |
+    |-------------------------                        |------------                   |--------------------|--------------------------------------------------------------------------------|
+    | Class, Struct | Pascal | `AppDomain` |  |
+    | Interface | Pascal | `IBusinessService` | [SA1302: InterfaceNamesMustBeginWithI](http://stylecop.soyuz5.com/SA1302.html) |
+    | Enumeration type | Pascal | `ErrorLevel` |  |
+    | Enumeration values | Pascal | `FatalError` |  |
+    | Event | Pascal | `Click` |  |
+    | Private field | Camel | `listItem` | [SA1306: FieldNamesMustBeginWithLowerCaseLetter](http://stylecop.soyuz5.com/SA1306.html)<br>[SA1310: FieldNamesMustNotContainUnderscore](http://stylecop.soyuz5.com/SA1310.html)<br>[SA1309: FieldNamesMustNotBeginWithUnderscore](http://stylecop.soyuz5.com/SA1309.html)<br>[SA1305: FieldNamesMustNotUseHungarianNotation](http://stylecop.soyuz5.com/SA1305.html) |
+    | Protected field | Pascal | `MainPanel` | [SA1307: AccessibleFieldsMustBeginWithUpperCaseLetter](http://stylecop.soyuz5.com/SA1307.html) |
+    | Constant field | Pascal | `MaximumItems` | [SA1303: ConstFieldNamesMustBeginWithUpperCaseLetter](http://stylecop.soyuz5.com/SA1303.html) |
+    | Constant Local variable | Camel | `maximumItems` |  |
+    | Read-only static field | Pascal | `RedValue` | [SA1304: NonPrivateReadonlyFieldsMustBeginWithUpperCaseLetter](http://stylecop.soyuz5.com/SA1304.html) |
+    | Local Variable | Camel | `listOfValues` | [SA1308: VariableNamesMustNotBePrefixed](http://stylecop.soyuz5.com/SA1308.html) |
+    | Method | Pascal | `ToString` |  |
+    | Namespace | Pascal | `System.Drawing` |  |
+    | Parameter | Camel | `typeName` |  |
+    | Type Parameter | Pascal | `TView` |  |
+    | Property | Pascal | `BackColor` |  |
 
     I ReSharper är det definierat på detta sätt som standard:  
     ![ReSharper Naming Style](https://github.com/crippe/kodigt/blob/master/wiki/images/resharper-naming-style.png?raw=true)
-
-1. StyleCop-regler för namngivning  
-Här är är de StyleCop-regler som finns för namngivning av medlemmar, typer och variabler:
-    * [SA1301: ElementMustBeginWithLowerCaseLetter](http://stylecop.soyuz5.com/SA1301.html)
-    * [SA1302: InterfaceNamesMustBeginWithI](http://stylecop.soyuz5.com/SA1302.html)
-    * [SA1303: ConstFieldNamesMustBeginWithUpperCaseLetter](http://stylecop.soyuz5.com/SA1303.html)
-    * [SA1304: NonPrivateReadonlyFieldsMustBeginWithUpperCaseLetter](http://stylecop.soyuz5.com/SA1304.html)
-    * [SA1305: FieldNamesMustNotUseHungarianNotation](http://stylecop.soyuz5.com/SA1305.html)
-    * [SA1306: FieldNamesMustBeginWithLowerCaseLetter](http://stylecop.soyuz5.com/SA1306.html)
-    * [SA1307: AccessibleFieldsMustBeginWithUpperCaseLetter](http://stylecop.soyuz5.com/SA1307.html)
-    * [SA1308: VariableNamesMustNotBePrefixed](http://stylecop.soyuz5.com/SA1308.html)
-    * [SA1309: FieldNamesMustNotBeginWithUnderscore](http://stylecop.soyuz5.com/SA1309.html)
-    * [SA1310: FieldNamesMustNotContainUnderscore](http://stylecop.soyuz5.com/SA1310.html)
 
 Referenser:
 * [Naming Guidelines](http://www.dofactory.com/reference/csharp-coding-standards)
@@ -113,23 +99,28 @@ Sträva efter att ordna medlemmar i en fil enligt StyleCop regel [SA1201: Elemen
     1. Sortera medlemmar i klasser i bokstavsordning.
 
 1. Klasser läggs i separata filer  
-Se vidare i: [SA1402: FileMayOnlyContainASingleClass](http://stylecop.soyuz5.com/SA1402.html)
+
+    * [SA1402: FileMayOnlyContainASingleClass](http://stylecop.soyuz5.com/SA1402.html)
 
 1. Indrag  
 Använd fyra (4) mellanslag istället för tabb i filer.  
-    Se vidare i: [SA1027: TabsMustNotBeUsed](http://stylecop.soyuz5.com/SA1027.html)
+    
+    * [SA1027: TabsMustNotBeUsed](http://stylecop.soyuz5.com/SA1027.html)
 
 1. Tomrader mellan element  
 Ha alltid en tomrad mellan element. Det gäller såväl mellan metoder som kodblock. Ett block kan vara ett **if**-uttryck eller **foreach** osv.  
-    Se vidare i: [SA1516: ElementsMustBeSeparatedByBlankLine](http://stylecop.soyuz5.com/SA1516.html)
+    
+    * [SA1516: ElementsMustBeSeparatedByBlankLine](http://stylecop.soyuz5.com/SA1516.html)
 
 1. Flera tomrader  
 Undvik flera tomrader på rad.  
-    Se vidare i: [SA1507: CodeMustNotContainMultipleBlankLinesInARow](http://stylecop.soyuz5.com/SA1507.html)
+    
+    * [SA1507: CodeMustNotContainMultipleBlankLinesInARow](http://stylecop.soyuz5.com/SA1507.html)
  
 1. Regioner  
 Undvik att använda regioner.  
-    Se vidare i: [SA1124: DoNotUseRegions](http://stylecop.soyuz5.com/SA1124.html)
+
+    * [SA1124: DoNotUseRegions](http://stylecop.soyuz5.com/SA1124.html)
     * [C# regions is a design smell](http://enterprisecraftsmanship.com/2015/12/08/c-regions-is-a-design-smell/) 
 
 1. Beräkning och kontroll  
@@ -259,6 +250,10 @@ Sortera och ta bort **using**-direktiv som inte längre används.
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    ```
+    * [using Directive (C# Reference)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive)
+    
+    &#x1F3F7; `using`
 
 1. Returnera inte null  
 Returnera instansierade objekt framför null i metoder. Var noga att kontrollera objekt som ändå kan vara null.
@@ -267,6 +262,7 @@ Returnera instansierade objekt framför null i metoder. Var noga att kontrollera
     * [My takeaways from “Clean Code” -> Don’t Pass Null](https://medium.com/@webprolific/my-takeaways-from-clean-code-a70ca8382884)
     * [Is it Really Better to 'Return an Empty List Instead of null'? / Part 1](https://www.codeproject.com/Articles/794448/Is-it-Really-Better-to-Return-an-Empty-List-Instea), [Part 2](https://www.codeproject.com/Articles/797453/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 3](https://www.codeproject.com/Articles/820066/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 4](https://www.codeproject.com/Articles/834677/Is-it-Really-Better-to-Return-an-Empty-List-Inst)
 
+    &#x1F3F7; `null`
 1. Konsekvent kod  
 Deklarera typer på samma sätt genom hela lösningen. Använd inte både **Int32** och **int** eller **String** och **string**.
     
@@ -292,6 +288,10 @@ Deklarera typer på samma sätt genom hela lösningen. Använd inte både **Int3
         string address = "Kommendörsgatan 34";
     }
     ```
+    * [SA1121: UseBuiltInTypeAlias](http://stylecop.soyuz5.com/SA1121.html)
+    * [C# - StyleCop - SA1121: UseBuiltInTypeAlias - Readability Rules](https://stackoverflow.com/questions/6000517/c-sharp-stylecop-sa1121-usebuiltintypealias-readability-rules)
+
+    &#x1F3F7; `string` `int` `alias`
 1. Använd using-block  
 Använd using-block för **IDisposable** objekt.
 
@@ -317,8 +317,9 @@ Använd using-block för **IDisposable** objekt.
         var gdiCharSet = arialFont.GdiCharSet;
     } 
     ```
-    * [ using Statement (C# Reference)](https://msdn.microsoft.com/en-us/library/yh598w02.aspx)
+    * [using Statement (C# Reference)](https://msdn.microsoft.com/en-us/library/yh598w02.aspx)
 
+    &#x1F3F7; `IDisposable`
 1. Exceptions  
 Använd **try**-**catch** och **finally** där du vet att det finns risk att undantag uppstår och du vet att du kan göra något åt det. Undvik det annars.
 
@@ -372,7 +373,8 @@ Använd **try**-**catch** och **finally** där du vet att det finns risk att und
     * [Throw Often, Catch Rarely](https://helloacm.com/throw-often-catch-rarely/)
     * [C# Exception Handling Best Practices](https://stackify.com/csharp-exception-handling-best-practices/)
     * [Custom exception types](http://enterprisecraftsmanship.com/2016/12/08/custom-exception-types/)
- 
+
+     &#x1F3F7; `Exception` `try` `catch` `finally`
 1. Lägga ihop strängar  
 Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
     1. Sex eller färre strängar: använd "**+**", string interpolation eller **string.Format**.
@@ -408,6 +410,7 @@ Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
     * [String concatenation behind the scenes, part one](https://ericlippert.com/2013/06/17/string-concatenation-behind-the-scenes-part-one/), [part two](https://ericlippert.com/2013/06/24/string-concatenation-behind-the-scenes-part-two/)
     * [Most efficient way to concatenate strings?](http://stackoverflow.com/questions/21078/most-efficient-way-to-concatenate-strings)
 
+    &#x1F3F7; `string.Format` `String interpolation` `string.Concat` `StringBuilder`
 1. Magiska strängar  
 Undvik magiska strängar och tal eftersom det oftast är svårt att förstå dess innebörd. Använd const- och readonly medlemmar där det är möjligt. Ett tips är också att placera ofta använda konstanter i en egen konstantklass.
 
@@ -774,11 +777,49 @@ Sätt typer (klasser, medlemmar, metoder etc) till **private** som standard, om 
 
 1. Använd string.Empty  
 Använd **string.Empty** istället för två "" (citationstecken), för att tilldela en sträng tomt värde eller jämföra strängar. 
-Se vidare i [SA1122: UseStringEmptyForEmptyStrings](http://stylecop.soyuz5.com/SA1122.html)
+
+    &#x274C; UNDVIK:
+    ```csharp
+    var text = "";
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    var text = string.Empty;
+    ```
+    * [SA1122: UseStringEmptyForEmptyStrings](http://stylecop.soyuz5.com/SA1122.html)
 
 1. Använd inte .ToLower()  
 Använd inte **.ToLower()** när du jämför strängar. Det skapas då ytterligare en temporär sträng i bakgrunden. Använd istället **string.Compare** som har inbyggt stöd för skiftkänslighet och kultur.
 
+    &#x274C; UNDVIK:
+    ```csharp
+    var string1 = "Hello world!";
+    var string2 = "Hello Sweden!";
+    
+    if(string1.ToLower() == string2.ToLower())
+    {
+        // The strings match.
+    }
+    else
+    {
+        // The strings do not match.
+    }
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    var string1 = "Hello world!";
+    var string2 = "Hello Sweden!";
+    
+    var compareResult = string.Compare(string1, string2, StringComparison.OrdinalIgnoreCase);
+    if(compareResult == 0)
+    {
+        // The strings match.
+    }
+    else
+    {
+        // The strings do not match.
+    }
+    ```
     * [String.Compare Method](https://msdn.microsoft.com/en-us/library/system.string.compare(v=vs.110).aspx)
     * [How to: Compare Strings (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/cc165449.aspx)
 
