@@ -152,7 +152,13 @@ Sträva efter att ha en tomrad innan det sista retur-uttrycket i metoder, det g�
 ***
 ### Kommentarkonventioner
 
-I möjligaste mån, undvik att skriva kommentarer. Lägg istället energi på att beskriva din intention i namn på metoder,  variabler och dela upp kod på ett förståeligt sätt. Det finns några undantag till rekommendationen:
+1. Undvik kommentarer   
+I möjligaste mån, undvik att skriva kommentarer. Lägg istället energi på att beskriva din intention i namn på metoder,  variabler och dela upp kod på ett förståeligt sätt. 
+
+    * [Comments in Clean Code? Think Documentation](http://www.daedtech.com/comments-clean-code-think-documentation/)
+    * [Don’t document your code. Code your documentation.](https://dev.to/raddikx/dont-document-your-code-code-your-documentation)
+
+    **Undantag till denna rekommendation:**
 1. Märkning av kod som behöver förändras med "TODO".  
 TODO-kommentarer skrivs enligt mönstret:  
     **[//][mellanslag][TODO:][mellanslag][Text som börjar med stor bokstav och slutar med punkt.]** 
@@ -161,6 +167,8 @@ TODO-kommentarer skrivs enligt mönstret:
     ```csharp
     // TODO: En kommentar.
     ```
+    * [SA1005: SingleLineCommentsMustBeginWithSingleSpace](http://stylecop.soyuz5.com/SA1005.html)
+
 1. Beskrivning av skeenden, flöden etc som ligger utanför lösningens kontroll och som inte på ett bra och enkelt sätt kan beskrivas i kod.
 
 1. Vid skapande av API  
@@ -170,10 +178,6 @@ Om du skapar ett ASP.NET Web API är dokumentation en del av lösningen.
     * [Swashbuckle - Swagger for WebApi 5.5.3](https://github.com/domaindrivendev/Swashbuckle)
     * [RESTful Web API Help Documentation using Swagger UI and Swashbuckle](https://www.codeproject.com/Articles/1078249/RESTful-Web-API-Help-Documentation-using-Swagger-U)
 
-Referenser:  
-* [SA1005: SingleLineCommentsMustBeginWithSingleSpace](http://stylecop.soyuz5.com/SA1005.html)
-* [Comments in Clean Code? Think Documentation](http://www.daedtech.com/comments-clean-code-think-documentation/)
-* [Don’t document your code. Code your documentation.](https://dev.to/raddikx/dont-document-your-code-code-your-documentation)
 ***
 ### Språkkonventioner och checklista
 
@@ -253,7 +257,7 @@ Sortera och ta bort **using**-direktiv som inte längre används.
     ```
     * [using Directive (C# Reference)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive)
     
-    &#x1F3F7; `using`
+    &#x1F3F7; `using` `directive`
 
 1. Returnera inte null  
 Returnera instansierade objekt framför null i metoder. Var noga att kontrollera objekt som ändå kan vara null.
@@ -263,8 +267,8 @@ Returnera instansierade objekt framför null i metoder. Var noga att kontrollera
     * [Is it Really Better to 'Return an Empty List Instead of null'? / Part 1](https://www.codeproject.com/Articles/794448/Is-it-Really-Better-to-Return-an-Empty-List-Instea), [Part 2](https://www.codeproject.com/Articles/797453/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 3](https://www.codeproject.com/Articles/820066/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 4](https://www.codeproject.com/Articles/834677/Is-it-Really-Better-to-Return-an-Empty-List-Inst)
 
     &#x1F3F7; `null`
-1. Konsekvent kod  
-Deklarera typer på samma sätt genom hela lösningen. Använd inte både **Int32** och **int** eller **String** och **string**.
+1. Använd alias  
+Deklarera typer på samma sätt genom hela lösningen, dvs använd inbyggda alias. Använd inte både **Int32** och **int** eller **String** och **string**.
     
     &#x274C; UNDVIK:
     ```csharp
@@ -319,7 +323,7 @@ Använd using-block för **IDisposable** objekt.
     ```
     * [using Statement (C# Reference)](https://msdn.microsoft.com/en-us/library/yh598w02.aspx)
 
-    &#x1F3F7; `IDisposable`
+    &#x1F3F7; `IDisposable` `using` 
 1. Exceptions  
 Använd **try**-**catch** och **finally** där du vet att det finns risk att undantag uppstår och du vet att du kan göra något åt det. Undvik det annars.
 
@@ -481,6 +485,7 @@ Undvik magiska strängar och tal eftersom det oftast är svårt att förstå des
     * [Difference Between Const, ReadOnly and Static ReadOnly in C#](http://www.c-sharpcorner.com/UploadFile/c210df/difference-between-const-readonly-and-static-readonly-in-C-Sharp/)
     * [Some ways to tame magical strings in .NET and C#](https://danielwertheim.se/some-ways-to-tame-magical-strings-in-net-and-c/)
 
+    &#x1F3F7; `magic strings` `readonly` `const`
  1. Använd as vid typekonvertering  
 Att använda **as** ger bättre prestanda och kräver mindre kod än **try**/**catch**-metoden. Använd inte **is** och **as** i kombination eftersom det inte behövs.
 
@@ -513,10 +518,10 @@ Att använda **as** ger bättre prestanda och kräver mindre kod än **try**/**c
     * [CA1800: Do not cast unnecessarily](https://msdn.microsoft.com/en-us/library/ms182271.aspx)
     * [Casting and Type Conversions (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ms173105.aspx)
  
+    &#x1F3F7; `as` `is` `Casting` `Type Conversions` 
 1. Undvik boxing/unboxing  
 Ibland är boxing nödvändigt, men du bör undvika det om möjligt eftersom det ger sämre prestanda och ökar minneskraven.  
     _(Typkonvertering är inte boxing eller unboxing, men det kan orsaka det ena eller det andra. En **int** är inte en **Class1**, det vill säga **int** ärver inte eller utökar inte **Class1**. Det betyder att du inte kan konvertera **int** till **Class1**. Typkonvertering orsakar konvertering bara om det är möjligt att göra det. Du kan gå från en **int** till en **double** och vice versa. Men du kan inte gå från en **int** till **Class1**.)_
-
 
     &#x274C; UNDVIK:
     ```csharp
@@ -564,10 +569,10 @@ Ibland är boxing nödvändigt, men du bör undvika det om möjligt eftersom det
     * [Boxing and Unboxing (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx)
     * [Performance (C# and Visual Basic)](https://msdn.microsoft.com/en-us/library/ms173196.aspx)
 
+    &#x1F3F7; `Boxing` `Unboxing` `Performance` 
 1. Undvik out och ref  
 Användning av **out**- eller **ref**-parametrar kräver erfarenhet av pekare, förståelse för hur värdetyper och referenstyper skiljer sig åt samt att man kan hantera metoder med flera returvärden. Dessutom är skillnaden mellan **out** och **ref** inte allmänt förstått. TryParse-metoder är ett undantag till regeln.
     
-
     &#x274C; UNDVIK:
     ```csharp
     public static void PassTheReference(ref string argument)
@@ -598,6 +603,7 @@ Användning av **out**- eller **ref**-parametrar kräver erfarenhet av pekare, f
     * [CA1045: Do not pass types by reference](https://msdn.microsoft.com/en-us/library/ms182146.aspx)
     * [Parameter Design -&gt; Parameter Passing](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx)
 
+    &#x1F3F7; `out` `ref` `Performance` 
 1. Any(), Count() > 0 eller Count > 0?  
 Använd **Any()** för läsbarhetens skull, det är ett sätt att förklara sin intension. Om prestandan är superviktig rekommenderas det ofta att använda **Any()** framför **Count()** (extension metoden) men inte framför **Count** (property). Förklaringen är att **Count** (property) hämtar ett **int**-värde som sparats på heapen.
 
@@ -626,6 +632,7 @@ Använd **Any()** för läsbarhetens skull, det är ett sätt att förklara sin 
     * [List Any vs Count, which one is better for readability?](http://codereview.stackexchange.com/questions/27901/listt-any-vs-count-which-one-is-better-for-readability)
     * [List Any or Count?](http://stackoverflow.com/questions/5741617/listt-any-or-count)
 
+    &#x1F3F7; `Any` `Count` `Enumerable` 
 1. Välj rätt kollektionstyp  
 Försök så långt det går att använda **IEnumerable** eller **IReadOnlyList** framför **IList<>**/**List<>** etc som returvärde från metoder. Är prestanda, storlek eller ordning viktig, undersök närmare vilken kollektionstyp som passar bäst tilländamålet.
 
@@ -706,6 +713,7 @@ Sträva efter att spendera så lite tid som möjligt i en metod och placera den 
     * [Code Blocks and Nested Statements](https://www.devu.com/cs-asp/lesson-25-code-blocks-and-nested-statements/)
     * [Deep nesting of conditional Statements](https://books.google.se/books?id=xYgCAQAAQBAJ&pg=PA899&lpg=PA899&dq=c%23+if+else+nested+bad&source=bl&ots=FOclwKsY1g&sig=BOTlEEZwI7vNKSb5v8YVnHS4svc&hl=sv&sa=X&ved=0ahUKEwjyhN6-8cTRAhWBKCwKHYDnAD0Q6AEIYTAJ#v=onepage&q=c%23%20if%20else%20nested%20bad&f=false)
 
+    &#x1F3F7; `if` `else` `nested` `Arrow Anti Pattern` 
 1. Villkor och return på samma rad  
 Om villkor och return-uttrycket tillsammans kan bli en kort rad och lätt kan läsas, placera dem på samma rad. Anledningen är att man på det sättet kan spara hela tre rader vilket gör att metoden blir mindre.
  
@@ -758,6 +766,7 @@ Använd linq och metodsyntax (lambda) om det är möjligt. Det brukar innebära 
     * [LINQ Tips and Tricks](http://markheath.net/post/linq-tips-and-tricks)
     * [Optimising LINQ](http://mattwarren.org/2016/09/29/Optimising-LINQ/)
 
+    &#x1F3F7; `foreach` `for` `LINQ` `Lambda Expressions` 
 1. Undvik #if-direktiv för miljövariabler  
 Undvik #if-direktiv för att ange miljöer som dev, stage, pre-production och production. Använd istället konfigurationer och transformeringar.
 
@@ -770,11 +779,13 @@ Använd klasser som SecureString för att hålla hemlig information i minnet. An
     * [SecureString Class](https://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx)
     * [System.Security.Cryptography Namespace](https://msdn.microsoft.com/en-us/library/system.security.cryptography(v=vs.110).aspx)
 
+    &#x1F3F7; `SecureString` 
 1. Begränsa tillgängligheten till typer  
 Sätt typer (klasser, medlemmar, metoder etc) till **private** som standard, om de inte ska användas utanför din klass. Sätt typer till **internal** om de ska användas inom samma assembly osv.
 
     * [Access Modifiers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ms173121.aspx)
 
+    &#x1F3F7; `Access Modifiers` `public` `private` 
 1. Använd string.Empty  
 Använd **string.Empty** istället för två "" (citationstecken), för att tilldela en sträng tomt värde eller jämföra strängar. 
 
@@ -788,6 +799,7 @@ Använd **string.Empty** istället för två "" (citationstecken), för att till
     ```
     * [SA1122: UseStringEmptyForEmptyStrings](http://stylecop.soyuz5.com/SA1122.html)
 
+    &#x1F3F7; `string.Empty` 
 1. Använd inte .ToLower()  
 Använd inte **.ToLower()** när du jämför strängar. Det skapas då ytterligare en temporär sträng i bakgrunden. Använd istället **string.Compare** som har inbyggt stöd för skiftkänslighet och kultur.
 
@@ -823,6 +835,7 @@ Använd inte **.ToLower()** när du jämför strängar. Det skapas då ytterliga
     * [String.Compare Method](https://msdn.microsoft.com/en-us/library/system.string.compare(v=vs.110).aspx)
     * [How to: Compare Strings (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/cc165449.aspx)
 
+    &#x1F3F7; `string.Compare` 
 1. Objektinitialiserare  
 Använd objektinitialiserare när nytt objekt initieras vars medlemmar kräver värden.
 
@@ -849,6 +862,7 @@ Använd objektinitialiserare när nytt objekt initieras vars medlemmar kräver v
 
     * [Object and Collection Initializers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384062.aspx)
 
+    &#x1F3F7; `Initializers` 
 1. Instanisera objekt  
 Sträva efter att instanisera objekt framför att konsumera statiska klasser. Anledningen är att man med ett instansiserat objekt kan använda Dependency Injection. DI i sin tur behövs för att kunna skriva bra enhetstester.
 
@@ -874,6 +888,7 @@ Använd "named argument" för metoder där man inte har variabler/enums som man 
     * [Named and Optional Arguments (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/dd264739.aspx)
     * [Boolean parameters and code readability](https://www.codeproject.com/Articles/1182980/Boolean-parameters-and-code-readability)
 
+    &#x1F3F7; `named argument` 
 1. Metoder och många parametrar  
 Antal parametrar i metodsignaturer bör vara runt fyra (4). Om det blir fler, skapa en s.k. "wrapper"-klass istället som används som parameter. Använd konstruktorn i wrapper-klassen framför att objektinitialisera den.
 
@@ -913,6 +928,7 @@ Använd **?.** för att hålla nere antal rader i metoder.
 
     * [Null-conditional Operators (C# and Visual Basic)](https://msdn.microsoft.com/en-us/library/dn986595.aspx?f=255&MSPPError=-2147217396)
 
+    &#x1F3F7; `Null-conditional Operators` 
 1. Komplicerade kod i return-uttryck  
 Undvik att ha komplicerade uttryck i retursatser. Sträva efter att returnera en variabel som tidigare tilldelats. Syftet med det är att lättare kunna debugga/felsöka i framtiden. Genom att göra på det här sättet behöver man inte debugga klart metoden och få värdet först i den anropande metoden. En annan bonus är att man kan använda variabeln för att ytterligare uttrycka vad man har gjort (hämtat/beräknat). Du är helt enkelt snäll mot nästa utvecklare.
 
@@ -975,9 +991,9 @@ Använd **var** när typen är uppenbar eller vetskapen om vilken typ det är in
 
     * [Implicitly Typed Local Variables (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384061.aspx)
 
+    &#x1F3F7; `var` 
 1. Använd "ternary operator"  
 Använd s.k. ternary operator för att minska antal kodrader.
-
 
     &#x274C; UNDVIK:
     ```csharp
@@ -1009,6 +1025,7 @@ Använd s.k. ternary operator för att minska antal kodrader.
 
     * [Ternary operator](https://www.dotnetperls.com/ternary)
 
+    &#x1F3F7; `Ternary operator` `?`
 1. Egenskaper vs metoder  
 Generellt sätt representerar metoder handlingar och egenskaper data. Egenskaper är avsedda att användas som fält, vilket betyder att de inte bör vara beräkningsmässigt komplexa eller skapa sidoeffekter. Använd egenskap när medlemmen är en logisk datamedlem, använd metoder i alla andra fall. Exempel på användningsområde kan vara att sätta ihop för- och efternamn för att bilda en ny egenskap. Man kan också tänka sig att trimma texter eller göra avrundningar, för att att visa i gränssnitt.
 
