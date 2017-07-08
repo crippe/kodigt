@@ -160,8 +160,6 @@ Namnge händelser med verb eller verbfraser. Till exempel: `Click`, `Deleted`, `
     I ReSharper är det definierat på detta sätt som standard:  
     ![ReSharper Naming Style](https://github.com/crippe/kodigt/blob/master/wiki/images/resharper-naming-style.png?raw=true)
 
-
-
 Referenser:
 * [Naming Guidelines](http://www.dofactory.com/reference/csharp-coding-standards)
 * [C# Coding Standards and Naming Conventions](http://www.dofactory.com/reference/csharp-coding-standards)
@@ -252,6 +250,11 @@ Antal parametrar i metodsignaturer bör vara runt fyra (4). Om det blir fler, sk
     * [How many parameters are too many?](http://stackoverflow.com/questions/174968/how-many-parameters-are-too-many)
     * [How many parameters in C# method are acceptable?](http://stackoverflow.com/questions/12431932/how-many-parameters-in-c-sharp-method-are-acceptable)
 
+1. Radbredd  
+Sätt radbredden till maximum om 120 tecken.
+
+    * [Is an 80 Character Code Line Length Still Relevant?](https://blog.falafel.com/is-an-80-character-code-line-length-still-relevant/)
+    * [How to follow the 80 character limit best practice while writing source code?](http://softwareengineering.stackexchange.com/questions/312889/how-to-follow-the-80-character-limit-best-practice-while-writing-source-code)
 
 ***
 ### Kommentarkonventioner
@@ -1066,9 +1069,6 @@ Undvik att ha komplicerade uttryck i retursatser. Sträva efter att returnera en
         return contentResult;
     }
     ```
-
-1. Refaktorera klasser  
-Dela upp klasser när de bryter mot SRP (Single Responsibility Principle). En klass ska ha ett ansvar och syfte.
 
 1. Undvik att förändra parametervärden   
 Undvik att förändra parametrar som skickas in i metoder. Och om det är oundvikligt, använd metodnamn som börjar på Populate, Set etc.
