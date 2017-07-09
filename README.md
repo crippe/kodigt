@@ -61,7 +61,7 @@ Alla medlemmar, parametrar och variabler bör namnges med ord från engelska spr
 1. Domänspråk är undantag till engelska  
 Använd ord, fraser och termer från företagets domän eller vad som är allmänt vedertaget i branschen. Finns det en entitet som heter `Konto` som kommer från ett backofficesystem, behåll det. Döp det inte till `Account`. Det underlättar när ytterligare en kontohanterare implementeras där namngivningen av objekt faktiskt är `Account`. Om det finns en framtagen domänspråksdokumentation i företaget, följ den framför allt annat.
 
-    Gemensamt domänspråk är viktigt i kedjor som: `beslutsfattare/intressent <-> affärsanalytiker <-> produktägare <-> projektledare <-> scrummaster <-> interaktionsdesigner <-> copywriter <-> redaktör <-> kundtjänst <-> ekonomichef <-> kientutvecklare <-> backendutvecklare <-> api-utvecklare`. 
+    Gemensamt domänspråk är viktigt i kedjor som: `beslutsfattare/intressent ↔ affärsanalytiker ↔ produktägare ↔ arkitekt ↔ projektledare ↔ scrummaster ↔ interaktionsdesigner ↔ copywriter ↔ redaktör ↔ kundtjänst ↔ ekonomichef ↔ kientutvecklare ↔ backendutvecklare ↔ api-utvecklare`. 
 
     Det är oundvikligt att begrepp tas bort eller ändrar betydelse i delar av systemkedjan. Då är kommentarer i kod att rekommendera. Beskriv vad det hette tidigare och möjligen lite bakgrund, då blir det enkelt att söka/hitta och förstå koden.
 
@@ -470,6 +470,41 @@ Använd **try**-**catch** och **finally** där du vet att det finns risk att und
         var validationResult = new ValidationResult(ValidationStatus.Valid, user);
  
         return validationResult;
+    }
+    ```
+
+    Om du kastar vidare ett specifikt fångat undantag, kommer man bara att få reda på att felet uppstod i aktuell metod. Det ursprungliga felet kommer gå förlorat. Istället, använd endast `throw` i dessa lägen.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    public void RunDataOperation()
+    {
+        try
+        {
+            Intialize();
+            ConnectDatabase();
+            Execute();
+        }
+        catch (Exception exception)
+        {
+            throw exception;
+        }
+    }
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    public void RunDataOperation()
+    {
+        try
+        {
+            Intialize();
+            ConnectDatabase();
+            Execute();
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
     ```
     * [Best practices for exceptions](https://docs.microsoft.com/en-us/dotnet/articles/standard/exceptions#best-practices-for-exceptions)
