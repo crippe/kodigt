@@ -190,7 +190,7 @@ Använd fyra (4) mellanslag istället för tabb i filer.
     * [SA1027: TabsMustNotBeUsed](http://stylecop.soyuz5.com/SA1027.html)
 
 1. Tomrader mellan element  
-Ha alltid en tomrad mellan element. Det gäller såväl mellan metoder som kodblock. Ett block kan vara ett **if**-uttryck eller **foreach** osv.  
+Ha alltid en tomrad mellan element. Det gäller såväl mellan metoder som kodblock. Ett block kan vara ett `if`-uttryck eller `foreach` osv.  
     
     * [SA1516: ElementsMustBeSeparatedByBlankLine](http://stylecop.soyuz5.com/SA1516.html)
 
@@ -199,13 +199,26 @@ Undvik flera tomrader på rad.
     
     * [SA1507: CodeMustNotContainMultipleBlankLinesInARow](http://stylecop.soyuz5.com/SA1507.html)
  
+1. En deklaration per rad  
+Undvik att deklarera flera variabler på en och samma rad.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    int i = 2, j = 3;
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    int i = 2;
+    int j = 3;
+    ```
+
 1. Regioner  
 Undvik att använda regioner.  
 
     * [SA1124: DoNotUseRegions](http://stylecop.soyuz5.com/SA1124.html)
     * [C# regions is a design smell](http://enterprisecraftsmanship.com/2015/12/08/c-regions-is-a-design-smell/) 
 
-1. Beräkning och kontroll  
+1. Hämtning, beräkning och kontroll  
 Undvik tomrad mellan datahämtning eller beräkningar, och det villkorsuttryck som ska kontrollera resultatet.
 
     &#x274C; UNDVIK:
@@ -356,7 +369,7 @@ Kontrollera om det finns kod som inte kan nås och ta bort den om så skulle var
 Kontrollera och åtgärda varningar som visas när projekten byggs. Tillse att "Enable Code Analysis on Build" är ikryssat på respektive projekt.
 
 1. using direktiv  
-Sortera och ta bort **using**-direktiv som inte längre används.
+Sortera och ta bort `using`-direktiv som inte längre används.
     ```csharp
     using System.Collections.Generic;
     using System.Linq;
@@ -376,7 +389,7 @@ Returnera instansierade objekt framför null i metoder. Var noga att kontrollera
 
     &#x1F3F7; `null`
 1. Använd alias  
-Deklarera typer på samma sätt genom hela lösningen, dvs använd inbyggda alias. Använd inte både **Int32** och **int** eller **String** och **string**.
+Deklarera typer på samma sätt genom hela lösningen, dvs använd inbyggda alias. Använd inte både `Int32` och `int` eller `String` och `string`.
     
     &#x274C; UNDVIK:
     ```csharp
@@ -405,7 +418,7 @@ Deklarera typer på samma sätt genom hela lösningen, dvs använd inbyggda alia
 
     &#x1F3F7; `string` `int` `alias`
 1. Använd using-block  
-Använd using-block för **IDisposable** objekt.
+Använd using-block för `IDisposable` objekt.
 
     &#x274C; UNDVIK:
     ```csharp
@@ -433,11 +446,11 @@ Använd using-block för **IDisposable** objekt.
 
     &#x1F3F7; `IDisposable` `using` 
 1. Exceptions  
-Använd **try**-**catch** och **finally** där du vet att det finns risk att undantag uppstår och du vet att du kan göra något åt det. Undvik det annars.
+Använd `try`-`catch` och `finally` där du vet att det finns risk att undantag uppstår och du vet att du kan göra något åt det. Undvik det annars.
 
-    Ett exception är inte detsamma som ett fel. Om ett exception uppstår har något oväntat hänt. Ta en metod som under normala omständigheter alltid fungerar. Men om minnet tar slut kommer **OutOfMemoryException** att kastas vilket är ett exempel på något oväntat.
+    Ett exception är inte detsamma som ett fel. Om ett exception uppstår har något oväntat hänt. Ta en metod som under normala omständigheter alltid fungerar. Men om minnet tar slut kommer `OutOfMemoryException` att kastas vilket är ett exempel på något oväntat.
 
-    Undvik att använda den generella **Exception**-klassen, skapa istället en egen som ärver från ApplicationException. Avsluta alltid egna klasser med ordet Exception (**public UserNotFoundException: Exception {}**).
+    Undvik att använda den generella `Exception`-klassen, skapa istället en egen som ärver från ApplicationException. Avsluta alltid egna klasser med ordet Exception (`public UserNotFoundException: Exception {}`).
 
     &#x274C; UNDVIK:
     ```csharp
@@ -524,9 +537,9 @@ Använd **try**-**catch** och **finally** där du vet att det finns risk att und
      &#x1F3F7; `Exception` `try` `catch` `finally`
 1. Lägga ihop strängar  
 Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
-    1. Sex eller färre strängar: använd "**+**", string interpolation eller **string.Format**.
-    1. Över sex strängar men där man på förhand vet antal element: använd **string.Concat**.
-    1. Över sex strängar och okänt antal: använd **StringBuilder**.  
+    1. Sex eller färre strängar: använd `+`, string interpolation eller `string.Format`.
+    1. Över sex strängar men där man på förhand vet antal element: använd `string.Concat`.
+    1. Över sex strängar och okänt antal: använd `StringBuilder`.  
 
     &#x2139; EXEMPEL:
     ```csharp
@@ -560,7 +573,7 @@ Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
 
     &#x1F3F7; `string.Format` `String interpolation` `string.Concat` `StringBuilder`
 1. Magiska strängar  
-Undvik magiska strängar och tal eftersom det oftast är svårt att förstå dess innebörd. Använd const- och readonly medlemmar där det är möjligt. Ett tips är också att placera ofta använda konstanter i en egen konstantklass.
+Undvik magiska strängar och tal eftersom det oftast är svårt att förstå dess innebörd. Använd `const`- och `readonly` medlemmar där det är möjligt. Ett tips är också att placera ofta använda konstanter i en egen konstantklass.
 
     &#x274C; UNDVIK:
     ```csharp
@@ -631,7 +644,7 @@ Undvik magiska strängar och tal eftersom det oftast är svårt att förstå des
 
     &#x1F3F7; `magic strings` `readonly` `const`
  1. Använd as vid typekonvertering  
-Att använda **as** ger bättre prestanda och kräver mindre kod än **try**/**catch**-metoden. Använd inte **is** och **as** i kombination eftersom det inte behövs.
+Att använda `as` ger bättre prestanda och kräver mindre kod än `try`/`catch`-metoden. Använd inte `is` och `as` i kombination eftersom det inte behövs.
 
     &#x274C; UNDVIK:
     ```csharp
@@ -665,7 +678,7 @@ Att använda **as** ger bättre prestanda och kräver mindre kod än **try**/**c
     &#x1F3F7; `as` `is` `Casting` `Type Conversions` 
 1. Undvik boxing/unboxing  
 Ibland är boxing nödvändigt, men du bör undvika det om möjligt eftersom det ger sämre prestanda och ökar minneskraven.  
-    _(Typkonvertering är inte boxing eller unboxing, men det kan orsaka det ena eller det andra. En **int** är inte en **Class1**, det vill säga **int** ärver inte eller utökar inte **Class1**. Det betyder att du inte kan konvertera **int** till **Class1**. Typkonvertering orsakar konvertering bara om det är möjligt att göra det. Du kan gå från en **int** till en **double** och vice versa. Men du kan inte gå från en **int** till **Class1**.)_
+    _(Typkonvertering är inte boxing eller unboxing, men det kan orsaka det ena eller det andra. En `int` är inte en `Class1`, det vill säga `int` ärver inte eller utökar inte `Class1`. Det betyder att du inte kan konvertera `int` till `Class1`. Typkonvertering orsakar konvertering bara om det är möjligt att göra det. Du kan gå från en `int` till en `double` och vice versa. Men du kan inte gå från en `int` till `Class1`.)_
 
     &#x274C; UNDVIK:
     ```csharp
@@ -715,7 +728,7 @@ Ibland är boxing nödvändigt, men du bör undvika det om möjligt eftersom det
 
     &#x1F3F7; `Boxing` `Unboxing` `Performance` 
 1. Undvik out och ref  
-Användning av **out**- eller **ref**-parametrar kräver erfarenhet av pekare, förståelse för hur värdetyper och referenstyper skiljer sig åt samt att man kan hantera metoder med flera returvärden. Dessutom är skillnaden mellan **out** och **ref** inte allmänt förstått. TryParse-metoder är ett undantag till regeln.
+Användning av `out`- eller `ref`-parametrar kräver erfarenhet av pekare, förståelse för hur värdetyper och referenstyper skiljer sig åt samt att man kan hantera metoder med flera returvärden. Dessutom är skillnaden mellan `out` och `ref` inte allmänt förstått. TryParse-metoder är ett undantag till regeln.
     
     &#x274C; UNDVIK:
     ```csharp
@@ -749,7 +762,7 @@ Användning av **out**- eller **ref**-parametrar kräver erfarenhet av pekare, f
 
     &#x1F3F7; `out` `ref` `Performance` 
 1. Any(), Count() > 0 eller Count > 0?  
-Använd **Any()** för läsbarhetens skull, det är ett sätt att förklara sin intension. Om prestandan är superviktig rekommenderas det ofta att använda **Any()** framför **Count()** (extension metoden) men inte framför **Count** (property). Förklaringen är att **Count** (property) hämtar ett **int**-värde som sparats på heapen.
+Använd `Any()` för läsbarhetens skull, det är ett sätt att förklara sin intension. Om prestandan är superviktig rekommenderas det ofta att använda `Any()` framför `Count()` (extension metoden) men inte framför `Count` (egenskap). Förklaringen är att `Count` (egenskap) hämtar ett `int`-värde som sparats på heapen.
 
     &#x274C; UNDVIK:
     ```csharp
@@ -778,7 +791,7 @@ Använd **Any()** för läsbarhetens skull, det är ett sätt att förklara sin 
 
     &#x1F3F7; `Any` `Count` `Enumerable` 
 1. Välj rätt kollektionstyp  
-Försök så långt det går att använda **IEnumerable** eller **IReadOnlyList** framför **IList<>**/**List<>** etc som returvärde från metoder. Är prestanda, storlek eller ordning viktig, undersök närmare vilken kollektionstyp som passar bäst tilländamålet.
+Försök så långt det går att använda `IEnumerable` eller `IReadOnlyList` framför `IList<>`/`List<>` etc som returvärde från metoder. Är prestanda, storlek eller ordning viktig, undersök närmare vilken kollektionstyp som passar bäst tilländamålet.
 
     * [Guidelines for Collections](https://msdn.microsoft.com/en-us/library/dn169389%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396)
     * [Selecting a Collection Class](https://msdn.microsoft.com/en-us/library/6tc79sx1(v=vs.110).aspx)
@@ -791,9 +804,9 @@ Försök så långt det går att använda **IEnumerable** eller **IReadOnlyList*
 
 1. Villkor (if-syntax)  
 Sträva efter att spendera så lite tid som möjligt i en metod och placera den mest väntade processen först - det gör att det också blir mer lättläst.
-    1. Undvik **else** genom att returnera värdet i samma ögonblick du vet vad det är.
+    1. Undvik `else` genom att returnera värdet i samma ögonblick du vet vad det är.
     1. Försök undvika negationer i uttryck.
-    1. Undvik nestlad kod med **if**-satser inuti **if**-satser (s.k. Arrow Anti Pattern).  
+    1. Undvik nestlad kod med `if`-satser inuti `if`-satser (s.k. Arrow Anti Pattern).  
 
     &#x274C; UNDVIK:
     ```csharp
@@ -862,7 +875,7 @@ Sträva efter att spendera så lite tid som möjligt i en metod och placera den 
 Om villkor och return-uttrycket tillsammans kan bli en kort rad och lätt kan läsas, placera dem på samma rad. Anledningen är att man på det sättet kan spara hela tre rader vilket gör att metoden blir mindre.
  
 1. Villkor på en rad och retur-uttryck på nästa rad  
-Retur-uttryck som inte är placerade på samma rad som villkor (if), måste inneslutas av måsvingar (**{…}**).
+Retur-uttryck som inte är placerade på samma rad som `if`, måste inneslutas av måsvingar (`{…}`).
 
 1. Linq, foreach eller for?  
 Använd linq och metodsyntax (lambda) om det är möjligt. Det brukar innebära minst kod samtidigt som den också är läsbar. 
@@ -912,26 +925,26 @@ Använd linq och metodsyntax (lambda) om det är möjligt. Det brukar innebära 
 
     &#x1F3F7; `foreach` `for` `LINQ` `Lambda Expressions` 
 1. Undvik #if-direktiv för miljövariabler  
-Undvik #if-direktiv för att ange miljöer som dev, stage, pre-production och production. Använd istället konfigurationer och transformeringar.
+Undvik `#if`-direktiv för att ange miljöer som dev, stage, pre-production och production. Använd istället konfigurationer och transformeringar.
 
     * [#if DEBUG vs. Conditional(“DEBUG”)](http://stackoverflow.com/questions/3788605/if-debug-vs-conditionaldebug)
     * [C# Preprocessor Directives](https://msdn.microsoft.com/en-us/library/ed8yd1ha.aspx)
 
 1. Kryptera känslig information  
-Använd klasser som SecureString för att hålla hemlig information i minnet. Använd beprövad krypteringsalgoritmer för att spara personnummer och annat i databaser, filer etc.
+Använd klasser som `SecureString` för att hålla hemlig information i minnet. Använd beprövad krypteringsalgoritmer för att spara personnummer och annat i databaser, filer etc.
 
     * [SecureString Class](https://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx)
     * [System.Security.Cryptography Namespace](https://msdn.microsoft.com/en-us/library/system.security.cryptography(v=vs.110).aspx)
 
     &#x1F3F7; `SecureString` 
 1. Begränsa tillgängligheten till typer  
-Sätt typer (klasser, medlemmar, metoder etc) till **private** som standard, om de inte ska användas utanför din klass. Sätt typer till **internal** om de ska användas inom samma assembly osv.
+Sätt typer (klasser, medlemmar, metoder etc) till `private` som standard, om de inte ska användas utanför din klass. Sätt typer till `internal` om de ska användas inom samma assembly osv.
 
     * [Access Modifiers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ms173121.aspx)
 
     &#x1F3F7; `Access Modifiers` `public` `private` 
 1. Använd string.Empty  
-Använd **string.Empty** istället för två "" (citationstecken), för att tilldela en sträng tomt värde eller jämföra strängar. 
+Använd `string.Empty` istället för två `""` (citationstecken), för att tilldela en sträng tomt värde eller jämföra strängar. 
 
     &#x274C; UNDVIK:
     ```csharp
@@ -945,7 +958,7 @@ Använd **string.Empty** istället för två "" (citationstecken), för att till
 
     &#x1F3F7; `string.Empty` 
 1. Använd inte .ToLower()  
-Använd inte **.ToLower()** när du jämför strängar. Det skapas då ytterligare en temporär sträng i bakgrunden. Använd istället **string.Compare** som har inbyggt stöd för skiftkänslighet och kultur.
+Använd inte `.ToLower()` när du jämför strängar. Det skapas då ytterligare en temporär sträng i bakgrunden. Använd istället `string.Compare` som har inbyggt stöd för skiftkänslighet och kultur.
 
     &#x274C; UNDVIK:
     ```csharp
@@ -1034,7 +1047,7 @@ Använd "named argument" för metoder där man inte har variabler/enums som man 
 
     &#x1F3F7; `named argument` 
 1. Använd Elvis-operatorn  
-Använd **?.** för att hålla nere antal rader i metoder.
+Använd `?.` för att hålla nere antal rader i metoder.
 
     &#x274C; UNDVIK:
     ```csharp
@@ -1109,7 +1122,7 @@ Undvik att ha komplicerade uttryck i retursatser. Sträva efter att returnera en
 Undvik att förändra parametrar som skickas in i metoder. Och om det är oundvikligt, använd metodnamn som börjar på Populate, Set etc.
 
 1. Använd var  
-Använd **var** när typen är uppenbar eller vetskapen om vilken typ det är inte är viktig. Harmonisera till övriga variabeldeklarationer i aktuell metod (om alla typer är definierade, definiera den nya också). Lägg extra energi på namngivningen av variabeln, eftersom det är den man läser längre ner i koden. Ett annat skäl till att använda **var** är att distraktionen inte blir lika stor vid läsning framför en typ som är deklarerad som exempelvis **Dictionary<string, List<string>>**.
+Använd `var` när typen är uppenbar eller vetskapen om vilken typ det är inte är viktig. Harmonisera till övriga variabeldeklarationer i aktuell metod (om alla typer är definierade, definiera den nya också). Lägg extra energi på namngivningen av variabeln, eftersom det är den man läser längre ner i koden. Ett annat skäl till att använda `var` är att distraktionen inte blir lika stor vid läsning framför en typ som är deklarerad som exempelvis `Dictionary<string, List<string>>`.
 
     &#x274C; UNDVIK:
     ```csharp
@@ -1174,7 +1187,7 @@ Generellt sätt representerar metoder handlingar och egenskaper data. Egenskaper
 1. Undvik backendkod i vyer  
 Undvik att placera backendlogik i vyer (cshtml). Det finns dock två undantag:
     1. Val av CSS-klasser utifrån objekt som kommer från backend.
-    1. **switch**-satser för att välja partials att visa.
+    1. `switch`-satser för att välja partials att visa.
 
 1. Metoder i Razor-vyer  
 Om backendkoden blir lite längre enligt punkt ett ovan, använd functions och helpers för att kapsla in logik och rendering.
