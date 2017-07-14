@@ -1,5 +1,5 @@
-# Checklista för C# utvecklare  🛠  beta 0.6.5
-![https://www.gizmodo.com.au/2016/01/this-woman-was-a-bored-button-pusher-before-jane-jetson-was-even-born/](https://github.com/crippe/kodigt/blob/master/wiki/images/RCA-computer-room-1959.jpg)
+# Checklista för C# utvecklare  🛠  beta 0.6.6
+![RCA computer room 1959](https://github.com/crippe/kodigt/blob/master/wiki/images/RCA-computer-room-1959.jpg)
 ### Innehåll
 * [Introduktion](#introduktion)
 * [Mindset](#mindset)
@@ -265,6 +265,14 @@ Antal parametrar i metodsignaturer bör vara runt fyra (4). Om det blir fler, sk
 
 1. Radbredd  
 Sätt radbredden till maximum om 120 tecken.
+
+    Ju längre kodrader är ju mer distraktion utsätts du för i det ögonblick du ska börja läsa nästa rad. Se exempel nedan.
+
+    Så här tänker ofta utvecklare när de skriver kod  
+    ![Kolumn 80](https://github.com/crippe/kodigt/blob/master/wiki/images/column-80.JPG)
+    
+    Så här brukar människor föredra att läsa text   
+    ![Kolumn 80](https://github.com/crippe/kodigt/blob/master/wiki/images/how-people-read-3.jpg)
 
     * [Is an 80 Character Code Line Length Still Relevant?](https://blog.falafel.com/is-an-80-character-code-line-length-still-relevant/)
     * [How to follow the 80 character limit best practice while writing source code?](http://softwareengineering.stackexchange.com/questions/312889/how-to-follow-the-80-character-limit-best-practice-while-writing-source-code)
