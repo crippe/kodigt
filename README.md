@@ -185,8 +185,48 @@ Sträva efter att ordna medlemmar i en fil enligt StyleCop regel [SA1201: Elemen
     * [SA1402: FileMayOnlyContainASingleClass](http://stylecop.soyuz5.com/SA1402.html)
 
 1. Indrag  
-Använd fyra (4) mellanslag istället för tabb i filer.  
-    
+    * Använd fyra (4) mellanslag istället för tabb i filer. 
+    * Använd inte enstaka mellanslag för att marginaljustera uttryck. Många varierande radstarter i koden gör att helheten blir svårare att läsa. 
+
+    I exemplet nedan används fem olika indrag i det övre exemplet och två i det undre.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    public ResultType ArbitraryMethodName(FirstArgumentType firstParameter, 
+                                          SecondArgumentType secondParameter,
+                                          ThirdArgumentType thirdParameter)
+    {
+        LocalVariableType localVariable = method(firstParameter, 
+                                                 secondParameter
+                                                 defaultIfZero: 100);
+
+        if (localVariable.IsSomething(thirdParameter, 
+                                      SomeConstant)) 
+        {   
+            DoSomethingWith(localVariable); 
+        } 
+
+        return localVariable.GetSomething(); 
+    }
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    public ResultType ArbitraryMethodName(
+        FirstArgumentType firstParameter, 
+        SecondArgumentType secondParameter,
+        ThirdArgumentType thirdParameter)
+    {
+        LocalVariableType localVariable = 
+            method(firstParameter, secondParameter, defaultIfZero: 100);
+
+        if (localVariable.IsSomething(thirdParameter, SomeConstant)) 
+        {   
+            DoSomethingWith(localVariable); 
+        } 
+
+        return localVariable.GetSomething(); 
+    }
+    ```
     * [SA1027: TabsMustNotBeUsed](http://stylecop.soyuz5.com/SA1027.html)
 
 1. Tomrader mellan element  
@@ -244,6 +284,35 @@ Sträva efter att ha en tomrad innan det sista retur-uttrycket i metoder, det g�
     ```csharp
     // Placeholder.
     ```
+
+1. Radbrytningar i metodsignaturer  
+Om raden tenderar att bli längre än praxis kan det vara mer lättläst att dela upp metodsnamnet på en rad och parametrar på nästa. Följ också konvention med indrag. 
+
+    &#x274C; UNDVIK:
+    ```csharp
+    public override IAsyncResult BeginWrite(byte[] buffer, int offset, 
+        int count, AsyncCallback callback, object state)
+    ```
+    &#x274C; UNDVIK:
+    ```csharp
+    public override IAsyncResult BeginWrite(byte[] buffer, int offset, 
+                                            int count, AsyncCallback callback, object state)
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    public override IAsyncResult BeginWrite(
+        byte[] buffer, int offset, int count, AsyncCallback callback, object state)
+    ```
+    &#x2705; ELLER GÖR SÅ HÄR:
+    ```csharp
+    public override IAsyncResult BeginWrite(
+        byte[] buffer, 
+        int offset, 
+        int count, 
+        AsyncCallback callback, 
+        object state)
+    ```
+
 #### Storlekar och antal
 1. Klasser    
 Försök hålla klasser så små som möjligt. Använd "Single Responsibility Principal" för att avgöra storleken. Principen säger att varje objekt ska ett ansvar och att ansvaret bör vara helt inkapslat i klassen.
@@ -268,10 +337,10 @@ Sätt radbredden till maximum om 120 tecken.
 
     Ju längre kodrader är ju mer distraktion utsätts du för i det ögonblick du ska börja läsa nästa rad. Se exempel nedan.
 
-    Så här tänker ofta utvecklare när de skriver kod  
+    Så här tänker ofta utvecklare när de skriver kod (rader kan vara lika långa som skärmen är bredd)  
     ![Kolumn 80](https://github.com/crippe/kodigt/blob/master/wiki/images/column-80.JPG)
     
-    Så här brukar människor föredra att läsa text   
+    Så här brukar människor föredra att läsa text (kortare rader som i böcker)   
     ![Kolumn 80](https://github.com/crippe/kodigt/blob/master/wiki/images/how-people-read-3.jpg)
 
     * [Is an 80 Character Code Line Length Still Relevant?](https://blog.falafel.com/is-an-80-character-code-line-length-still-relevant/)
