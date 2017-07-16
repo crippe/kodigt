@@ -1,4 +1,4 @@
-# Checklista för C# utvecklare  🛠  beta 0.6.6
+# Checklista för C# utvecklare  🛠  beta 0.6.7
 ![RCA computer room 1959](https://github.com/crippe/kodigt/blob/master/wiki/images/RCA-computer-room-1959.jpg)
 ### Innehåll
 * [Introduktion](#introduktion)
@@ -285,6 +285,12 @@ Sträva efter att ha en tomrad innan det sista retur-uttrycket i metoder, det g�
     // Placeholder.
     ```
 
+1. Radbryningar  
+Om inte ett uttryck får rum på en rad och det inte är möjligt att refaktorera för att göra den kortare, följ dessa generella principer:
+    * Bryt efter operatorer.
+    * Bryt efter komma.
+    * Gör alltid indrag efter radbrytning.
+
 1. Radbrytningar i metodsignaturer  
 Om raden tenderar att bli längre än praxis kan det vara mer lättläst att dela upp metodsnamnet på en rad och parametrar på nästa. Följ också konvention med indrag. 
 
@@ -311,6 +317,46 @@ Om raden tenderar att bli längre än praxis kan det vara mer lättläst att del
         int count, 
         AsyncCallback callback, 
         object state)
+    ```
+    * [C# coding style - line length / wrapping lines](https://stackoverflow.com/questions/2151836/c-sharp-coding-style-line-length-wrapping-lines)
+
+1. Radbrytningar i metodanrop  
+Använd ungefär samma principer vid metodanrop som vid metodssignaturer.  
+
+    &#x274C; UNDVIK:
+    ```csharp
+    var compareResult = string.Compare(string1, 
+                                       string2, StringComparison.OrdinalIgnoreCase);
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    var compareResult = string.Compare(
+        string1, string2, StringComparison.OrdinalIgnoreCase);
+    ```
+    &#x2705; ELLER GÖR SÅ HÄR:
+    ```csharp
+    var compareResult = string.Compare(
+        string1, 
+        string2, 
+        StringComparison.OrdinalIgnoreCase);
+    ```
+    &#x2705; ELLER GÖR SÅ HÄR:
+    ```csharp
+    var compareResult = 
+        string.Compare(
+            string1, 
+            string2, 
+            StringComparison.OrdinalIgnoreCase);
+    ```
+
+1. Radbrytningar av ternary operatorn  
+Får uttrycket plats på en rad och är läsbart, behåll det så. I annat fall, dela upp raderna så att de börjar med `?` respektive `:`.
+
+    &#x2139; EXEMPEL:
+    ```csharp
+    int result = condition
+        ? SomeFunction1()
+        : SomeFunction2();
     ```
 
 #### Storlekar och antal
@@ -982,9 +1028,9 @@ Använd linq och metodsyntax (lambda) om det är möjligt. Det brukar innebära 
     private decimal GetTotalOrderSummary(IEnumerable<CustomerInfo> customers)
     {
         var totalOrderSummary = customers
-                                .SelectMany(o => o.Orders)
-                                .SelectMany(r => r.OrderRows)
-                                .Sum(s => s.Amount);
+            .SelectMany(o => o.Orders)
+            .SelectMany(r => r.OrderRows)
+            .Sum(s => s.Amount);
  
         return totalOrderSummary;
     }
@@ -1165,15 +1211,15 @@ Undvik att ha komplicerade uttryck i retursatser. Sträva efter att returnera en
     public IEnumerable<SupportPage> Search(string searchTerm, int startPageId)
     {
         return SearchClient.Instance.Search<SupportPage>(Language.Swedish)
-               .For(searchTerm)
-               .AddWildCardQuery(searchTerm, x => x.Name)
-               .AddWildCardQuery(searchTerm, x => x.Tags)
-               .AddWildCardQuery(searchTerm, x => x.Keywords)
-               .AddWildCardQuery(searchTerm, x => x.SearchText())
-               .CommonFilter(startPageId)
-               .BoostMatching(x => x.Tags.AnyWordBeginsWith(searchTerm), boost: 2)
-               .Track()
-               .GetContentResult();
+            .For(searchTerm)
+            .AddWildCardQuery(searchTerm, x => x.Name)
+            .AddWildCardQuery(searchTerm, x => x.Tags)
+            .AddWildCardQuery(searchTerm, x => x.Keywords)
+            .AddWildCardQuery(searchTerm, x => x.SearchText())
+            .CommonFilter(startPageId)
+            .BoostMatching(x => x.Tags.AnyWordBeginsWith(searchTerm), boost: 2)
+            .Track()
+            .GetContentResult();
     }
     ```
     &#x2705; GÖR SÅ HÄR:
@@ -1181,15 +1227,15 @@ Undvik att ha komplicerade uttryck i retursatser. Sträva efter att returnera en
     public IEnumerable<SupportPage> Search(string searchTerm, int startPageId)
     {
         var contentResult = SearchClient.Instance.Search<SupportPage>(Language.Swedish)
-                            .For(searchTerm)
-                            .AddWildCardQuery(searchTerm, x => x.Name)
-                            .AddWildCardQuery(searchTerm, x => x.Tags)
-                            .AddWildCardQuery(searchTerm, x => x.Keywords)
-                            .AddWildCardQuery(searchTerm, x => x.SearchText())
-                            .CommonFilter(startPageId)
-                            .BoostMatching(x => x.Tags.AnyWordBeginsWith(searchTerm), boost: 2)
-                            .Track()
-                            .GetContentResult();
+            .For(searchTerm)
+            .AddWildCardQuery(searchTerm, x => x.Name)
+            .AddWildCardQuery(searchTerm, x => x.Tags)
+            .AddWildCardQuery(searchTerm, x => x.Keywords)
+            .AddWildCardQuery(searchTerm, x => x.SearchText())
+            .CommonFilter(startPageId)
+            .BoostMatching(x => x.Tags.AnyWordBeginsWith(searchTerm), boost: 2)
+            .Track()
+            .GetContentResult();
  
         return contentResult;
     }
