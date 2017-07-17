@@ -184,50 +184,7 @@ Sträva efter att ordna medlemmar i en fil enligt StyleCop regel [SA1201: Elemen
 
     * [SA1402: FileMayOnlyContainASingleClass](http://stylecop.soyuz5.com/SA1402.html)
 
-1. Indrag  
-    * Använd fyra (4) mellanslag istället för tabb i filer. 
-    * Använd inte enstaka mellanslag för att marginaljustera uttryck. Många varierande radstarter i koden gör att helheten blir svårare att läsa. 
 
-    I exemplet nedan används fem olika indrag i det övre exemplet och två i det undre.
-
-    &#x274C; UNDVIK:
-    ```csharp
-    public ResultType ArbitraryMethodName(FirstArgumentType firstParameter, 
-                                          SecondArgumentType secondParameter,
-                                          ThirdArgumentType thirdParameter)
-    {
-        LocalVariableType localVariable = method(firstParameter, 
-                                                 secondParameter
-                                                 defaultIfZero: 100);
-
-        if (localVariable.IsSomething(thirdParameter, 
-                                      SomeConstant)) 
-        {   
-            DoSomethingWith(localVariable); 
-        } 
-
-        return localVariable.GetSomething(); 
-    }
-    ```
-    &#x2705; GÖR SÅ HÄR:
-    ```csharp
-    public ResultType ArbitraryMethodName(
-        FirstArgumentType firstParameter, 
-        SecondArgumentType secondParameter,
-        ThirdArgumentType thirdParameter)
-    {
-        LocalVariableType localVariable = 
-            method(firstParameter, secondParameter, defaultIfZero: 100);
-
-        if (localVariable.IsSomething(thirdParameter, SomeConstant)) 
-        {   
-            DoSomethingWith(localVariable); 
-        } 
-
-        return localVariable.GetSomething(); 
-    }
-    ```
-    * [SA1027: TabsMustNotBeUsed](http://stylecop.soyuz5.com/SA1027.html)
 
 1. Tomrader mellan element  
 Ha alltid en tomrad mellan element. Det gäller såväl mellan metoder som kodblock. Ett block kan vara ett `if`-uttryck eller `foreach` osv.  
@@ -284,6 +241,51 @@ Sträva efter att ha en tomrad innan det sista retur-uttrycket i metoder, det g�
     ```csharp
     // Placeholder.
     ```
+
+1. Indrag  
+    * Använd fyra (4) mellanslag istället för tabb i filer. 
+    * Använd inte enstaka mellanslag för att marginaljustera uttryck. Många varierande radstarter i koden gör att helheten blir svårare att läsa. 
+
+    I exemplet nedan används fem olika indrag i det övre exemplet och två i det undre.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    public ResultType ArbitraryMethodName(FirstArgumentType firstParameter, 
+                                          SecondArgumentType secondParameter,
+                                          ThirdArgumentType thirdParameter)
+    {
+        LocalVariableType localVariable = method(firstParameter, 
+                                                 secondParameter
+                                                 defaultIfZero: 100);
+
+        if (localVariable.IsSomething(thirdParameter, 
+                                      SomeConstant)) 
+        {   
+            DoSomethingWith(localVariable); 
+        } 
+
+        return localVariable.GetSomething(); 
+    }
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    public ResultType ArbitraryMethodName(
+        FirstArgumentType firstParameter, 
+        SecondArgumentType secondParameter,
+        ThirdArgumentType thirdParameter)
+    {
+        LocalVariableType localVariable = 
+            method(firstParameter, secondParameter, defaultIfZero: 100);
+
+        if (localVariable.IsSomething(thirdParameter, SomeConstant)) 
+        {   
+            DoSomethingWith(localVariable); 
+        } 
+
+        return localVariable.GetSomething(); 
+    }
+    ```
+    * [SA1027: TabsMustNotBeUsed](http://stylecop.soyuz5.com/SA1027.html)
 
 1. Radbryningar  
 Om inte ett uttryck får rum på en rad och det inte är möjligt att refaktorera för att göra den kortare, följ dessa generella principer:
@@ -357,6 +359,64 @@ Får uttrycket plats på en rad och är läsbart, behåll det så. I annat fall,
     int result = condition
         ? SomeFunction1()
         : SomeFunction2();
+    ```
+    Just i detta exempel, när uttrycket är kort, är det bättre att placera allt på en rad.  
+
+    &#x2139; EXEMPEL TVÅ:
+    ```csharp
+    int result = condition ? SomeFunction1() : SomeFunction2();
+    ```
+
+1. Radbrytningar av LINQ med metodsyntax  
+Får uttrycket plats på en rad och är läsbart, behåll det så. I annat fall, dela upp raderna så att de börjar med `.` och extension-metod namnet. Undvik att dela upp lambda-yttryck så långt det går.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    var nameAndOrderIds = customers
+                          .Where(c => c.Country == "Sweden")
+                          .SelectMany(o => o.Orders)
+                          .Where(y => y.OrderDate.Year == 2017)
+                          .Select(oi => new { oi.Customer.Name, oi.OrderID });
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    var nameAndOrderIds = customers
+        .Where(c => c.Country == "Sweden")
+        .SelectMany(o => o.Orders)
+        .Where(y => y.OrderDate.Year == 2017)
+        .Select(oi => new { oi.Customer.Name, oi.OrderID });
+    ```
+
+1. Radbrytningar av LINQ med frågesyntax  
+Får uttrycket plats på en rad och är läsbart, behåll det så. I annat fall, placera `from` på en egen rad.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    var categoryProducts = from category in categories
+                           join p in products on category.ID equals p.CategoryID into prodGroups
+                           orderby category.Name
+                           select new
+                           {
+                               Category = category.Name,
+                               Products = from prodGroup in prodGroups
+                                          orderby prodGroup.Name
+                                          select prodGroup
+                           };
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+        var categoryProducts = 
+            from category in categories
+            join p in products on category.ID equals p.CategoryID into prodGroups
+            orderby category.Name
+            select new
+            {
+                Category = category.Name,
+                Products = 
+                    from prodGroup in prodGroups
+                    orderby prodGroup.Name
+                    select prodGroup
+            };
     ```
 
 #### Storlekar och antal
