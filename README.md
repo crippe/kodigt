@@ -19,11 +19,11 @@ Fördelar med riklinjer:
 
 ***
 ### Innehåll
-* [Introduktion](Konventioner\01-Introduktion.md)
-* [Mindset](Konventioner\02-Mindset.md)
-* [Namnkonventioner](Konventioner\03-Namnkonventioner.md)
-* [Layoutkonventioner](Konventioner\04-Layoutkonventioner.md)
-* [Kommentarkonventioner](Konventioner\05-Kommentarkonventioner.md)
-* [Språkkonventioner och checklista](Konventioner\06-Sprakkonventioner_och_checklista.md)  
-    * [Generellt](Konventioner\06-Sprakkonventioner_och_checklista.md#generellt)  
-    * [ASP.NET MVC](Konventioner\06-Sprakkonventioner_och_checklista.md#aspnet-mvc)
+* [Introduktion](Konventioner/01-Introduktion.md)
+* [Mindset](Konventioner/02-Mindset.md)
+* [Namnkonventioner](Konventioner/03-Namnkonventioner.md)
+* [Layoutkonventioner](Konventioner/04-Layoutkonventioner.md)
+* [Kommentarkonventioner](Konventioner/05-Kommentarkonventioner.md)
+* [Språkkonventioner och checklista](Konventioner/06-Sprakkonventioner_och_checklista.md)  
+    * [Generellt](Konventioner/06-Sprakkonventioner_och_checklista.md#generellt)  
+    * [ASP.NET MVC](Konventioner/06-Sprakkonventioner_och_checklista.md#aspnet-mvc)
