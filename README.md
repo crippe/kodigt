@@ -15,7 +15,8 @@ Fördelar med riklinjer:
 * Konventioner behövs för att öka medvetenheten om att kod i allmänhet läses tio gånger mer än den ändras.
 * Konventioner behövs för att åskådligöra potentiella fallgropar för vissa konstruktioner i C#.
 * Riktlinjer behövs för att göra oss bekanta med konventioner i .NET Framework, t.ex. IDisposable, LINQ-uttryck och Exceptions.
-* Konventioner leder också till att minska gapet mellan erfarna kollegor och juniora utvecklare. Det är också en stor hjälp för nya teammedlemmar.
+* Konventioner leder också till att minska gapet mellan erfarna och juniora utvecklare. Det är också en stor hjälp för nya teammedlemmar.
+* Riktlinjer leder till minskad kostnad då underhåll av applikation går snabbare och är enklare.
 
 ***
 ### Innehåll
