@@ -5,7 +5,7 @@ Sträva efter att ordna medlemmar i en fil enligt StyleCop regel [SA1201: Elemen
     
     | StyleCop                                                                                                                                                                                                                                                                                                                        	| ReSharper 	|
     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------	|
-    | På rotnivån ser det ut så här:<ul><li>Extern Alias Directives</li><li>Using Directives</li><li>Namespaces</li><li>Delegates</li><li>Enums</li><li>Interfaces</li><li>Structs</li><li>Classes</li></ul>  <br>Inuti en class, struct eller interface ordnas det enligt följande:<ul><li>Inuti en class, struct eller interface ordnas det enligt följande:</li><li>Fields</li><li>Constructors</li><li>Finalizers (Destructors)</li><li>Delegates</li><li>Events</li><li>Enums</li><li>Interfaces</li><li>Properties</li><li>Indexers</li><li>Methods</li><li>Structs</li><li>Classes</li></ul>   	| ![File layout - ReSharper - StyleCop](https://github.com/crippe/kodigt/blob/master/wiki/images/file-layout-resharper-stylecop.png?raw=true) 	|
+    | På rotnivån ser det ut så här:<ul><li>Extern Alias Directives</li><li>Using Directives</li><li>Namespaces</li><li>Delegates</li><li>Enums</li><li>Interfaces</li><li>Structs</li><li>Classes</li></ul>  <br>Inuti en class, struct eller interface ordnas det enligt följande:<ul><li>Inuti en class, struct eller interface ordnas det enligt följande:</li><li>Fields</li><li>Constructors</li><li>Finalizers (Destructors)</li><li>Delegates</li><li>Events</li><li>Enums</li><li>Interfaces</li><li>Properties</li><li>Indexers</li><li>Methods</li><li>Structs</li><li>Classes</li></ul>   	| ![File layout - ReSharper - StyleCop](Bilder/file-layout-resharper-stylecop.png?raw=true) 	|
 
     Två saker kan man fokusera på:
     1. Sortera metoder i bokstavsordning och placera alla publika först.
@@ -275,10 +275,10 @@ Sätt radbredden till maximum om 120 tecken.
     Ju längre kodrader är ju mer distraktion utsätts du för i det ögonblick du ska börja läsa nästa rad. Se exempel nedan.
 
     Så här tänker ofta utvecklare när de skriver kod (rader kan vara lika långa som skärmen är bredd)  
-    ![Kolumn 80](https://github.com/crippe/kodigt/blob/master/wiki/images/column-80.JPG)
+    ![Kolumn 80](Bilder/column-80.JPG)
     
     Så här brukar människor föredra att läsa text (kortare rader som i böcker)   
-    ![Kolumn 80](https://github.com/crippe/kodigt/blob/master/wiki/images/how-people-read-3.jpg)
+    ![Kolumn 80](Bilder/how-people-read-3.jpg)
 
     * [Is an 80 Character Code Line Length Still Relevant?](https://blog.falafel.com/is-an-80-character-code-line-length-still-relevant/)
     * [How to follow the 80 character limit best practice while writing source code?](http://softwareengineering.stackexchange.com/questions/312889/how-to-follow-the-80-character-limit-best-practice-while-writing-source-code)

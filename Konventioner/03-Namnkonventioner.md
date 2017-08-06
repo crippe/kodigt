@@ -105,7 +105,7 @@ Namnge händelser med verb eller verbfraser. Till exempel: `Click`, `Deleted`, `
     | Property | Pascal | `BackColor` |  |
 
     I ReSharper är det definierat på detta sätt som standard:  
-    ![ReSharper Naming Style](https://github.com/crippe/kodigt/blob/master/wiki/images/resharper-naming-style.png?raw=true)
+    ![ReSharper Naming Style](Bilder/resharper-naming-style.png?raw=true)
 
 Referenser:
 * [Naming Guidelines](http://www.dofactory.com/reference/csharp-coding-standards)
