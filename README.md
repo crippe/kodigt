@@ -24,7 +24,9 @@ Fördelar med kodpraxis:
 * [Mindset](Konventioner/02-Mindset.md)
 * [Namnkonventioner](Konventioner/03-Namnkonventioner.md)
 * [Layoutkonventioner](Konventioner/04-Layoutkonventioner.md)
-* [Kommentarkonventioner](Konventioner/05-Kommentarkonventioner.md)
+    *  <a href="Konventioner\04-Layoutkonventioner.md#generellt" target="_blank">Generellt</a>
+    *  <a href="Konventioner\04-Layoutkonventioner.md#Storlekar och antal" target="_blank">Storlekar och antal</a>
+* [Kommentarkonventioner](Konventioner/05-Kommentarkonventioner.md)  
 * [Språkkonventioner och checklista](Konventioner/06-Sprakkonventioner_och_checklista.md)  
     * [Generellt](Konventioner/06-Sprakkonventioner_och_checklista.md#generellt)  
     * [ASP.NET MVC](Konventioner/06-Sprakkonventioner_och_checklista.md#aspnet-mvc)
