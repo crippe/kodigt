@@ -236,18 +236,18 @@ Får uttrycket plats på en rad och är läsbart, behåll det så. I annat fall,
     ```
     &#x2705; GÖR SÅ HÄR:
     ```csharp
-        var categoryProducts = 
-            from category in categories
-            join p in products on category.ID equals p.CategoryID into prodGroups
-            orderby category.Name
-            select new
-            {
-                Category = category.Name,
-                Products = 
-                    from prodGroup in prodGroups
-                    orderby prodGroup.Name
-                    select prodGroup
-            };
+    var categoryProducts = 
+        from category in categories
+        join p in products on category.ID equals p.CategoryID into prodGroups
+        orderby category.Name
+        select new
+        {
+            Category = category.Name,
+            Products = 
+                from prodGroup in prodGroups
+                orderby prodGroup.Name
+                select prodGroup
+        };
     ```
 
 #### Storlekar och antal
