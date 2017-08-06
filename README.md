@@ -25,7 +25,7 @@ Fördelar med kodpraxis:
 * [Namnkonventioner](Konventioner/03-Namnkonventioner.md)
 * [Layoutkonventioner](Konventioner/04-Layoutkonventioner.md)
     *  <a href="Konventioner\04-Layoutkonventioner.md#generellt" target="_blank">Generellt</a>
-    *  <a href="Konventioner\04-Layoutkonventioner.md#Storlekar och antal" target="_blank">Storlekar och antal</a>
+    *  <a href="Konventioner\04-Layoutkonventioner.md#storlekar-och-antal" target="_blank">Storlekar och antal</a>
 * [Kommentarkonventioner](Konventioner/05-Kommentarkonventioner.md)  
 * [Språkkonventioner och checklista](Konventioner/06-Sprakkonventioner_och_checklista.md)  
     * [Generellt](Konventioner/06-Sprakkonventioner_och_checklista.md#generellt)  
