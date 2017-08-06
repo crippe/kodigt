@@ -1,5 +1,5 @@
 # Checklista för C# utvecklare  🛠  beta 0.6.7
-
+![RCA computer room 1959](https://github.com/crippe/kodigt/blob/master/wiki/images/RCA-computer-room-1959.jpg)
 ### Vad är det här?
 Ansatsen för det här dokumentet är att ge riktlinjer för kodning i programmeringsspråket C#. Konventionerna utgår från egna erfarenheter, Microsoft-dokumentation, StyleCop-regler samt många andra artiklar kring C#-praxis. Det förekommer punkter som inte har någon särskild motivering. Bakgrunden till dessa val är att det är bättre att bestämma en standard, och vara konsekvent, än att det blir godtyckligt.
 
