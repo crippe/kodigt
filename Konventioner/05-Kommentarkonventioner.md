@@ -3,6 +3,7 @@
 1. Undvik kommentarer   
 I möjligaste mån, undvik att skriva kommentarer. Lägg istället energi på att beskriva din intention i namn på metoder,  variabler och dela upp kod på ett förståeligt sätt. 
 
+    * <a href="https://visualstudiomagazine.com/articles/2013/06/01/roc-rocks.aspx" target="_blank">Why You Shouldn't Comment (or Document) Code</a>
     * [Comments in Clean Code? Think Documentation](http://www.daedtech.com/comments-clean-code-think-documentation/)
     * [Don’t document your code. Code your documentation.](https://dev.to/raddikx/dont-document-your-code-code-your-documentation)
     * [Fighting Evil in Your Code: Comments on Comments](https://www.simple-talk.com/opinion/opinion-pieces/fighting-evil-code-comments-comments/)
