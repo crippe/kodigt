@@ -20,13 +20,13 @@ Fördelar med kodpraxis:
 
 ***
 ### Innehåll
-* [Introduktion](Konventioner/01-Introduktion.md)
-* [Mindset](Konventioner/02-Mindset.md)
-* [Namnkonventioner](Konventioner/03-Namnkonventioner.md)
-* [Layoutkonventioner](Konventioner/04-Layoutkonventioner.md)
+* [01. Introduktion](Konventioner/01-Introduktion.md). 
+* [02. Mindset](Konventioner/02-Mindset.md)
+* [03. Namnkonventioner](Konventioner/03-Namnkonventioner.md)
+* [04. Layoutkonventioner](Konventioner/04-Layoutkonventioner.md)
     *  <a href="Konventioner\04-Layoutkonventioner.md#generellt" target="_blank">Generellt</a>
     *  <a href="Konventioner\04-Layoutkonventioner.md#storlekar-och-antal" target="_blank">Storlekar och antal</a>
-* [Kommentarkonventioner](Konventioner/05-Kommentarkonventioner.md)  
-* [Språkkonventioner och checklista](Konventioner/06-Sprakkonventioner_och_checklista.md)  
+* [05. Kommentarkonventioner](Konventioner/05-Kommentarkonventioner.md)  
+* [06. Språkkonventioner och checklista](Konventioner/06-Sprakkonventioner_och_checklista.md)  
     * [Generellt](Konventioner/06-Sprakkonventioner_och_checklista.md#generellt)  
     * [ASP.NET MVC](Konventioner/06-Sprakkonventioner_och_checklista.md#aspnet-mvc)

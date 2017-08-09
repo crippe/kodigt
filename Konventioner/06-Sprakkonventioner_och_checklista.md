@@ -1,5 +1,5 @@
 ### 06. Spåkkonventioner och checklista
-
+ 
 #### Generellt
 1. Återanvändning av kod  
 Om ett kodblock används på mer än ett ställe, eller kommer att göra det, gör det till generiska metoder. Placera koden i relaterade klasser så andra utvecklare kan börja använda dem.
