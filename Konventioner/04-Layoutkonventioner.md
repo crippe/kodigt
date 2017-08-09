@@ -1,4 +1,6 @@
-﻿#### Generellt  
+﻿### 04. Layoutkonventioner
+
+#### Generellt  
 
 1. Ordning i fil  
 Sträva efter att ordna medlemmar i en fil enligt StyleCop regel [SA1201: ElementsMustAppearInTheCorrectOrder](http://stylecop.soyuz5.com/SA1201.html).  
