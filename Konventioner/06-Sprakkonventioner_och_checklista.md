@@ -1,4 +1,4 @@
-### 06. Spåkkonventioner och checklista
+### 6. Spåkkonventioner och checklista
  
 #### Generellt
 1. Återanvändning av kod  
