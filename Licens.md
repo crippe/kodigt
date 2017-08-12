@@ -104,23 +104,22 @@ c. Den friskrivning från utfästelser och ansvarsbegränsning som anges ovan sk
 ## Avsnitt 6 – Giltighetstid och uppsägning.  
 
 a. Denna Publika Licens gäller under skyddstiden för den Upphovsrätt och/eller Liknande rättigheter som licensieras här. I den händelse Du underlåter att följa denna Publika Licens upphör dock automatiskt dina rättigheter enligt denna Publika Licens.  
-b. Om Din rätt att använda Licensmaterialet har upphört enligt [6(a)](#s6a), återinförs den:  
-
+b. Om Din rätt att använda Licensmaterialet har upphört enligt [6(a)](#s6a), återinförs den:
     1. automatiskt från den dag kränkningen upphörde, förutsatt att den upphörde inom 30 dagar från det att Du upptäckte kränkningen; eller
     2. vid uttryckligt återinförande av Licensgivaren.För undvikande av missförstånd: detta avsnitt [6(b)](#s6b) påverkar inte den rätt Licensgivaren kan ha att beivra Din kränkning av denna Publika Licens.  
 c. För undvikande av missförstånd: Licensgivaren kan också erbjuda Licensmaterialet enligt separata villkor eller sluta distribuera Licensmaterialet när som helst; men att göra så innebär inte att denna Publika Licens upphör att gälla.  
-d.  Avsnitten [1](#s1), [5](#s5), [6](#s6), [7](#s7), och [8](#s8) gäller fortsatt även efter upphörandet av denna Publika Licens.  
+d. Avsnitten [1](#s1), [5](#s5), [6](#s6), [7](#s7), och [8](#s8) gäller fortsatt även efter upphörandet av denna Publika Licens.  
 
 ## Avsnitt 7 – Övriga villkor.
 
-a. Licensgivaren skall inte vara bunden av några ytterligare eller andra villkor som meddelats av Dig, om det inte uttryckligen överenskommits.
+a. Licensgivaren skall inte vara bunden av några ytterligare eller andra villkor som meddelats av Dig, om det inte uttryckligen överenskommits.  
 b. Alla överenskommelser, uppgörelser eller avtal om Licensmaterialet som inte anges här är skilda från och oberoende av villkoren i denna Publika Licens.  
 
 ## Avsnitt 8 – Tolkning.
 
 a. För undvikande av missförstånd: denna Publika Licens förminskar, avgränsar eller begränsar inte, och uppställer heller inte villkor för, någon användning av Licensmaterialet som lagligen kan företas utan tillstånd enligt denna Publika Licens, och ska heller inte tolkas så.  
 b. Om någon bestämmelse i denna Publika Licens bedöms vara omöjlig att verkställa ska den i möjligaste mån automatiskt omvandlas i så liten utrsträckning som möjligt för att göra den verkställbar. Om bestämmelsen inte kan omvandlas ska den avskiljas från denna Publika Licens utan att påverka verkställigheten av de återstående villkoren.  
-c. Inget villkor i denna Publika Licens ska avstås ifrån och ingen underlåtenhet att följa villkoren godkänns om inte Licensgivaren uttryckligen samtycker till det.
+c. Inget villkor i denna Publika Licens ska avstås ifrån och ingen underlåtenhet att följa villkoren godkänns om inte Licensgivaren uttryckligen samtycker till det.  
 d. Ingenting i denna Publika Licens utgör eller får tolkas som en begränsning av eller avstående från några privilegier eller någon immunitet som Licensgivaren eller Du innehar, inklusive de som följer av rättspraxis hos någon domstol eller myndighet.  
 
 _Creative Commons är inte part i sina publika licenser. Trots det kan Creative Commons välja att tillämpa en av sina publika licenser på material som organisationen ger ut och kommer i så fall att ses som "Licensgivaren". Med undantag för det begränsade syftet att visa att materialet delas under en Creative Commons Publik Licens eller på sätt som annars är tillåtet enligt Creative Commons policyer, som finns publicerade på [creativecommons.org/policies](//creativecommons.org/policies), tillåter inte Creative Commons användningen av varumärket "Creative Commons" eller något annat varumärke eller logotyp för Creative Commons utan föregående skriftligt medgivande. Detta gäller bland annat, dock utan begränsning, i samband med varje obehörig modifiering av någon av organisationens publika licenser eller andra överenskommelser, uppgörelser eller avtal om användning av licensierat material. För undvikande av missförstånd: denna punkt utgör inte en del av de publika licenserna._  
