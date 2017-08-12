@@ -22,8 +22,8 @@ m.  **Med Du** avses den fysiska eller juridiska person som utövar Licensrätti
 
 **Avsnitt 2 – Omfattning.**  
 
-a.  **Tillstånd enligt licens**.
-    1.  Med förbehåll för villkoren i denna Publika Licens, beviljar Licenstagaren en global, royalty-fri, icke-vidarelicensierbar, icke-exklusiv och oåterkallelig rätt att nyttja Licensrättigheterna i Licensmaterialet till att:
+a.  **Tillstånd enligt licens**.  
+    1.  Med förbehåll för villkoren i denna Publika Licens, beviljar Licenstagaren en global, royalty-fri, icke-vidarelicensierbar, icke-exklusiv och oåterkallelig rätt att nyttja Licensrättigheterna i Licensmaterialet till att:  
         A.  mångfaldiga och Dela Licensmaterialet, helt eller delvis; och  
         B.  skapa, mångfaldiga och Dela Bearbetningar.  
     2.  <span style="text-decoration: underline;">Undantag och Begränsningar</span>. För att undvika osäkerhet: när Ditt nyttjande av ett verk omfattas av inskränkningar i lagen gäller inte denna Publika Licens, och Du behöver inte tillämpa licensensvillkoren.  
