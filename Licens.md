@@ -74,10 +74,9 @@ a.  **Erkännande**.
         B. ange om Du har ändrat i Licensmaterialet och bevara uppgifter om alla eventuella tidigare ändringar; och  
         C. ange att Licensmaterialet är licensierat under denna Publika Licens och inkludera texten om, eller URI:en eller hyperlänken till, denna Publika Licens.  
     2. Du kan uppfylla villkoren i avsnitt [3(a)(1)](#s3a1) på varje rimligt sätt med tanke på det medium, sätt och sammanhang i vilket Du Delar Licensmaterialet. Till exempel kan det vara rimligt att uppfylla villkoren genom att tillhandahålla en URI eller hyperlänk till en resurs som innehåller den information som krävs.  
-    3.  På begäran av Licensgivaren måste Du, i den mån det är rimligt genomförbart, avlägsna sådan information som krävs enligt avsnitt [3(a)(1)(A)](#s3a1A).  
+    3. På begäran av Licensgivaren måste Du, i den mån det är rimligt genomförbart, avlägsna sådan information som krävs enligt avsnitt [3(a)(1)(A)](#s3a1A).  
     
 b. **DelaPåSammaVillkor**.  
-
     Om Du Delar de Bearbetningar Du har skapat gäller även följande villkor som tillägg till villkoren i avsnitt [3(a)](#s3a).  
 
     1. Den Bearbetningslicens som Du tillämpar måste vara en Creative Commons-licens med samma typ av Grundlicens, i denna version eller senare, eller en BY-SA-kompatibel Licens.  
@@ -87,10 +86,9 @@ b. **DelaPåSammaVillkor**.
 ## Avsnitt 4 – Sui Generis-rättigheter för Databaser.  
 
 När Licensrättigheterna inkluderar Sui Generis-rättigheter för Databaser gäller följande för din användning av Licensmaterialet:  
-
-a. för undvikande av missförstånd: avsnitt [2(a)(1)](#s2a1) ger Dig rätt att extrahera, återanvända, mångfaldiga och Dela hela eller en väsentlig del av innehållet i databasen;  
-b. om Du inkluderar hela eller en väsentlig del av databasinnehållet i en databas där Du har egna Sui generis-rättigheter för databasen, då är den databas som Du har Sui generis-rättigheter till (men inte dess innehåll) att betrakta som en Bearbetning, även vid tillämpning av avsnitt [3(b)](#s3b); och  
-c. Du måste uppfylla villkoren i avsnitt [3(a)](#s3a) om Du Delar hela eller en väsentlig del av innehållet i databasen.  
+    a. för undvikande av missförstånd: avsnitt [2(a)(1)](#s2a1) ger Dig rätt att extrahera, återanvända, mångfaldiga och Dela hela eller en väsentlig del av innehållet i databasen;  
+    b. om Du inkluderar hela eller en väsentlig del av databasinnehållet i en databas där Du har egna Sui generis-rättigheter för databasen, då är den databas som Du har Sui generis-rättigheter till (men inte dess innehåll) att betrakta som en Bearbetning, även vid tillämpning av avsnitt [3(b)](#s3b); och  
+    c. Du måste uppfylla villkoren i avsnitt [3(a)](#s3a) om Du Delar hela eller en väsentlig del av innehållet i databasen.  
 
 För undvikande av missförstånd: detta avsnitt [4](#s4) kompletterar och ersätter inte Dina skyldigheter enligt denna Publika Licens när Licensrättigheterna inkluderar annan Upphovsrätt eller Liknande rättigheter.  
 
