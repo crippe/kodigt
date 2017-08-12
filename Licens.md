@@ -40,7 +40,7 @@ a.  **Tillstånd enligt licens**.
         
     2.  **Undantag och Begränsningar**. För att undvika osäkerhet: när Ditt nyttjande av ett verk omfattas av inskränkningar i lagen gäller inte denna Publika Licens, och Du behöver inte tillämpa licensensvillkoren.  
     
-    3.  **Giltighetstiden**. Giltighetstiden för denna Publika Licens anges i avsnitt [6(a)](#s6a).  
+    3.  **Giltighetstiden**. Giltighetstiden för denna Publika Licens anges i avsnitt 6(a).  
     
     4.  **Medieformer och format; tekniska ändringar tillåts**. Licensgivaren ger Dig rätt att nyttja Licensrättigheterna i alla nu kända och kommande medieformer och format, och att vidta de tekniska anpassningar som krävs för det. Licensgivaren avstår från och/eller samtycker till att inte hävda någon rätt eller behörighet för att förbjuda Dig från att göra de nödvändiga tekniska anpassningar som krävs för att nyttja Licensieringsrättigheterna, däribland de tekniska anpassningar som krävs för att kringgå Tekniska skyddsåtgärder. Såvitt gäller tillämpningen av denna Publika Licens har Bearbetningar aldrig skapats genom anpassningar som är godkända enligt detta avsnitt [2(a)(4)](#s2a4). 
  
