@@ -22,7 +22,7 @@ m.  **Med Du** avses den fysiska eller juridiska person som utövar Licensrätti
 
 ## Avsnitt 2 – Omfattning. 
 
-a.  **Tillstånd enligt licens**.  
+a.  **Tillstånd enligt licens**.
     1.  Med förbehåll för villkoren i denna Publika Licens, beviljar Licenstagaren en global, royalty-fri, icke-vidarelicensierbar, icke-exklusiv och oåterkallelig rätt att nyttja Licensrättigheterna i Licensmaterialet till att:  
         A.  mångfaldiga och Dela Licensmaterialet, helt eller delvis; och  
         B.  skapa, mångfaldiga och Dela Bearbetningar.  
