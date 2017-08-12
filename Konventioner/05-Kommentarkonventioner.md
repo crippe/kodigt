@@ -1,4 +1,4 @@
-### 05. Kommentarkonventioner
+### 5. Kommentarkonventioner
 
 1. Undvik kommentarer   
 I möjligaste mån, undvik att skriva kommentarer. Lägg istället energi på att beskriva din intention i namn på metoder,  variabler och dela upp kod på ett förståeligt sätt. 
