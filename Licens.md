@@ -22,20 +22,23 @@ m.  **Med Du** avses den fysiska eller juridiska person som utövar Licensrätti
 
 **Avsnitt 2 – Omfattning.**   
 
-a.  **Tillstånd enligt licens**.  
-        1.  Med förbehåll för villkoren i denna Publika Licens, beviljar Licenstagaren en global, royalty-fri, icke-vidarelicensierbar, icke-exklusiv och oåterkallelig rätt att nyttja Licensrättigheterna i Licensmaterialet till att:  
+a.  **Tillstånd enligt licens**.
+
+ 1.  Med förbehåll för villkoren i denna Publika Licens, beviljar Licenstagaren en global, royalty-fri, icke-vidarelicensierbar, icke-exklusiv och oåterkallelig rätt att nyttja Licensrättigheterna i Licensmaterialet till att:  
         A.  mångfaldiga och Dela Licensmaterialet, helt eller delvis; och  
         B.  skapa, mångfaldiga och Dela Bearbetningar.  
-        2.  <span style="text-decoration: underline;">Undantag och Begränsningar</span>. För att undvika osäkerhet: när Ditt nyttjande av ett verk omfattas av inskränkningar i lagen gäller inte denna Publika Licens, och Du behöver inte tillämpa licensensvillkoren.  
-        3.  <span style="text-decoration: underline;">Giltighetstiden</span>.   Giltighetstiden för denna Publika Licens anges i avsnitt [6(a)](#s6a).  
-        4.  <span style="text-decoration: underline;">Medieformer och format; tekniska ändringar tillåts</span>. Licensgivaren ger Dig rätt att nyttja Licensrättigheterna i alla nu kända och kommande medieformer och format, och att vidta de tekniska anpassningar som krävs för det. Licensgivaren avstår från och/eller samtycker till att inte hävda någon rätt eller behörighet för att förbjuda Dig från att göra de nödvändiga tekniska anpassningar som krävs för att nyttja Licensieringsrättigheterna, däribland de tekniska anpassningar som krävs för att kringgå Tekniska skyddsåtgärder. Såvitt gäller tillämpningen av denna Publika Licens har Bearbetningar aldrig skapats genom anpassningar som är godkända enligt detta avsnitt [2(a)(4)](#s2a4).  
-        5.  <span style="text-decoration: underline;">Senare nyttjare</span>.
+ 2.  **Undantag och Begränsningar**. För att undvika osäkerhet: när Ditt nyttjande av ett verk omfattas av inskränkningar i lagen gäller inte denna Publika Licens, och Du behöver inte tillämpa licensensvillkoren.  
+ 3.  **Giltighetstiden**.   Giltighetstiden för denna Publika Licens anges i avsnitt [6(a)](#s6a).  
+ 4.  **Medieformer och format; tekniska ändringar tillåts**. Licensgivaren ger Dig rätt att nyttja Licensrättigheterna i alla nu kända och kommande medieformer och format, och att vidta de tekniska anpassningar som krävs för det. Licensgivaren avstår från och/eller samtycker till att inte hävda någon rätt eller behörighet för att förbjuda Dig från att göra de nödvändiga tekniska anpassningar som krävs för att nyttja Licensieringsrättigheterna, däribland de tekniska anpassningar som krävs för att kringgå Tekniska skyddsåtgärder. Såvitt gäller tillämpningen av denna Publika Licens har Bearbetningar aldrig skapats genom anpassningar som är godkända enligt detta avsnitt [2(a)(4)](#s2a4).  
+ 5.  **Senare nyttjare**.
 
-            A.  <span style="text-decoration: underline;">Erbjudande från Licensgivaren - Licensmaterialet</span>. Varje mottagare av Licensmaterialet får automatiskt ett erbjudande från Licensgivaren att nyttja de Licensrättigheterna enligt villkoren i denna Publika Licens.  
-            B.  <span style="text-decoration: underline;">Tilläggserbjudande från Licensgivaren -- Bearbetningar</span>. Varje mottagare av Bearbetningar från Dig får automatiskt ett erbjudande från Licensgivaren att nyttja Licensrättigheterna som hör till Bearbetningen enligt villkoren i Bearbetningslicensen som Du tillämpar.  
-            C.  <span style="text-decoration: underline;">Inga restriktioner för senare nyttjande</span>. Du får inte erbjuda eller införa något ytterligare eller annat villkor eller tillämpa någon Teknisk Skyddsåtgärd för Licensmaterialet om det innebär en begränsning av nyttjandet av Licensrättigheterna för någon mottagare av Licensmaterialet.  
+  A.  **Erbjudande från Licensgivaren - Licensmaterialet**. Varje mottagare av Licensmaterialet får automatiskt ett erbjudande från Licensgivaren att nyttja de Licensrättigheterna enligt villkoren i denna Publika Licens.  
+  
+  B.  **Tilläggserbjudande från Licensgivaren -- Bearbetningar**. Varje mottagare av Bearbetningar från Dig får automatiskt ett erbjudande från Licensgivaren att nyttja Licensrättigheterna som hör till Bearbetningen enligt villkoren i Bearbetningslicensen som Du tillämpar.  
+  
+  C.  **Inga restriktioner för senare nyttjande**. Du får inte erbjuda eller införa något ytterligare eller annat villkor eller tillämpa någon Teknisk Skyddsåtgärd för Licensmaterialet om det innebär en begränsning av nyttjandet av Licensrättigheterna för någon mottagare av Licensmaterialet.  
 
-        6.  <span style="text-decoration: underline;">Inget godkännande</span>. Ingenting i denna Publika Licens utgör eller kan tolkas som tillstånd för att hävda eller antyda att Du eller Din användning av Licensmaterialet hör samman med eller är sponsrad, godkänd, eller beviljad officiell status av Licensgivaren eller andra som har rätt till erkännande enligt avsnitt [3(a)(1)(A)(i)](#s3a1Ai).  
+ 6.  **Inget godkännande**. Ingenting i denna Publika Licens utgör eller kan tolkas som tillstånd för att hävda eller antyda att Du eller Din användning av Licensmaterialet hör samman med eller är sponsrad, godkänd, eller beviljad officiell status av Licensgivaren eller andra som har rätt till erkännande enligt avsnitt [3(a)(1)(A)(i)](#s3a1Ai).  
     
 b.  **Andra rättigheter**.  
 
