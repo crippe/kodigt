@@ -53,9 +53,9 @@ Ditt nyttjande av Licensrättigheterna omfattas uttryckligen av följande villko
 
 a.  **Erkännande**.  
 
-    1.  Om Du Delar Licensmaterialet (inclusive i ändrad form), måste Du:  
+    1.  Om Du Delar Licensmaterialet (inclusive i ändrad form), måste Du:
 
-        A.  behålla följande om det tillhandahålls av Licensgivaren tillsammans med Licensmaterialet:  
+        A.  behålla följande om det tillhandahålls av Licensgivaren tillsammans med Licensmaterialet:
             i.  identifiering av skaparen (-arna) av Licensmaterialet och andra som ska erkännas, på varje rimligt sätt som begärts av Licensgivaren (inbegripet pseudonym om sådan angivits);  
             ii.  ett meddelande om upphovsrätt;  
             iii.  ett meddelande som hänvisar till denna Publika Licens;  
