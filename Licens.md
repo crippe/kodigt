@@ -8,26 +8,40 @@ Genom att nyttja Licensrättigheterna (definierade nedan), accepterar och godkä
 
 a.  **Med Bearbetning** avses material som är föremål för Upphovsrätt eller Liknande Rättigheter som härrör från eller är baserat på Licensmaterialet och där Licensmaterialet har översatts, ändrats, arrangerats, omvandlats, eller på annat sätt modifierats på ett sätt som kräver tillstånd för Upphovsrätt eller Liknande Rättigheter som innehas av Licensgivaren. För tillämpningen av den här Publika Licensen har en Bearbetning alltid skapats när Licensmaterialet är synkroniserat med rörlig bild och utgör ett musikaliskt verk, ett framförande eller en ljudupptagning.  
 b.  **Med Bearbetningslicens** avses den licens Du tillämpar rörande Din Upphovsrätt och och Liknande Rättigheter när du bidrar till en Bearbetning enligt villkoren i denna Publika Licens.  
+
 c.  **Med BY-SA-Kompatibel Licens** avses en licens som har registrerats på [creativecommons.org/compatiblelicenses](//creativecommons.org/compatiblelicenses), godkänd av Creative Commons som huvudsakligen jämförlig med denna Publika Licens.  
+
 d.  **Med Upphovsrätt eller Liknande Rättigheter** avses upphovsrätt och/eller liknande rättigheter närbesläktade med upphovsrätt, vilket utan begränsning inkluderar framförande, utsändning, ljudinspelning och Sui Generis-rättigheter för Databaser, oavsett hur rättigheterna är märkta eller kategoriserade. För tillämpningen av denna Publika Licens är de rättigheter som anges i avsnitt [2(b)(1)-(2)](#s2b) inte Upphovsrätt eller Liknande Rättigheter.  
+
 e.  **Med Tekniska Skyddsåtgärder** avses de åtgärder som inte utan behörighet får kringgås enligt de lagar som uppfyller skyldigheterna enligt artikel 11 i WIPO Copyright Treaty (WIPOs Upphovsrättsfördrag) som antogs den 20 december 1996 och/eller genom liknande internationella överenskommelser.  
+
 f.  **Med Undantag och Begränsningar** avses "fair use", "fair dealing" och/eller varje annan form av undantag från eller inskränkningar i Upphovsrätt eller Liknande rättigheter som gäller för Din användning av Licensmaterialet.  
+
 g.  **Med Grundlicens** avses de licensegenskaper som anges i rubriken till en Creative Commons Publik Licens. Grundlicenser för denna Publika Licens är ”Erkännande” och ”DelaPåSammaVillkor”.  
+
 h.  **Med Licensmaterialet** avses det konstnärliga eller litterära verk, databas, eller annat material som Licensgivaren tillämpat denna Publika Licens för.
+
 i.  **Med Licensrättigheter** avses de rättigheter som Du beviljas enligt villkoren i denna Publika Licens, vilka är begränsade till all Upphovsrätt eller Liknande rättigheter som gäller för Din användning av Licensmaterialet och som Licensgivaren har behörighet att licensiera.  
+
 j.  **Med Licensgivaren** avses den fysiska eller juridiska person som beviljar rättigheter enligt denna Publika Licens.  
+
 k.  **Med Dela** avses att tillhandahålla material till allmänheten på alla sätt och vis som kräver tillstånd enligt Licensrättigheterna, såsom mångfaldigande, offentlig visning, offentligt framförande, distribution, spridning, kommunikation, eller import, och att göra materialet tillgängligt för allmänheten även på de sätt som medlemmar av allmänheten kan få tillgång till material från en plats och vid en tidpunkt som de väljer själva.  
+
 l.  **Med Sui Generis-rättigheter för Databaser** menas rättigheter vid sidan av upphovsrätt som följer av Europaparlamentets och rådets direktiv 96/9/EU av den 11 mars 1996 om rättsligt skydd för databaser, så som det är implementerat och/eller förändrat eller ersatt, liksom andra huvudsakligen likvärdiga rättigheter runtom i världen.  
+
 m.  **Med Du** avses den fysiska eller juridiska person som utövar Licensrättigheterna enligt denna Publika Licens. Din, Ditt eller Dina har motsvarande betydelse. **Dig** har en liknande betydelse.  
 
-## Avsnitt 2 – Omfattning. 
+## Avsnitt 2 – Omfattning.  
 
-a.  **Tillstånd enligt licens**.
+a.  **Tillstånd enligt licens**.  
     1.  Med förbehåll för villkoren i denna Publika Licens, beviljar Licenstagaren en global, royalty-fri, icke-vidarelicensierbar, icke-exklusiv och oåterkallelig rätt att nyttja Licensrättigheterna i Licensmaterialet till att:  
         A.  mångfaldiga och Dela Licensmaterialet, helt eller delvis; och  
         B.  skapa, mångfaldiga och Dela Bearbetningar.  
+        
     2.  **Undantag och Begränsningar**. För att undvika osäkerhet: när Ditt nyttjande av ett verk omfattas av inskränkningar i lagen gäller inte denna Publika Licens, och Du behöver inte tillämpa licensensvillkoren.  
+    
     3.  **Giltighetstiden**.   Giltighetstiden för denna Publika Licens anges i avsnitt [6(a)](#s6a).  
+    
     4.  **Medieformer och format; tekniska ändringar tillåts**. Licensgivaren ger Dig rätt att nyttja Licensrättigheterna i alla nu kända och kommande medieformer och format, och att vidta de tekniska anpassningar som krävs för det. Licensgivaren avstår från och/eller samtycker till att inte hävda någon rätt eller behörighet för att förbjuda Dig från att göra de nödvändiga tekniska anpassningar som krävs för att nyttja Licensieringsrättigheterna, däribland de tekniska anpassningar som krävs för att kringgå Tekniska skyddsåtgärder. Såvitt gäller tillämpningen av denna Publika Licens har Bearbetningar aldrig skapats genom anpassningar som är godkända enligt detta avsnitt [2(a)(4)](#s2a4). 
  
     5.  **Senare nyttjare**.  
