@@ -15,6 +15,6 @@ Här är några generella och drivande principer vid systemutveckling.
 * Refaktorera och rensa upp koden ofta.
  
 Prioritering:
-1. Robusthet: se till att koden inte oväntat slutar fungera.
+1. Robusthet: koden slutar inte oväntat att fungera.
 2. Korrekhet: koden gör vad det förväntas göra.
 3. Prestanda: koden är tillräckligt effektiv.
