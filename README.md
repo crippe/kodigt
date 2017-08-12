@@ -9,7 +9,7 @@ Dokumentet kan fungera som underlag när man vill sätta upp kodpraxis i team. T
 
 ***
 ### Varför kodpraxis?
-Det kanske är så att vissa ser att kodningsriktlinjer begränsar kreativitet och tar för mycket tid i anspråk att följa. Men det är värt ansträngningen. Huvudskälet till att använda en konsekvent uppsättning kodningskonventioner är att standardisera struktur och kodstil för en applikation så att du och andra lätt kan läsa, förstå och underhålla koden.
+Det kanske är så att vissa ser att kodningsriktlinjer begränsar kreativitet och tar för mycket tid i anspråk att följa. Men det är värt ansträngningen. Huvudskälet till att använda en konsekvent uppsättning kodningskonventioner är att standardisera struktur och kodstil så att du och andra lätt kan läsa, förstå och underhålla koden.
 
 Fördelar med kodpraxis:
 * Konventioner behövs för att öka medvetenheten om att kod i allmänhet läses tio gånger mer än den ändras.
