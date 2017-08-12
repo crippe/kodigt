@@ -23,11 +23,11 @@ Fördelar med kodpraxis:
 1. [Introduktion](Konventioner/01-Introduktion.md) 
 1. [Inspiration](Konventioner/02-Inspiration.md)  
 1. <a href="Konventioner\03-Drivande_principer.md" target="_blank">Drivande principer</a>
-1. [Namnkonventioner](Konventioner/03-Namnkonventioner.md)  
-1. [Layoutkonventioner](Konventioner/04-Layoutkonventioner.md)
-    *  <a href="Konventioner\04-Layoutkonventioner.md#generellt" target="_blank">Generellt</a>
-    *  <a href="Konventioner\04-Layoutkonventioner.md#storlekar-och-antal" target="_blank">Storlekar och antal</a>
-1. [Kommentarkonventioner](Konventioner/05-Kommentarkonventioner.md)  
-1. [Språkkonventioner och checklista](Konventioner/06-Sprakkonventioner_och_checklista.md)  
-    * [Generellt](Konventioner/06-Sprakkonventioner_och_checklista.md#generellt)  
-    * [ASP.NET MVC](Konventioner/06-Sprakkonventioner_och_checklista.md#aspnet-mvc)
+1. [Namnkonventioner](Konventioner/04-Namnkonventioner.md)  
+1. [Layoutkonventioner](Konventioner/05-Layoutkonventioner.md)
+    *  <a href="Konventioner\05-Layoutkonventioner.md#generellt" target="_blank">Generellt</a>
+    *  <a href="Konventioner\05-Layoutkonventioner.md#storlekar-och-antal" target="_blank">Storlekar och antal</a>
+1. [Kommentarkonventioner](Konventioner/06-Kommentarkonventioner.md)  
+1. [Språkkonventioner och checklista](Konventioner/07-Sprakkonventioner_och_checklista.md)  
+    * [Generellt](Konventioner/07-Sprakkonventioner_och_checklista.md#generellt)  
+    * [ASP.NET MVC](Konventioner/07-Sprakkonventioner_och_checklista.md#aspnet-mvc)
