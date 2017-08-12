@@ -13,6 +13,9 @@ Här är några generella och drivande principer vid systemutveckling.
 * Skriv minst ett enhetstest innan du åtgärdar fel.
 
 * Refaktorera och rensa upp koden ofta.
+
+* Läsbar kod: skriv så att en utvecklare som ser koden för första gången har lätt att förstå och kan utöka den. Tänk på formatering, storlek, namngivning, ansvarsområden, magiska strängar, upprepningar etcetera.
+
  
 Prioritering:
 1. Robusthet: koden slutar inte oväntat att fungera.

@@ -5,66 +5,11 @@
 Om ett kodblock används på mer än ett ställe, eller kommer att göra det, gör det till generiska metoder. Placera koden i relaterade klasser så andra utvecklare kan börja använda dem.
     * [Designing Code for Reusability](http://msdn.microsoft.com/en-us/library/office/aa140806(v=office.10).aspx)
 
-1. Läsbar kod  
-Skriv så att en utvecklare som börjar i teamet om sex månader förstår. Koden här är exempel på många fel på ett och samma ställe. Exemeplvis namngivning, ansvarsområde för klass, magiska siffror, upprepningar, ska 0 returneras om type är utanför intervall etcetera.  
-
-    &#x274C; UNDVIK:
-    ```csharp
-    public class Class1
-    {
-        public decimal Calculate(decimal amount, int type, int years)
-        {
-            decimal r = 0;
-            decimal disc = (years > 5) ? (decimal)5 / 100 : (decimal)years / 100;
-            if (type == 1)
-            {
-                r = amount;
-            }
-            else if (type == 2)
-            {
-                r = (amount - (0.1m * amount)) - disc * (amount - (0.1m * amount));
-            }
-            else if (type == 3)
-            {
-                r = (0.7m * amount) - disc * (0.7m * amount);
-            }
-            else if (type == 4)
-            {
-                r = (amount - (0.5m * amount)) - disc * (amount - (0.5m * amount));
-            }
-            return r;
-        }
-    }
-    ```
-    &#x2705; EXEMPEL PÅ LÖSNING:
-    ```csharp
-    public class DiscountManager
-    {
-        private readonly IAccountDiscountCalculatorFactory factory;
-        private readonly ILoyaltyDiscountCalculator loyaltyDiscountCalculator;
- 
-        public DiscountManager(IAccountDiscountCalculatorFactory factory, ILoyaltyDiscountCalculator loyaltyDiscountCalculator)
-        {
-           factory = factory;
-           loyaltyDiscountCalculator = loyaltyDiscountCalculator;
-        }
- 
-       public decimal ApplyDiscount(decimal price, AccountStatus accountStatus, int timeOfHavingAccountInYears)
-       {
-           decimal priceAfterDiscount = 0;
-           priceAfterDiscount = factory.GetAccountDiscountCalculator(accountStatus).ApplyDiscount(price);
-           priceAfterDiscount = loyaltyDiscountCalculator.ApplyDiscount(priceAfterDiscount, timeOfHavingAccountInYears);
-    
-          return priceAfterDiscount;
-       }
-    }
-    ```
-
 1. Onårbar kod  
 Kontrollera om det finns kod som inte kan nås och ta bort den om så skulle vara fallet. ReSharper markerar sådan kod som nedtonad grå.
 
 1. Varningar vid byggen  
-Kontrollera och åtgärda varningar som visas när projekten byggs. Tillse att "Enable Code Analysis on Build" är ikryssat på respektive projekt.
+Kontrollera och åtgärda varningar som visas när projekten byggs. Tillse att "Enable Code Analysis on Build" är ikryssat på respektive projekt.  
 
 1. using direktiv  
 Sortera och ta bort `using`-direktiv som inte längre används.
@@ -74,18 +19,15 @@ Sortera och ta bort `using`-direktiv som inte längre används.
     using System.Text;
     using System.Threading.Tasks;
     ```
-    * [using Directive (C# Reference)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive)
+    * [using Directive (C# Reference)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive)  
     
-    &#x1F3F7; `using` `directive`
-
 1. Returnera inte null  
 Returnera instansierade objekt framför null i metoder. Var noga att kontrollera objekt som ändå kan vara null.
     * [How to Avoid Returning Null from a Method](http://www.codinghelmet.com/?path=howto/avoid-returning-null)
     * [Tactical Design Patterns in .NET: Control Flow -&gt; Motivation to Avoid Null Reference](https://app.pluralsight.com/player?course=tactical-design-patterns-dot-net-control-flow&author=zoran-horvat&name=tactical-design-patterns-dot-net-control-flow-m2&clip=0&mode=live)
     * [My takeaways from “Clean Code” -> Don’t Pass Null](https://medium.com/@webprolific/my-takeaways-from-clean-code-a70ca8382884)
-    * [Is it Really Better to 'Return an Empty List Instead of null'? / Part 1](https://www.codeproject.com/Articles/794448/Is-it-Really-Better-to-Return-an-Empty-List-Instea), [Part 2](https://www.codeproject.com/Articles/797453/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 3](https://www.codeproject.com/Articles/820066/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 4](https://www.codeproject.com/Articles/834677/Is-it-Really-Better-to-Return-an-Empty-List-Inst)
-
-    &#x1F3F7; `null`
+    * [Is it Really Better to 'Return an Empty List Instead of null'? / Part 1](https://www.codeproject.com/Articles/794448/Is-it-Really-Better-to-Return-an-Empty-List-Instea), [Part 2](https://www.codeproject.com/Articles/797453/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 3](https://www.codeproject.com/Articles/820066/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 4](https://www.codeproject.com/Articles/834677/Is-it-Really-Better-to-Return-an-Empty-List-Inst)  
+    
 1. Använd alias  
 Deklarera typer på samma sätt genom hela lösningen, dvs använd inbyggda alias. Använd inte både `Int32` och `int` eller `String` och `string`.
     
@@ -112,9 +54,8 @@ Deklarera typer på samma sätt genom hela lösningen, dvs använd inbyggda alia
     }
     ```
     * [SA1121: UseBuiltInTypeAlias](http://stylecop.soyuz5.com/SA1121.html)
-    * [C# - StyleCop - SA1121: UseBuiltInTypeAlias - Readability Rules](https://stackoverflow.com/questions/6000517/c-sharp-stylecop-sa1121-usebuiltintypealias-readability-rules)
+    * [C# - StyleCop - SA1121: UseBuiltInTypeAlias - Readability Rules](https://stackoverflow.com/questions/6000517/c-sharp-stylecop-sa1121-usebuiltintypealias-readability-rules)  
 
-    &#x1F3F7; `string` `int` `alias`
 1. Använd using-block  
 Använd using-block för `IDisposable` objekt.
 
@@ -140,9 +81,8 @@ Använd using-block för `IDisposable` objekt.
         var gdiCharSet = arialFont.GdiCharSet;
     } 
     ```
-    * [using Statement (C# Reference)](https://msdn.microsoft.com/en-us/library/yh598w02.aspx)
-
-    &#x1F3F7; `IDisposable` `using` 
+    * [using Statement (C# Reference)](https://msdn.microsoft.com/en-us/library/yh598w02.aspx)  
+    
 1. Exceptions  
 Använd `try`-`catch` och `finally` där du vet att det finns risk att undantag uppstår och du vet att du kan göra något åt det. Undvik det annars.
 
@@ -230,9 +170,8 @@ Använd `try`-`catch` och `finally` där du vet att det finns risk att undantag 
     * [Handling Errors and Exceptions in C#. Part 3](http://www.engineerspock.com/2016/10/24/handling-error-and-exceptions-part-3/)
     * [Throw Often, Catch Rarely](https://helloacm.com/throw-often-catch-rarely/)
     * [C# Exception Handling Best Practices](https://stackify.com/csharp-exception-handling-best-practices/)
-    * [Custom exception types](http://enterprisecraftsmanship.com/2016/12/08/custom-exception-types/)
+    * [Custom exception types](http://enterprisecraftsmanship.com/2016/12/08/custom-exception-types/)  
 
-     &#x1F3F7; `Exception` `try` `catch` `finally`
 1. Lägga ihop strängar  
 Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
     1. Sex eller färre strängar: använd `+`, string interpolation eller `string.Format`.
@@ -262,14 +201,12 @@ Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
         stringBuilder.Append(product.Name).AppendLine();
     }
     ```    
-
     * [5 ways to concatenate strings with C# .NET](https://dotnetcodr.com/2015/11/27/5-ways-to-concatenate-strings-with-c-net-2/)
     * [Adventures in Benchmarking - Memory Allocations](http://mattwarren.org/2016/02/17/adventures-in-benchmarking-memory-allocations/)
     * [String concatenation behind the scenes, part one](https://ericlippert.com/2013/06/17/string-concatenation-behind-the-scenes-part-one/), [part two](https://ericlippert.com/2013/06/24/string-concatenation-behind-the-scenes-part-two/)
     * [Most efficient way to concatenate strings?](http://stackoverflow.com/questions/21078/most-efficient-way-to-concatenate-strings)
-    * [The Difference Between String and StringBuilder in C#](https://www.codeproject.com/Articles/1194964/The-Difference-Between-String-and-StringBuilder-in)
+    * [The Difference Between String and StringBuilder in C#](https://www.codeproject.com/Articles/1194964/The-Difference-Between-String-and-StringBuilder-in)  
 
-    &#x1F3F7; `string.Format` `String interpolation` `string.Concat` `StringBuilder`
 1. Magiska strängar  
 Undvik magiska strängar och tal eftersom det oftast är svårt att förstå dess innebörd. Använd `const`- och `readonly` medlemmar där det är möjligt. Ett tips är också att placera ofta använda konstanter i en egen konstantklass.
 
@@ -331,16 +268,14 @@ Undvik magiska strängar och tal eftersom det oftast är svårt att förstå des
         return ...
     }
     ```
-
     * [Magic Strings – No More!](https://blog.goyello.com/2014/12/30/magic-strings-no-more/)
     * [Eliminating Magic Strings in ASP.NET MVC](https://daveaglick.com/posts/eliminating-magic-strings)
     * [const (C# Reference)](https://msdn.microsoft.com/en-us/library/e6w8fe1b(v=vs.140).aspx)
     * [readonly (C# Reference)](https://msdn.microsoft.com/en-us/library/acdd6hb7(v=vs.100).aspx)
     * [C# CONSTANTS BEST PRACTICE](http://codebender.denniland.com/c-constants-best-practice/)
     * [Difference Between Const, ReadOnly and Static ReadOnly in C#](http://www.c-sharpcorner.com/UploadFile/c210df/difference-between-const-readonly-and-static-readonly-in-C-Sharp/)
-    * [Some ways to tame magical strings in .NET and C#](https://danielwertheim.se/some-ways-to-tame-magical-strings-in-net-and-c/)
+    * [Some ways to tame magical strings in .NET and C#](https://danielwertheim.se/some-ways-to-tame-magical-strings-in-net-and-c/)  
 
-    &#x1F3F7; `magic strings` `readonly` `const`
  1. Använd as vid typekonvertering  
 Att använda `as` ger bättre prestanda och kräver mindre kod än `try`/`catch`-metoden. Använd inte `is` och `as` i kombination eftersom det inte behövs.
 
@@ -367,13 +302,11 @@ Att använda `as` ger bättre prestanda och kräver mindre kod än `try`/`catch`
         // Incorrect conversion
     }
     ```  
-    
     * [Using as vs casting in C#](http://theburningmonk.com/2010/04/net-tips-using-as-vs-casting-in-csharp/)
     * [Type conversion in C#](http://www.computerprogrammingtutorial.com/2016/03/type-conversion-in-c.html)
     * [CA1800: Do not cast unnecessarily](https://msdn.microsoft.com/en-us/library/ms182271.aspx)
-    * [Casting and Type Conversions (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ms173105.aspx)
+    * [Casting and Type Conversions (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ms173105.aspx)  
  
-    &#x1F3F7; `as` `is` `Casting` `Type Conversions` 
 1. Undvik boxing/unboxing  
 Ibland är boxing nödvändigt, men du bör undvika det om möjligt eftersom det ger sämre prestanda och ökar minneskraven.  
     _(Typkonvertering är inte boxing eller unboxing, men det kan orsaka det ena eller det andra. En `int` är inte en `Class1`, det vill säga `int` ärver inte eller utökar inte `Class1`. Det betyder att du inte kan konvertera `int` till `Class1`. Typkonvertering orsakar konvertering bara om det är möjligt att göra det. Du kan gå från en `int` till en `double` och vice versa. Men du kan inte gå från en `int` till `Class1`.)_
@@ -419,12 +352,10 @@ Ibland är boxing nödvändigt, men du bör undvika det om möjligt eftersom det
         return classA;
     }
     ```
-
     * [Understanding Boxing and Unboxing in C#](http://www.dotnettricks.com/learn/csharp/understanding-boxing-and-unboxing-in-csharp)
     * [Boxing and Unboxing (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx)
-    * [Performance (C# and Visual Basic)](https://msdn.microsoft.com/en-us/library/ms173196.aspx)
+    * [Performance (C# and Visual Basic)](https://msdn.microsoft.com/en-us/library/ms173196.aspx)  
 
-    &#x1F3F7; `Boxing` `Unboxing` `Performance` 
 1. Undvik out och ref  
 Användning av `out`- eller `ref`-parametrar kräver erfarenhet av pekare, förståelse för hur värdetyper och referenstyper skiljer sig åt samt att man kan hantera metoder med flera returvärden. Dessutom är skillnaden mellan `out` och `ref` inte allmänt förstått. TryParse-metoder är ett undantag till regeln.
     
@@ -453,12 +384,10 @@ Användning av `out`- eller `ref`-parametrar kräver erfarenhet av pekare, förs
 
     // newArgumentValue = 12345 ABCDE
     ```
-
     * [CA1021: Avoid out parameters](https://msdn.microsoft.com/en-us/library/ms182131.aspx)
     * [CA1045: Do not pass types by reference](https://msdn.microsoft.com/en-us/library/ms182146.aspx)
-    * [Parameter Design -&gt; Parameter Passing](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx)
+    * [Parameter Design -&gt; Parameter Passing](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx)  
 
-    &#x1F3F7; `out` `ref` `Performance` 
 1. Any(), Count() > 0 eller Count > 0?  
 Använd `Any()` för läsbarhetens skull, det är ett sätt att förklara sin intension. Om prestandan är superviktig rekommenderas det ofta att använda `Any()` framför `Count()` (extension metoden) men inte framför `Count` (egenskap). Förklaringen är att `Count` (egenskap) hämtar ett `int`-värde som sparats på heapen.
 
@@ -478,16 +407,14 @@ Använd `Any()` för läsbarhetens skull, det är ett sätt att förklara sin in
       ...
     }
     ```
-
     * [Enumerable.cs](https://referencesource.microsoft.com/#System.Core/System/Linq/Enumerable.cs,41ef9e39e54d0d0b,references)
     * [Which method performs better: .Any() vs .Count() > 0?](http://stackoverflow.com/questions/305092/which-method-performs-better-any-vs-count-0)
     * [ArrayList Count vs Any](http://stackoverflow.com/questions/23376225/arraylist-count-vs-any)
     * [What's the use of .Any() in a C# List<>?](http://softwareengineering.stackexchange.com/questions/296445/whats-the-use-of-any-in-a-c-list)
     * [Use Any() Instead of Count() To See if an IEnumerable Has Any Objects](http://firebreaksice.com/use-any-instead-of-count-to-see-if-an-ienumerable-has-any-objects/)
     * [List Any vs Count, which one is better for readability?](http://codereview.stackexchange.com/questions/27901/listt-any-vs-count-which-one-is-better-for-readability)
-    * [List Any or Count?](http://stackoverflow.com/questions/5741617/listt-any-or-count)
+    * [List Any or Count?](http://stackoverflow.com/questions/5741617/listt-any-or-count)  
 
-    &#x1F3F7; `Any` `Count` `Enumerable` 
 1. Välj rätt kollektionstyp  
 Försök så långt det går att använda `IEnumerable` eller `IReadOnlyList` framför `IList<>`/`List<>` etc som returvärde från metoder. Är prestanda, storlek eller ordning viktig, undersök närmare vilken kollektionstyp som passar bäst tilländamålet.
 
@@ -498,7 +425,7 @@ Försök så långt det går att använda `IEnumerable` eller `IReadOnlyList` fr
     * [C# Best Practices: Collections and Generics](https://app.pluralsight.com/library/courses/csharp-best-practices-collections-generics/table-of-contents)
     * [Difference Between IEnumerable, ICollection and IList Interface in C#](https://www.codeproject.com/Articles/1070991/Difference-Between-IEnumerable-ICollection-and-ILi)
     * [Best Practices Implementing IEnumerable Interface in C#](http://codinghelmet.com/?path=howto/best-practices-implementing-ienumerable-interface-in-cs)
-    * [IEnumerable vs IReadOnlyList](http://enterprisecraftsmanship.com/2017/05/24/ienumerable-vs-ireadonlylist/)
+    * [IEnumerable vs IReadOnlyList](http://enterprisecraftsmanship.com/2017/05/24/ienumerable-vs-ireadonlylist/)  
 
 1. Villkor (if-syntax)  
 Sträva efter att spendera så lite tid som möjligt i en metod och placera den mest väntade processen först - det gör att det också blir mer lättläst.
@@ -553,7 +480,6 @@ Sträva efter att spendera så lite tid som möjligt i en metod och placera den 
         return true;
     }
     ```
-
     * [Flattening Arrow Code](https://blog.codinghorror.com/flattening-arrow-code/)
     * [Observations on the ‘if’ statement](https://elegantcode.com/2009/08/14/observations-on-the-if-statement/)
     * [Anti-IF Campaign](http://cirillocompany.de/pages/anti-if-campaign)
@@ -566,9 +492,8 @@ Sträva efter att spendera så lite tid som möjligt i en metod och placera den 
     * [Dude, are you still programming using if...then…else?](https://www.codeproject.com/Articles/12508/Dude-are-you-still-programming-using-if-then-else)
     * [How and Why to Avoid Excessive Nesting](https://www.codeproject.com/Articles/626403/How-and-Why-to-Avoid-Excessive-Nesting)
     * [Code Blocks and Nested Statements](https://www.devu.com/cs-asp/lesson-25-code-blocks-and-nested-statements/)
-    * [Deep nesting of conditional Statements](https://books.google.se/books?id=xYgCAQAAQBAJ&pg=PA899&lpg=PA899&dq=c%23+if+else+nested+bad&source=bl&ots=FOclwKsY1g&sig=BOTlEEZwI7vNKSb5v8YVnHS4svc&hl=sv&sa=X&ved=0ahUKEwjyhN6-8cTRAhWBKCwKHYDnAD0Q6AEIYTAJ#v=onepage&q=c%23%20if%20else%20nested%20bad&f=false)
+    * [Deep nesting of conditional Statements](https://books.google.se/books?id=xYgCAQAAQBAJ&pg=PA899&lpg=PA899&dq=c%23+if+else+nested+bad&source=bl&ots=FOclwKsY1g&sig=BOTlEEZwI7vNKSb5v8YVnHS4svc&hl=sv&sa=X&ved=0ahUKEwjyhN6-8cTRAhWBKCwKHYDnAD0Q6AEIYTAJ#v=onepage&q=c%23%20if%20else%20nested%20bad&f=false)  
 
-    &#x1F3F7; `if` `else` `nested` `Arrow Anti Pattern` 
 1. Villkor och return på samma rad  
 Om villkor och return-uttrycket tillsammans kan bli en kort rad och lätt kan läsas, placera dem på samma rad. Anledningen är att man på det sättet kan spara hela tre rader vilket gör att metoden blir mindre.
  
@@ -619,9 +544,8 @@ Använd linq och metodsyntax (lambda) om det är möjligt. Det brukar innebära 
     * [The pitfalls of LINQ deferred execution](https://marcusclasson.com/2014/08/18/the-pitfalls-with-linq-deferred-execution/)
     * [Parallel LINQ (PLINQ)](http://www.csharpstar.com/csharp-parallel-linq/)
     * [LINQ Tips and Tricks](http://markheath.net/post/linq-tips-and-tricks)
-    * [Optimising LINQ](http://mattwarren.org/2016/09/29/Optimising-LINQ/)
+    * [Optimising LINQ](http://mattwarren.org/2016/09/29/Optimising-LINQ/)  
 
-    &#x1F3F7; `foreach` `for` `LINQ` `Lambda Expressions` 
 1. Undvik #if-direktiv för miljövariabler  
 Undvik `#if`-direktiv för att ange miljöer som dev, stage, pre-production och production. Använd istället konfigurationer och transformeringar.
 
@@ -632,15 +556,13 @@ Undvik `#if`-direktiv för att ange miljöer som dev, stage, pre-production och 
 Använd klasser som `SecureString` för att hålla hemlig information i minnet. Använd beprövad krypteringsalgoritmer för att spara personnummer och annat i databaser, filer etc.
 
     * [SecureString Class](https://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx)
-    * [System.Security.Cryptography Namespace](https://msdn.microsoft.com/en-us/library/system.security.cryptography(v=vs.110).aspx)
+    * [System.Security.Cryptography Namespace](https://msdn.microsoft.com/en-us/library/system.security.cryptography(v=vs.110).aspx)  
 
-    &#x1F3F7; `SecureString` 
 1. Begränsa tillgängligheten till typer  
 Sätt typer (klasser, medlemmar, metoder etc) till `private` som standard, om de inte ska användas utanför din klass. Sätt typer till `internal` om de ska användas inom samma assembly osv.
 
-    * [Access Modifiers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ms173121.aspx)
+    * [Access Modifiers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/ms173121.aspx)  
 
-    &#x1F3F7; `Access Modifiers` `public` `private` 
 1. Använd string.Empty  
 Använd `string.Empty` istället för två `""` (citationstecken), för att tilldela en sträng tomt värde eller jämföra strängar. 
 
@@ -652,9 +574,8 @@ Använd `string.Empty` istället för två `""` (citationstecken), för att till
     ```csharp
     var text = string.Empty;
     ```
-    * [SA1122: UseStringEmptyForEmptyStrings](http://stylecop.soyuz5.com/SA1122.html)
+    * [SA1122: UseStringEmptyForEmptyStrings](http://stylecop.soyuz5.com/SA1122.html)  
 
-    &#x1F3F7; `string.Empty` 
 1. Använd inte .ToLower()  
 Använd inte `.ToLower()` när du jämför strängar. Det skapas då ytterligare en temporär sträng i bakgrunden. Använd istället `string.Compare` som har inbyggt stöd för skiftkänslighet och kultur.
 
@@ -688,9 +609,8 @@ Använd inte `.ToLower()` när du jämför strängar. Det skapas då ytterligare
     }
     ```
     * [String.Compare Method](https://msdn.microsoft.com/en-us/library/system.string.compare(v=vs.110).aspx)
-    * [How to: Compare Strings (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/cc165449.aspx)
+    * [How to: Compare Strings (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/cc165449.aspx)  
 
-    &#x1F3F7; `string.Compare` 
 1. Objektinitialiserare  
 Använd objektinitialiserare när nytt objekt initieras vars medlemmar kräver värden.
 
@@ -714,10 +634,8 @@ Använd objektinitialiserare när nytt objekt initieras vars medlemmar kräver v
         Phone = "+46701234567";
     }
     ```
+    * [Object and Collection Initializers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384062.aspx)  
 
-    * [Object and Collection Initializers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384062.aspx)
-
-    &#x1F3F7; `Initializers` 
 1. Instanisera objekt  
 Sträva efter att instanisera objekt framför att konsumera statiska klasser. Anledningen är att man med ett instansiserat objekt kan använda Dependency Injection. DI i sin tur behövs för att kunna skriva bra enhetstester.
 
@@ -738,12 +656,10 @@ Använd "named argument" för metoder där man inte har variabler/enums som man 
         // ...
     }
     ```
-
     * [Specify optional parameter names even though not required?](http://softwareengineering.stackexchange.com/questions/307773/specify-optional-parameter-names-even-though-not-required)
     * [Named and Optional Arguments (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/dd264739.aspx)
-    * [Boolean parameters and code readability](https://www.codeproject.com/Articles/1182980/Boolean-parameters-and-code-readability)
+    * [Boolean parameters and code readability](https://www.codeproject.com/Articles/1182980/Boolean-parameters-and-code-readability)  
 
-    &#x1F3F7; `named argument` 
 1. Använd Elvis-operatorn  
 Använd `?.` för att hålla nere antal rader i metoder.
 
@@ -774,10 +690,8 @@ Använd `?.` för att hålla nere antal rader i metoder.
     if (child != null)
     {...}
     ```
+    * [Null-conditional Operators (C# and Visual Basic)](https://msdn.microsoft.com/en-us/library/dn986595.aspx?f=255&MSPPError=-2147217396)  
 
-    * [Null-conditional Operators (C# and Visual Basic)](https://msdn.microsoft.com/en-us/library/dn986595.aspx?f=255&MSPPError=-2147217396)
-
-    &#x1F3F7; `Null-conditional Operators` 
 1. Komplicerade kod i return-uttryck  
 Undvik att ha komplicerade uttryck i retursatser. Sträva efter att returnera en variabel som tidigare tilldelats. Syftet med det är att lättare kunna debugga/felsöka i framtiden. Genom att göra på det här sättet behöver man inte debugga klart metoden och få värdet först i den anropande metoden. En annan bonus är att man kan använda variabeln för att ytterligare uttrycka vad man har gjort (hämtat/beräknat). Du är helt enkelt snäll mot nästa utvecklare.
 
@@ -830,10 +744,8 @@ Använd `var` när typen är uppenbar eller vetskapen om vilken typ det är inte
     ```csharp
     var nodeListItems = rssNode.SelectNodes("item");
     ```
+    * [Implicitly Typed Local Variables (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384061.aspx)  
 
-    * [Implicitly Typed Local Variables (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384061.aspx)
-
-    &#x1F3F7; `var` 
 1. Använd "ternary operator"  
 Använd s.k. ternary operator för att minska antal kodrader.
 
@@ -864,10 +776,8 @@ Använd s.k. ternary operator för att minska antal kodrader.
     var now = DateTime.UtcNow;
     greeting = now.Hour > eveningLimit ? $"{greeting} {evening}." : $"{greeting} {day}.";
     ```
+    * [Ternary operator](https://www.dotnetperls.com/ternary)  
 
-    * [Ternary operator](https://www.dotnetperls.com/ternary)
-
-    &#x1F3F7; `Ternary operator` `?`
 1. Egenskaper vs metoder  
 Generellt sätt representerar metoder handlingar och egenskaper data. Egenskaper är avsedda att användas som fält, vilket betyder att de inte bör vara beräkningsmässigt komplexa eller skapa sidoeffekter. Använd egenskap när medlemmen är en logisk datamedlem, använd metoder i alla andra fall. Exempel på användningsområde kan vara att sätta ihop för- och efternamn för att bilda en ny egenskap. Man kan också tänka sig att trimma texter eller göra avrundningar, för att att visa i gränssnitt.
 
