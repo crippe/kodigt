@@ -28,6 +28,6 @@ Fördelar med kodpraxis:
     *  <a href="Konventioner\05-Layoutkonventioner.md#generellt" target="_blank">Generellt</a>
     *  <a href="Konventioner\05-Layoutkonventioner.md#storlekar-och-antal" target="_blank">Storlekar och antal</a>
 1. [Kommentarkonventioner](Konventioner/06-Kommentarkonventioner.md)  
-1. [Språkkonventioner och checklista](Konventioner/07-Sprakkonventioner_och_checklista.md)  
-    * [Generellt](Konventioner/07-Sprakkonventioner_och_checklista.md#generellt)  
-    * [ASP.NET MVC](Konventioner/07-Sprakkonventioner_och_checklista.md#aspnet-mvc)
+1. [C#-konventioner och checklista](Konventioner/07-CSharp-konventioner_och_checklista.md)  
+    * [Generellt](Konventioner/07-CSharp-konventioner_och_checklista.md#generellt)  
+    * [ASP.NET MVC](Konventioner/07-CSharp-konventioner_och_checklista.md#aspnet-mvc)
