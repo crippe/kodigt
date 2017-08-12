@@ -1,4 +1,4 @@
-## 2. Mindset
+## 2. Inspiration
 
 * _"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."_  
 -- John F. Woods, 1991-09-25
