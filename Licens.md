@@ -20,7 +20,7 @@ k.  **Med Dela** avses att tillhandahålla material till allmänheten på alla s
 l.  **Med Sui Generis-rättigheter för Databaser** menas rättigheter vid sidan av upphovsrätt som följer av Europaparlamentets och rådets direktiv 96/9/EU av den 11 mars 1996 om rättsligt skydd för databaser, så som det är implementerat och/eller förändrat eller ersatt, liksom andra huvudsakligen likvärdiga rättigheter runtom i världen.  
 m.  **Med Du** avses den fysiska eller juridiska person som utövar Licensrättigheterna enligt denna Publika Licens. Din, Ditt eller Dina har motsvarande betydelse. **Dig** har en liknande betydelse.  
 
-**Avsnitt 2 – Omfattning.**  
+**Avsnitt 2 – Omfattning.**   
 
 a.  **Tillstånd enligt licens**.  
     1.  Med förbehåll för villkoren i denna Publika Licens, beviljar Licenstagaren en global, royalty-fri, icke-vidarelicensierbar, icke-exklusiv och oåterkallelig rätt att nyttja Licensrättigheterna i Licensmaterialet till att:  
