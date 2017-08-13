@@ -20,7 +20,7 @@ Fördelar med kodpraxis:
 
 ***
 ### Licens  
-Du får mer än gärna skapa en egen vesrion av detta dokument (alla inkluderade filer). <a href="Licens.md" target="_blank">Licensen</a> låter dig skapa, anpassa och distribuera den ändrade versionen så länge du refererar till originalversionen här.  Och om du har några bra idéer, rekommendationer eller korrigeringar, posta en kommenar här <a href="https://github.com/crippe/kodigt/issues/new" target="_blank">https://github.com/crippe/kodigt/issues/new</a>. 
+Du får mer än gärna skapa en egen vesrion av detta dokument (alla inkluderade filer). <a href="Licens.md" target="_blank">Licensen</a> låter dig skapa, anpassa och distribuera den ändrade versionen så länge du refererar till originalversionen här.  Och om du har några bra idéer, rekommendationer eller korrigeringar, posta kommentarer här <a href="https://github.com/crippe/kodigt/issues/new" target="_blank">https://github.com/crippe/kodigt/issues/new</a>. 
 
 ***
 ### Innehåll
