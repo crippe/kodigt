@@ -11,7 +11,7 @@ Genom att nyttja Licensrättigheterna (definierade nedan), accepterar och godkä
 
 1. **Med BY-SA-Kompatibel Licens** avses en licens som har registrerats på [creativecommons.org/compatiblelicenses](//creativecommons.org/compatiblelicenses), godkänd av Creative Commons som huvudsakligen jämförlig med denna Publika Licens.  
 
-1. **Med Upphovsrätt eller Liknande Rättigheter** avses upphovsrätt och/eller liknande rättigheter närbesläktade med upphovsrätt, vilket utan begränsning inkluderar framförande, utsändning, ljudinspelning och Sui Generis-rättigheter för Databaser, oavsett hur rättigheterna är märkta eller kategoriserade. För tillämpningen av denna Publika Licens är de rättigheter som anges i avsnitt [2(1)(i)-(a)](#avsnitt-2--omfattning) inte Upphovsrätt eller Liknande Rättigheter.  
+1. **Med Upphovsrätt eller Liknande Rättigheter** avses upphovsrätt och/eller liknande rättigheter närbesläktade med upphovsrätt, vilket utan begränsning inkluderar framförande, utsändning, ljudinspelning och Sui Generis-rättigheter för Databaser, oavsett hur rättigheterna är märkta eller kategoriserade. För tillämpningen av denna Publika Licens är de rättigheter som anges i avsnitt [2(1)(i)-(a)](Licens.md#avsnitt-2--omfattning) inte Upphovsrätt eller Liknande Rättigheter.  
 
 1. **Med Tekniska Skyddsåtgärder** avses de åtgärder som inte utan behörighet får kringgås enligt de lagar som uppfyller skyldigheterna enligt artikel 11 i WIPO Copyright Treaty (WIPOs Upphovsrättsfördrag) som antogs den 20 december 1996 och/eller genom liknande internationella överenskommelser.  
 
