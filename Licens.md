@@ -11,7 +11,7 @@ Genom att nyttja Licensrättigheterna (definierade nedan), accepterar och godkä
 
 1. **Med BY-SA-Kompatibel Licens** avses en licens som har registrerats på [creativecommons.org/compatiblelicenses](//creativecommons.org/compatiblelicenses), godkänd av Creative Commons som huvudsakligen jämförlig med denna Publika Licens.  
 
-1. **Med Upphovsrätt eller Liknande Rättigheter** avses upphovsrätt och/eller liknande rättigheter närbesläktade med upphovsrätt, vilket utan begränsning inkluderar framförande, utsändning, ljudinspelning och Sui Generis-rättigheter för Databaser, oavsett hur rättigheterna är märkta eller kategoriserade. För tillämpningen av denna Publika Licens är de rättigheter som anges i avsnitt [2(1)(i)-(a)](#s2b) inte Upphovsrätt eller Liknande Rättigheter.  
+1. **Med Upphovsrätt eller Liknande Rättigheter** avses upphovsrätt och/eller liknande rättigheter närbesläktade med upphovsrätt, vilket utan begränsning inkluderar framförande, utsändning, ljudinspelning och Sui Generis-rättigheter för Databaser, oavsett hur rättigheterna är märkta eller kategoriserade. För tillämpningen av denna Publika Licens är de rättigheter som anges i avsnitt [2(1)(i)-(a)]() inte Upphovsrätt eller Liknande Rättigheter.  
 
 1. **Med Tekniska Skyddsåtgärder** avses de åtgärder som inte utan behörighet får kringgås enligt de lagar som uppfyller skyldigheterna enligt artikel 11 i WIPO Copyright Treaty (WIPOs Upphovsrättsfördrag) som antogs den 20 december 1996 och/eller genom liknande internationella överenskommelser.  
 
@@ -40,9 +40,9 @@ Genom att nyttja Licensrättigheterna (definierade nedan), accepterar och godkä
         
     1. **Undantag och Begränsningar**. För att undvika osäkerhet: när Ditt nyttjande av ett verk omfattas av inskränkningar i lagen gäller inte denna Publika Licens, och Du behöver inte tillämpa licensensvillkoren.  
     
-    1. **Giltighetstiden**. Giltighetstiden för denna Publika Licens anges i avsnitt 6(1).  
+    1. **Giltighetstiden**. Giltighetstiden för denna Publika Licens anges i avsnitt [6(1)]().  
     
-    1. **Medieformer och format; tekniska ändringar tillåts**. Licensgivaren ger Dig rätt att nyttja Licensrättigheterna i alla nu kända och kommande medieformer och format, och att vidta de tekniska anpassningar som krävs för det. Licensgivaren avstår från och/eller samtycker till att inte hävda någon rätt eller behörighet för att förbjuda Dig från att göra de nödvändiga tekniska anpassningar som krävs för att nyttja Licensieringsrättigheterna, däribland de tekniska anpassningar som krävs för att kringgå Tekniska skyddsåtgärder. Såvitt gäller tillämpningen av denna Publika Licens har Bearbetningar aldrig skapats genom anpassningar som är godkända enligt detta avsnitt [2(1)(iv)](#s2a4). 
+    1. **Medieformer och format; tekniska ändringar tillåts**. Licensgivaren ger Dig rätt att nyttja Licensrättigheterna i alla nu kända och kommande medieformer och format, och att vidta de tekniska anpassningar som krävs för det. Licensgivaren avstår från och/eller samtycker till att inte hävda någon rätt eller behörighet för att förbjuda Dig från att göra de nödvändiga tekniska anpassningar som krävs för att nyttja Licensieringsrättigheterna, däribland de tekniska anpassningar som krävs för att kringgå Tekniska skyddsåtgärder. Såvitt gäller tillämpningen av denna Publika Licens har Bearbetningar aldrig skapats genom anpassningar som är godkända enligt detta avsnitt [2(1)(iv)](). 
  
     1. **Senare nyttjare**.  
          1.  **Erbjudande från Licensgivaren - Licensmaterialet**. Varje mottagare av Licensmaterialet får automatiskt ett erbjudande från Licensgivaren att nyttja de Licensrättigheterna enligt villkoren i denna Publika Licens.
@@ -51,7 +51,7 @@ Genom att nyttja Licensrättigheterna (definierade nedan), accepterar och godkä
   
          1.  **Inga restriktioner för senare nyttjande**. Du får inte erbjuda eller införa något ytterligare eller annat villkor eller tillämpa någon Teknisk Skyddsåtgärd för Licensmaterialet om det innebär en begränsning av nyttjandet av Licensrättigheterna för någon mottagare av Licensmaterialet.
 
-    1. **Inget godkännande**. Ingenting i denna Publika Licens utgör eller kan tolkas som tillstånd för att hävda eller antyda att Du eller Din användning av Licensmaterialet hör samman med eller är sponsrad, godkänd, eller beviljad officiell status av Licensgivaren eller andra som har rätt till erkännande enligt avsnitt [3(1)(i)(a)(a)](#s3a1Ai).  
+    1. **Inget godkännande**. Ingenting i denna Publika Licens utgör eller kan tolkas som tillstånd för att hävda eller antyda att Du eller Din användning av Licensmaterialet hör samman med eller är sponsrad, godkänd, eller beviljad officiell status av Licensgivaren eller andra som har rätt till erkännande enligt avsnitt [3(1)(i)(a)(a)]().  
     
 1. **Andra rättigheter**.  
     1. Ideella rättigheter, såsom rätten till integritet, är inte licensierade under denna Publika Licens. Det gäller även publicitet, integritet, och/eller andra motsvarande personliga rättigheter; I den mån det är möjligt avstår dock Licensgivaren från och/eller samtycker till att inte hävda dylika rättigheter som hen innehar i den begränsade omfattning som krävs för att tillåta Dig att nyttja Licensrättigheterna, men inte i övrigt.  
@@ -72,11 +72,11 @@ Ditt nyttjande av Licensrättigheterna omfattas uttryckligen av följande villko
             1. en URI eller hyperlänk till Licensmaterialet i den mån detta är rimligt genomförbart.   
         1. ange om Du har ändrat i Licensmaterialet och bevara uppgifter om alla eventuella tidigare ändringar; och  
         1. ange att Licensmaterialet är licensierat under denna Publika Licens och inkludera texten om, eller URI:en eller hyperlänken till, denna Publika Licens.  
-    1. Du kan uppfylla villkoren i avsnitt [3(1)(i)](#s3a1) på varje rimligt sätt med tanke på det medium, sätt och sammanhang i vilket Du Delar Licensmaterialet. Till exempel kan det vara rimligt att uppfylla villkoren genom att tillhandahålla en URI eller hyperlänk till en resurs som innehåller den information som krävs.  
-    1. På begäran av Licensgivaren måste Du, i den mån det är rimligt genomförbart, avlägsna sådan information som krävs enligt avsnitt [3(1)(i)(a)](#s3a1A).  
+    1. Du kan uppfylla villkoren i avsnitt [3(1)(i)]() på varje rimligt sätt med tanke på det medium, sätt och sammanhang i vilket Du Delar Licensmaterialet. Till exempel kan det vara rimligt att uppfylla villkoren genom att tillhandahålla en URI eller hyperlänk till en resurs som innehåller den information som krävs.  
+    1. På begäran av Licensgivaren måste Du, i den mån det är rimligt genomförbart, avlägsna sådan information som krävs enligt avsnitt [3(1)(i)(a)]().  
     
 1. **DelaPåSammaVillkor**.  
-    Om Du Delar de Bearbetningar Du har skapat gäller även följande villkor som tillägg till villkoren i avsnitt [3(1)](#s3a).  
+    Om Du Delar de Bearbetningar Du har skapat gäller även följande villkor som tillägg till villkoren i avsnitt [3(1)]().  
 
     1. Den Bearbetningslicens som Du tillämpar måste vara en Creative Commons-licens med samma typ av Grundlicens, i denna version eller senare, eller en BY-SA-kompatibel Licens.  
 
@@ -87,12 +87,12 @@ Ditt nyttjande av Licensrättigheterna omfattas uttryckligen av följande villko
 ## Avsnitt 4 – Sui Generis-rättigheter för Databaser.  
 
 När Licensrättigheterna inkluderar Sui Generis-rättigheter för Databaser gäller följande för din användning av Licensmaterialet:  
-1. för undvikande av missförstånd: avsnitt [2(1)(i)](#s2a1) ger Dig rätt att extrahera, återanvända, mångfaldiga och Dela hela eller en väsentlig del av innehållet i databasen;  
-1. om Du inkluderar hela eller en väsentlig del av databasinnehållet i en databas där Du har egna Sui generis-rättigheter för databasen, då är den databas som Du har Sui generis-rättigheter till (men inte dess innehåll) att betrakta som en Bearbetning, även vid tillämpning av avsnitt [3(2)](#s3b); och  
+1. för undvikande av missförstånd: avsnitt [2(1)(i)]() ger Dig rätt att extrahera, återanvända, mångfaldiga och Dela hela eller en väsentlig del av innehållet i databasen;  
+1. om Du inkluderar hela eller en väsentlig del av databasinnehållet i en databas där Du har egna Sui generis-rättigheter för databasen, då är den databas som Du har Sui generis-rättigheter till (men inte dess innehåll) att betrakta som en Bearbetning, även vid tillämpning av avsnitt [3(2)](); och  
 
-1. Du måste uppfylla villkoren i avsnitt [3(1)](#s3a) om Du Delar hela eller en väsentlig del av innehållet i databasen.  
+1. Du måste uppfylla villkoren i avsnitt [3(1)]() om Du Delar hela eller en väsentlig del av innehållet i databasen.  
 
-För undvikande av missförstånd: detta avsnitt [4](#s4) kompletterar och ersätter inte Dina skyldigheter enligt denna Publika Licens när Licensrättigheterna inkluderar annan Upphovsrätt eller Liknande rättigheter.  
+För undvikande av missförstånd: detta avsnitt [4]() kompletterar och ersätter inte Dina skyldigheter enligt denna Publika Licens när Licensrättigheterna inkluderar annan Upphovsrätt eller Liknande rättigheter.  
 
 ## Avsnitt 5 - Friskrivning från utfästelser och begränsning av ansvar.  
 
@@ -104,11 +104,11 @@ För undvikande av missförstånd: detta avsnitt [4](#s4) kompletterar och ersä
 ## Avsnitt 6 – Giltighetstid och uppsägning.  
 
 1. Denna Publika Licens gäller under skyddstiden för den Upphovsrätt och/eller Liknande rättigheter som licensieras här. I den händelse Du underlåter att följa denna Publika Licens upphör dock automatiskt dina rättigheter enligt denna Publika Licens.  
-1. Om Din rätt att använda Licensmaterialet har upphört enligt [6(1)](#s6a), återinförs den:
+1. Om Din rätt att använda Licensmaterialet har upphört enligt [6(1)](), återinförs den:
     1. automatiskt från den dag kränkningen upphörde, förutsatt att den upphörde inom 30 dagar från det att Du upptäckte kränkningen; eller
-    1. vid uttryckligt återinförande av Licensgivaren.För undvikande av missförstånd: detta avsnitt [6(2)](#s6b) påverkar inte den rätt Licensgivaren kan ha att beivra Din kränkning av denna Publika Licens.  
+    1. vid uttryckligt återinförande av Licensgivaren.För undvikande av missförstånd: detta avsnitt [6(2)]() påverkar inte den rätt Licensgivaren kan ha att beivra Din kränkning av denna Publika Licens.  
 1. För undvikande av missförstånd: Licensgivaren kan också erbjuda Licensmaterialet enligt separata villkor eller sluta distribuera Licensmaterialet när som helst; men att göra så innebär inte att denna Publika Licens upphör att gälla.  
-1. Avsnitten [1](#s1), [5](#s5), [6](#s6), [7](#s7), och [8](#s8) gäller fortsatt även efter upphörandet av denna Publika Licens.  
+1. Avsnitten [1](), [5](), [6](), [7](), och [8]() gäller fortsatt även efter upphörandet av denna Publika Licens.  
 
 ## Avsnitt 7 – Övriga villkor.
 
