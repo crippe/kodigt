@@ -19,5 +19,5 @@ Här är några generella och drivande principer vid systemutveckling.
  
 Prioritering:
 1. Robusthet: koden slutar inte oväntat att fungera.
-2. Korrekhet: koden gör vad det förväntas göra.
+2. Korrekhet: koden gör vad den förväntas göra.
 3. Prestanda: koden är tillräckligt effektiv.
