@@ -18,6 +18,7 @@ Fördelar med kodpraxis:
 * Konventioner leder också till att minska gapet mellan erfarna och juniora utvecklare. Det är också en stor hjälp för nya teammedlemmar.
 * Riktlinjer leder till minskad kostnad då underhåll av applikation går snabbare och är enklare.
 
+***
 ### Licens  
 Du får mer än gärna skapa en egen vesrion av detta dokument (alla inkluderade filer). <a href="Licens.md" target="_blank">Licensen</a> låter dig skapa, anpassa och distribuera den ändrade versionen så länge du refererar till originalversionen här.  Och om du har några bra idéer, rekommendationer eller korrigeringar, posta en kommenar här <a href="https://github.com/crippe/kodigt/issues/new" target="_blank">https://github.com/crippe/kodigt/issues/new</a>. 
 
