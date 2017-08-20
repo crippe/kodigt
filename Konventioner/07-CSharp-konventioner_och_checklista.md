@@ -702,7 +702,7 @@ Använd objektinitialiserare när nytt objekt initieras vars medlemmar kräver v
     * [Object and Collection Initializers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384062.aspx)  
 
 1. Instanisera klasser  
-Sträva efter att instanisera objekt framför att konsumera statiska klasser. Anledningen är att man med ett instansiserat objekt kan använda Dependency Injection. DI i sin tur behövs för att kunna skriva bra enhetstester.
+Sträva efter att instanisera objekt framför att använda egna statiska klasser. Anledningen är att man med ett instansiserat objekt kan använda Dependency Injection. DI i sin tur behövs för att kunna skriva bra enhetstester.
 
     &#x274C; UNDVIK:
     ```csharp
