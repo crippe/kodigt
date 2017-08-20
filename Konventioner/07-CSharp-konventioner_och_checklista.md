@@ -500,6 +500,19 @@ Om villkor och return-uttrycket tillsammans kan bli en kort rad och lätt kan l�
 1. Villkor på en rad och retur-uttryck på nästa rad  
 Retur-uttryck som inte är placerade på samma rad som `if`, måste inneslutas av måsvingar (`{…}`).
 
+    &#x274C; UNDVIK:
+    ```csharp
+    if (!string.IsNullOrEmpty(queryParam))
+        return queryParam.Convert<T>();
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    if (!string.IsNullOrEmpty(queryParam))
+    {
+        return queryParam.Convert<T>();
+    }
+    ```
+    
 1. Linq, foreach eller for?  
 Använd linq och metodsyntax (lambda) om det är möjligt. Det brukar innebära minst kod samtidigt som den också är läsbar. 
 
