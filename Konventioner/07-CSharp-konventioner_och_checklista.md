@@ -473,8 +473,11 @@ Sträva efter att spendera så lite tid som möjligt i en metod och placera den 
         if (!inDiscountMoths) return false;
  
         if (currentOrderAmount <= OrderAmountLimit) return false;
+        
         if (!user.UtilizedDiscountDuringLastwelveMonths) return false;
+        
         if (!user.Credit) return false;
+        
         if (user.LastTwelveMonthOrderSummary < TwelveMonthOrderSummaryLimit) return false;
  
         return true;
