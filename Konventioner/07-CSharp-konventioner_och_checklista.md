@@ -620,6 +620,8 @@ Använd klasser som `SecureString` för att hålla hemlig information i minnet. 
     * [SecureString Class](https://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx)
     * [System.Security.Cryptography Namespace](https://msdn.microsoft.com/en-us/library/system.security.cryptography(v=vs.110).aspx)  
     * <a href="https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016#csharp" target="_blank">How to Safely Store Your Users' Passwords in 2016</a>
+    * <a href="https://stackoverflow.com/questions/2420122/using-securestring" target="_blank">Using SecureString</a>
+    * <a href="https://bryanavery.co.uk/securestring/" target="_blank">SecureString</a>
 
 1. Begränsa tillgängligheten till typer  
 Sätt typer (klasser, medlemmar, metoder etc) till `private` som standard, om de inte ska användas utanför din klass. Sätt typer till `internal` om de ska användas inom samma assembly osv.
