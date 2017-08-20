@@ -583,8 +583,43 @@ Undvik `#if`-direktiv för att ange miljöer som dev, stage, pre-production och 
 1. Kryptera känslig information  
 Använd klasser som `SecureString` för att hålla hemlig information i minnet. Använd beprövad krypteringsalgoritmer för att spara personnummer och annat i databaser, filer etc.
 
+    &#x2139; EXEMPEL:
+    ```csharp
+    var securedPassword = ConvertStringToSecureString(enteredPassword);
+    
+    var passwordInClearText = ConvertSecureStringToString(securedPassword);
+    
+    public static SecureString ConvertStringToSecureString(string data)
+    {
+         var secureString = new SecureString()
+         
+         foreach(var character in data.ToCharArray())
+         {
+             secureString.AppendChar(character);
+         }
+         
+         secureString.MakeReadOnly();
+     
+         return secureString;
+    }
+    
+    public static string ConvertSecureStringToString(SecureString data)
+    {
+         var pointer = IntPtr.Zero;
+         try
+         {
+             pointer = Marshal.SecureStringToGlobalAllocUnicode(data);
+             return Marshal.PtrToStringUni(pointer);
+         }
+         finally
+         {
+             Marshal.ZeroFreeGlobalAllocUnicode(pointer);
+         }
+    }
+    ```
     * [SecureString Class](https://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx)
     * [System.Security.Cryptography Namespace](https://msdn.microsoft.com/en-us/library/system.security.cryptography(v=vs.110).aspx)  
+    * <a href="https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016#csharp" target="_blank">How to Safely Store Your Users' Passwords in 2016</a>
 
 1. Begränsa tillgängligheten till typer  
 Sätt typer (klasser, medlemmar, metoder etc) till `private` som standard, om de inte ska användas utanför din klass. Sätt typer till `internal` om de ska användas inom samma assembly osv.
