@@ -866,9 +866,9 @@ Använd s.k. ternary operator för att minska antal kodrader.
 
     &#x274C; UNDVIK:
     ```csharp
-    var greeting = "Good”;
+    var greeting = "Good";
     const string evening = "evening";
-    const string day = "day”;
+    const string day = "day";
     const int eveningLimit = 17;
             
     var now = DateTime.UtcNow;
@@ -885,7 +885,7 @@ Använd s.k. ternary operator för att minska antal kodrader.
     ```csharp
     var greeting = "Good";
     const string evening = "evening";
-    const string day = "day”;
+    const string day = "day";
     const int eveningLimit = 17;
             
     var now = DateTime.UtcNow;
