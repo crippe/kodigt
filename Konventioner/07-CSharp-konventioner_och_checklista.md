@@ -820,6 +820,25 @@ Undvik att ha komplicerade uttryck i retursatser. Sträva efter att returnera en
 1. Undvik att förändra parametervärden   
 Undvik att förändra parametrar som skickas in i metoder. Och om det är oundvikligt, använd metodnamn som börjar på Populate, Set etc.
 
+    &#x274C; UNDVIK:
+    ```csharp
+    private string RemoveDash(string data)
+    {
+        data = data.Replace("-", string.Empty);
+
+        return data;
+	}
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    private string RemoveDash(string data)
+    {
+        result = data.Replace("-", string.Empty);
+
+        return result;
+    }
+    ```
+
 1. Använd var  
 Använd `var` när typen är uppenbar eller vetskapen om vilken typ det är inte är viktig. Harmonisera till övriga variabeldeklarationer i aktuell metod (om alla typer är definierade, definiera den nya också). Lägg extra energi på namngivningen av variabeln, eftersom det är den man läser längre ner i koden. Ett annat skäl till att använda `var` är att distraktionen inte blir lika stor vid läsning framför en typ som är deklarerad som exempelvis `Dictionary<string, List<string>>`.
 
