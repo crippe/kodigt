@@ -496,6 +496,18 @@ Sträva efter att spendera så lite tid som möjligt i en metod och placera den 
 
 1. Villkor och return på samma rad  
 Om villkor och return-uttrycket tillsammans kan bli en kort rad och lätt kan läsas, placera dem på samma rad. Anledningen är att man på det sättet kan spara hela tre rader vilket gör att metoden blir mindre.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    if (string.IsNullOrEmpty(queryParam))
+    {
+        return string.Empty;
+    }
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    if (string.IsNullOrEmpty(queryParam)) return string.Empty;
+    ```
  
 1. Villkor på en rad och retur-uttryck på nästa rad  
 Retur-uttryck som inte är placerade på samma rad som `if`, måste inneslutas av måsvingar (`{…}`).
