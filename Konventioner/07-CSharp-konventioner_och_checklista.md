@@ -676,7 +676,7 @@ Använd inte `.ToLower()` när du jämför strängar. Det skapas då ytterligare
     * [String.Compare Method](https://msdn.microsoft.com/en-us/library/system.string.compare(v=vs.110).aspx)
     * [How to: Compare Strings (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/cc165449.aspx)  
 
-1. Objektinitialiserare  
+1. Använd objektinitialiserare  
 Använd objektinitialiserare när nytt objekt initieras vars medlemmar kräver värden.
 
     Men använd ännu hellre konstruktorer från klassen som ska konsumera objekttypen. Och om du har en klass med många medlemmar, undersök om de hör ihop eller kan kapslas in i mindre klasser för att uppnå att typen bara har ett ansvarsområde.
