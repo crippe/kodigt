@@ -601,7 +601,7 @@ Använd `string.Empty` istället för två `""` (citationstecken), för att till
     ```
     * [SA1122: UseStringEmptyForEmptyStrings](http://stylecop.soyuz5.com/SA1122.html)  
 
-1. Använd inte .ToLower()  
+1. Använd inte .ToLower() i strängjämförelser  
 Använd inte `.ToLower()` när du jämför strängar. Det skapas då ytterligare en temporär sträng i bakgrunden. Använd istället `string.Compare` som har inbyggt stöd för skiftkänslighet och kultur.
 
     &#x274C; UNDVIK:
