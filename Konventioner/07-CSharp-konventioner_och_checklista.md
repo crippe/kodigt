@@ -719,7 +719,7 @@ Sträva efter att instanisera objekt framför att använda egna statiska klasser
     ```
 
 1. Statiska klasser  
-Har du befintliga statisk klass, där `static` inte kan tas bort enkelt? Var uppmäksam på följande:  
+Har du en befintlig statisk klass, där `static` inte kan tas bort enkelt? Var uppmäksam på följande:  
     1. Tillse att klassen inte håller något tillstånd.
     1. Tillse att den inte är märkt som `abstract`, inte ärver från en annan klass eller implemnterar ett `interface`.
     
