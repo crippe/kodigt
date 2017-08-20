@@ -822,29 +822,38 @@ Undvik att förändra parametrar som skickas in i metoder. Och om det är oundvi
 
     &#x274C; UNDVIK:
     ```csharp
-    private string RemoveDash(string data)
-    {
-        data = data.Replace("-", string.Empty);
+    var person = new Person(){PhoneNumber = "070-1234567"};
 
-        return data;
+    var phoneNumberToDisplay = GetPersonPhoneNumberWithoutDash(person);
+    
+    private string GetPersonPhoneNumberWithoutDash(Person person)
+    {
+        person.PhoneNumber = person.PhoneNumber.Replace("-", string.Empty);
+
+        return person.PhoneNumber;
 	}
     ```
     &#x2705; GÖR SÅ HÄR:
     ```csharp
-    private string RemoveDash(string data)
+    var person = new Person(){PhoneNumber = "070-1234567"};
+
+    var phoneNumberToDisplay = GetPersonPhoneNumberWithoutDash(person);
+    
+    private string GetPersonPhoneNumberWithoutDash(Person person)
     {
-        result = data.Replace("-", string.Empty);
+        var result = person.PhoneNumber.Replace("-", string.Empty);
 
         return result;
-    }
+	}
     ```
+    * <a href="https://stackoverflow.com/questions/14069682/change-value-of-parameter-inside-method-is-this-an-anti-pattern" target="_blank">Change value of parameter inside method, is this an anti-pattern?</a>
 
 1. Använd var  
 Använd `var` när typen är uppenbar eller vetskapen om vilken typ det är inte är viktig. Harmonisera till övriga variabeldeklarationer i aktuell metod (om alla typer är definierade, definiera den nya också). Lägg extra energi på namngivningen av variabeln, eftersom det är den man läser längre ner i koden. Ett annat skäl till att använda `var` är att distraktionen inte blir lika stor vid läsning framför en typ som är deklarerad som exempelvis `Dictionary<string, List<string>>`.
 
     &#x274C; UNDVIK:
     ```csharp
-    XmlNodeList itemList = rssNode.SelectNodes("item”);
+    XmlNodeList itemList = rssNode.SelectNodes("item");
     ```
     &#x2705; GÖR SÅ HÄR:
     ```csharp
