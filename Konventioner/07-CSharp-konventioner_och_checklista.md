@@ -701,8 +701,30 @@ Använd objektinitialiserare när nytt objekt initieras vars medlemmar kräver v
     ```
     * [Object and Collection Initializers (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb384062.aspx)  
 
-1. Instanisera objekt  
+1. Instanisera klasser  
 Sträva efter att instanisera objekt framför att konsumera statiska klasser. Anledningen är att man med ett instansiserat objekt kan använda Dependency Injection. DI i sin tur behövs för att kunna skriva bra enhetstester.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    var result = ClassA.DoSomething("test");
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    var classA = new ClassA();
+    var result = classA.DoSomething("test");
+    ```
+    &#x2705; ELLER GÖR SÅ HÄR:
+    ```csharp
+    var result = new ClassA().DoSomething("test");
+    ```
+
+1. Statiska klasser  
+Har du befintliga statiska klasser i ditt projekt, där `static` inte kan tas bort enkelt? Var uppmäksam på följande:  
+    1. Tillse att klassen inte åller något tillstånd.
+    1. Tillse att den inte är märkt som `abstract`, inte ärver från en annan klass eller implemnterar ett `interface`.
+    
+    * <a href="https://stackoverflow.com/questions/9747116/guidelines-for-when-to-use-static-class-over-instance-class" target="_blank">Guidelines for when to use Static class over instance class?</a>
+    * <a href="https://stackoverflow.com/questions/241339/when-to-use-static-classes-in-c-sharp?answertab=votes#tab-top" target="_blank">When to use static classes in C#</a>
 
 1. Skriv ut parameternamn  
 Använd "named argument" för metoder där man inte har variabler/enums som man skickar in som parametrar.
