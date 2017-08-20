@@ -720,7 +720,7 @@ Sträva efter att instanisera objekt framför att konsumera statiska klasser. An
 
 1. Statiska klasser  
 Har du befintliga statiska klasser i ditt projekt, där `static` inte kan tas bort enkelt? Var uppmäksam på följande:  
-    1. Tillse att klassen inte åller något tillstånd.
+    1. Tillse att klassen inte håller något tillstånd.
     1. Tillse att den inte är märkt som `abstract`, inte ärver från en annan klass eller implemnterar ett `interface`.
     
     * <a href="https://stackoverflow.com/questions/9747116/guidelines-for-when-to-use-static-class-over-instance-class" target="_blank">Guidelines for when to use Static class over instance class?</a>
