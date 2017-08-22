@@ -28,6 +28,7 @@ Om du skapar ett ASP.NET Web API är dokumentation en del av lösningen.
     * [Swashbuckle - Swagger for WebApi 5.5.3](https://github.com/domaindrivendev/Swashbuckle)
     * [RESTful Web API Help Documentation using Swagger UI and Swashbuckle](https://www.codeproject.com/Articles/1078249/RESTful-Web-API-Help-Documentation-using-Swagger-U)
     * <a href="Show off your API with a little Swagger..." target="_blank">Show off your API with a little Swagger...</a>
+   
     
-    
+***
 <span style="float:left">&#x25C0; <a href="05-Layoutkonventioner.md">Layoutkonventioner</a></span>  |  <span style="float:right"><a href="07-CSharp-konventioner_och_checklista.md">C#-konventioner och checklista</a> &#x25B6;</span>

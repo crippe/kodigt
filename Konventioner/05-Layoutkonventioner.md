@@ -285,5 +285,5 @@ Sätt radbredden till maximum om 120 tecken.
     * [Is an 80 Character Code Line Length Still Relevant?](https://blog.falafel.com/is-an-80-character-code-line-length-still-relevant/)
     * [How to follow the 80 character limit best practice while writing source code?](http://softwareengineering.stackexchange.com/questions/312889/how-to-follow-the-80-character-limit-best-practice-while-writing-source-code)
 
-
+***
 <span style="float:left">&#x25C0; <a href="04-Namnkonventioner.md">Namnkonventioner</a></span>  |  <span style="float:right"><a href="06-Kommentarkonventioner.md">Kommentarkonventioner</a> &#x25B6;</span>
