@@ -33,4 +33,4 @@
 [Static Code Analysis and Quality Metrics](http://ardalis.com/static-code-analysis-and-quality-metrics)
 
 
-<span style="float:left"><a href="01-Introduktion.md"> &#x25C0; Introduktion</a></span>  |  <span style="float:right"><a href="03-Drivande_principer.md">Inspiration &#x25B6;</a></span>
+<span style="float:left">&#x25C0; <a href="01-Introduktion.md">Introduktion</a></span>  |  <span style="float:right"><a href="03-Drivande_principer.md">Inspiration</a> &#x25B6;</span>
