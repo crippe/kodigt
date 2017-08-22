@@ -1,4 +1,4 @@
-### 7. C#-konventioner och checklista
+## 7. C#-konventioner och checklista
  
 #### Generellt
 1. Återanvändning av kod  
