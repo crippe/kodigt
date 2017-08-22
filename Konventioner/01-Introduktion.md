@@ -24,13 +24,3 @@ Bra kod kan kort beskrivas som:
 * Effektiv
 * Självdokumenterande
 * Testbar
-
-
-
-
-<div id="textbox">
-  <p style="float:left"><a href="02-Inspiration.md">2-Inspiration</a></p>
-  <p style="float:right"><a href="02-Inspiration.md">2-Inspiration</a></p>
-</div>
-
-
