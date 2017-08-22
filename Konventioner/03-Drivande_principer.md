@@ -1,3 +1,4 @@
+
 ### 3. Drivande principer
 
 Här är några generella och drivande principer vid systemutveckling.
@@ -21,3 +22,6 @@ Prioritering:
 1. Robusthet: koden slutar inte oväntat att fungera.
 2. Korrekhet: koden gör vad den förväntas göra.
 3. Prestanda: koden är tillräckligt effektiv.
+
+
+<span style="float:left">&#x25C0; <a href="02-Inspiration.md">Inspiration</a></span>  |  <span style="float:right"><a href="04-Namnkonventioner.md">Namnkonventioner</a> &#x25B6;</span>

@@ -111,3 +111,6 @@ Referenser:
 * [Naming Guidelines](http://www.dofactory.com/reference/csharp-coding-standards)
 * [C# Coding Standards and Naming Conventions](http://www.dofactory.com/reference/csharp-coding-standards)
 * [StyleCop - Wikipedia](https://en.wikipedia.org/wiki/StyleCop)
+
+
+<span style="float:left">&#x25C0; <a href="03-Drivande_principer.md">Drivande principer</a></span>  |  <span style="float:right"><a href="05-Layoutkonventioner.md">Layoutkonventioner</a> &#x25B6;</span>

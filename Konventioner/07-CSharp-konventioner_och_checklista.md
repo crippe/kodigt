@@ -959,3 +959,6 @@ Låt kontrollermetoderna vara små vilket gör att det blir enklare att testa lo
 
 1. Ingen logik i vymodller  
 En vymodell bör aldrig vara ansvarig för att populera sig själv. Dvs, det ska aldrig finnas logik i dessa. Det kan göras undantag för exempelvis properties, för att exempelvis trimma en text eller liknande.
+
+
+<span style="float:left">&#x25C0; <a href="06-Kommentarkonventioner.md">Kommentarkonventioner</a></span>
