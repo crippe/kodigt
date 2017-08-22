@@ -31,3 +31,6 @@
     
 [Secrets of Maintainable Codebases](http://www.daedtech.com/secrets-maintainable-codebases/)  
 [Static Code Analysis and Quality Metrics](http://ardalis.com/static-code-analysis-and-quality-metrics)
+
+
+<span style="float:left"><a href="01-Introduktion.md"><-- 1-Introduktion</a></span><span style="float:right"><a href="03-Drivande_principer.md">3-Inspiration --></a></span>

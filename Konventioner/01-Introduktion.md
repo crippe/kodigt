@@ -24,3 +24,8 @@ Bra kod kan kort beskrivas som:
 * Effektiv
 * Självdokumenterande
 * Testbar
+
+
+<span style="float:left">Right aligned</span><span style="float:right"><a href="02-Inspiration.md">2-Inspiration</a> --></span>
+
+
