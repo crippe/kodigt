@@ -26,6 +26,11 @@ Bra kod kan kort beskrivas som:
 * Testbar
 
 
-<span style="float:left">Right aligned</span><span style="float:right"><a href="02-Inspiration.md">2-Inspiration</a> --></span>
+
+
+<div id="textbox">
+  <p style="float:left"><a href="02-Inspiration.md">2-Inspiration</a></p>
+  <p style="float:right"><a href="02-Inspiration.md">2-Inspiration</a></p>
+</div>
 
 
