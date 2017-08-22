@@ -25,4 +25,5 @@ Bra kod kan kort beskrivas som:
 * Självdokumenterande
 * Testbar
 
+***
 <span style="float:left">&#x25C0; <a href="../README.md">README</a></span>  |  <span style="float:right"><a href="02-Inspiration.md">Inspiration</a> &#x25B6;</span>
