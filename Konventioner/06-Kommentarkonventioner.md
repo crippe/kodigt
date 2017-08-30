@@ -7,6 +7,7 @@ I möjligaste mån, undvik att skriva kommentarer. Lägg istället energi på at
     * [Comments in Clean Code? Think Documentation](http://www.daedtech.com/comments-clean-code-think-documentation/)
     * [Don’t document your code. Code your documentation.](https://dev.to/raddikx/dont-document-your-code-code-your-documentation)
     * [Fighting Evil in Your Code: Comments on Comments](https://www.simple-talk.com/opinion/opinion-pieces/fighting-evil-code-comments-comments/)
+    * <a href="https://www.daedtech.com/correct-way-comment-code/" target="_blank">Is There a Correct Way to Comment Your Code?</a>
 
     **Undantag till denna rekommendation:**
 1. Märkning av kod som behöver förändras med "TODO".  
