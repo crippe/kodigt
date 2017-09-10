@@ -1,4 +1,4 @@
-# Checklista för C# utvecklare  🛠  beta 0.6.7
+# Checklista för C# utvecklare
 ![RCA computer room 1959](Konventioner/Bilder/RCA-computer-room-1959.jpg)
 
 ***
