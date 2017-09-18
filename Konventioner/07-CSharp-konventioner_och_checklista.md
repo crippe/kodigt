@@ -171,7 +171,8 @@ Använd `try`-`catch` och `finally` där du vet att det finns risk att undantag 
     * [Throw Often, Catch Rarely](https://helloacm.com/throw-often-catch-rarely/)
     * [C# Exception Handling Best Practices](https://stackify.com/csharp-exception-handling-best-practices/)
     * [Custom exception types](http://enterprisecraftsmanship.com/2016/12/08/custom-exception-types/)  
-
+    * [Exception handling best practices](http://vaibhavgawali.net/csharp-dotnet-exception-handling-best-practices/)  
+    
 1. Lägga ihop strängar  
 Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
     1. Sex eller färre strängar: använd `+`, string interpolation eller `string.Format`.
