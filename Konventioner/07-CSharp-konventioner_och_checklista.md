@@ -521,6 +521,12 @@ Retur-uttryck som inte är placerade på samma rad som `if`, måste inneslutas a
     if (!string.IsNullOrEmpty(queryParam))
         return queryParam.Convert<T>();
     ```
+    &#x274C; UNDVIK:
+    ```csharp
+    if (!string.IsNullOrEmpty(queryParam))
+    
+    return queryParam.Convert<T>();
+    ```
     &#x2705; GÖR SÅ HÄR:
     ```csharp
     if (!string.IsNullOrEmpty(queryParam))
