@@ -1,4 +1,4 @@
-﻿![IBM 360 Mainframe computer room](Bilder/IBM-360-mainframe-computer-room.jpg)
+﻿![Control Data 3600 computer room](Bilder/Control-Data-3600computer-room.jpg)
 
 ## 5. Layoutkonventioner
 
