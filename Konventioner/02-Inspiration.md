@@ -1,3 +1,5 @@
+![IBM 360 computer room](Bilder/IBM-360-computer-room.jpg)
+
 ## 2. Inspiration
 
 > Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.  
