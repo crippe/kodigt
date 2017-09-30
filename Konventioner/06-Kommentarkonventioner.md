@@ -1,3 +1,5 @@
+![Cray supersomputer - CERN](Bilder/Cray-supercomputer-CERN.jpg)
+
 ## 6. Kommentarkonventioner
 
 1. Undvik kommentarer   
