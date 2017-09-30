@@ -1,3 +1,5 @@
+![Magnetic tape macines](Bilder/Magnetic-tapes-machines.jpg)
+
 ## 7. C#-konventioner och checklista
  
 #### Generellt
