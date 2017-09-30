@@ -1,3 +1,5 @@
+![IBM 1401 computer room](Bilder/IBM-1401-computer-room.jpg)
+
 ## 4. Namnkonventioner
 
 Om inget annat sägs eller andra teamöverenskommelser finns, följ Microsofts namngivning, dokumentation och guider. Harmonisera med .NET ramverket. För att backa upp det, och vara ännu mera precis, använd [StyleCop](https://github.com/StyleCop/StyleCop) som vägledning. 
