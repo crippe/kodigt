@@ -1,4 +1,6 @@
-﻿## 5. Layoutkonventioner
+﻿![IBM 360 Mainframe computer room](Bilder/IBM-360-mainframe-computer-room.jpg)
+
+## 5. Layoutkonventioner
 
 #### Generellt  
 
