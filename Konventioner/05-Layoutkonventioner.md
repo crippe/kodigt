@@ -1,4 +1,4 @@
-﻿![Control Data 3600 computer room](Bilder/Control-Data-3600computer-room.jpg)
+﻿![DPS 88 mainframe](Bilder/DPS88-Mainframe.jpg)
 
 ## 5. Layoutkonventioner
 
