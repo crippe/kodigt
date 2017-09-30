@@ -1,3 +1,4 @@
+![Univac server room](Bilder/Univac_server_room.jpg)
 
 ## 3. Drivande principer
 
