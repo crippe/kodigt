@@ -970,6 +970,56 @@ Låt kontrollermetoderna vara små vilket gör att det blir enklare att testa lo
 1. Ingen logik i vymodller  
 En vymodell bör aldrig vara ansvarig för att populera sig själv. Dvs, det ska aldrig finnas logik i dessa. Det kan göras undantag för exempelvis properties, för att exempelvis trimma en text eller liknande.
 
+1. Undvik ViewData, ViewBag och TempData   
+Använd en typsäker modell framför `ViewData`, `ViewBag` eller `TempData`. Det gäller både i kontroller och vyer. Det är också bättre att populera data i en kontroller istället för att använda ett tillstånd (request/session) för att hämta och visa värden direkt i vyn. Och genom att använda en modell kan man också undvika stavfel som ofta upptäcks sent vid rendering av vy.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    public ActionResult Index()
+    {
+        ViewBag.Name = "Gunnar Olofsson";
+        
+        return View();
+    }
+    ```
+    ```html
+    <body>
+        <h1>@ViewBag.Name</h1>
+    </body>
+     ```
+    &#x274C; UNDVIK:
+    ```csharp
+    public ActionResult Index()
+    {
+        ViewData["Name"] = "Gunnar Olofsson";
+        
+        return View();
+    } 
+    ```
+    ```html
+    <body>
+        <h1>@ViewData["Name"]</h1>
+    </body>
+     ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    public ActionResult Index()
+    {
+        var person = new Person() { Name = "Gunnar Olofsson" };
+        
+        return View(person);
+    } 
+    ```
+    ```html
+    <body>
+        <h1>@Model.Name</h1>
+    </body>
+     ```
+
+    * <a href="https://offering.solutions/blog/articles/2014/03/08/how-to-avoid-viewbag-and-viewdata-in-asp-net-mvc/" target="_blank">How to avoid ViewBag and ViewData in ASP.NET MVC</a>  
+    * <a href="https://forums.asp.net/t/1986310.aspx?What+is+best+practice+between+viewdata+and+viewbag" target="_blank">What is best practice between viewdata and viewbag</a>  
+    * <a href="http://www.mytecbits.com/microsoft/dot-net/viewmodel-viewdata-viewbag-tempdata-mvc" target="_blank">ViewModel Vs ViewData Vs ViewBag Vs TempData Vs Session In MVC</a>  
+
 
 ***
 <span style="float:left">&#x25C0; <a href="06-Kommentarkonventioner.md">Kommentarkonventioner</a></span>
