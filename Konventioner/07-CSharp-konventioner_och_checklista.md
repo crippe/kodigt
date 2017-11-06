@@ -359,6 +359,7 @@ Ibland är boxing nödvändigt, men du bör undvika det om möjligt eftersom det
     * [Understanding Boxing and Unboxing in C#](http://www.dotnettricks.com/learn/csharp/understanding-boxing-and-unboxing-in-csharp)
     * [Boxing and Unboxing (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx)
     * [Performance (C# and Visual Basic)](https://msdn.microsoft.com/en-us/library/ms173196.aspx)  
+    * [Avoid Boxing and Unboxing to improve performance](http://vaibhavgawali.net/avoid-boxing-unboxing-improve-performance/)   
 
 1. Undvik out och ref  
 Användning av `out`- eller `ref`-parametrar kräver erfarenhet av pekare, förståelse för hur värdetyper och referenstyper skiljer sig åt samt att man kan hantera metoder med flera returvärden. Dessutom är skillnaden mellan `out` och `ref` inte allmänt förstått. TryParse-metoder är ett undantag till regeln.
