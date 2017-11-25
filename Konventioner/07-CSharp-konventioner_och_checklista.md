@@ -1020,6 +1020,7 @@ Använd en typsäker modell framför `ViewData`, `ViewBag` eller `TempData`. Det
     * <a href="https://offering.solutions/blog/articles/2014/03/08/how-to-avoid-viewbag-and-viewdata-in-asp-net-mvc/" target="_blank">How to avoid ViewBag and ViewData in ASP.NET MVC</a>  
     * <a href="https://forums.asp.net/t/1986310.aspx?What+is+best+practice+between+viewdata+and+viewbag" target="_blank">What is best practice between viewdata and viewbag</a>  
     * <a href="http://www.mytecbits.com/microsoft/dot-net/viewmodel-viewdata-viewbag-tempdata-mvc" target="_blank">ViewModel Vs ViewData Vs ViewBag Vs TempData Vs Session In MVC</a>  
+    * <a href="http://www.dotnetcrack.com/post/2017/03/07/ViewData-ViewBag-TempData-and-Session-in-MVC.aspx" target="_blank">ViewData, ViewBag, TempData and Session in MVC</a>  
 
 1. Använd RenderPartial  
 Om du inte behöver spara undan en vy som en html-sträng i en variabel, använd `Html.RenderPartial`. Prestandamässigt är `Html.RenderPartial` snabbare än `Html.Partial`.  
