@@ -209,6 +209,7 @@ Det finns flera sätt att sätta ihop strängar. Här är några tumregler:
     * [String concatenation behind the scenes, part one](https://ericlippert.com/2013/06/17/string-concatenation-behind-the-scenes-part-one/), [part two](https://ericlippert.com/2013/06/24/string-concatenation-behind-the-scenes-part-two/)
     * [Most efficient way to concatenate strings?](http://stackoverflow.com/questions/21078/most-efficient-way-to-concatenate-strings)
     * [The Difference Between String and StringBuilder in C#](https://www.codeproject.com/Articles/1194964/The-Difference-Between-String-and-StringBuilder-in)  
+    * <a href="https://www.meziantou.net/2017/12/17/performance-string-concatenation-vs-string-format-vs-interpolated-string" target="_blank">Performance: string concatenation vs String.Format vs interpolated string</a>
 
 1. Magiska strängar  
 Undvik magiska strängar och tal eftersom det oftast är svårt att förstå dess innebörd. Använd `const`- och `readonly` medlemmar där det är möjligt. Ett tips är också att placera ofta använda konstanter i en egen konstantklass.
