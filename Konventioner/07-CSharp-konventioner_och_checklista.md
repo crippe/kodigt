@@ -925,7 +925,9 @@ Undvik att placera backendlogik i vyer (cshtml). Det finns dock två undantag:
     1. `switch`-satser för att välja partials att visa.
 
 1. Metoder i Razor-vyer  
-Om backendkoden blir lite längre enligt punkt ett ovan, använd functions och helpers för att kapsla in logik och rendering.
+Om backendkoden blir lite längre enligt punkt ett ovan, använd functions och helpers för att kapsla in logik och rendering.  
+
+   Placera functions och helpers som ska delas i hela lösningen i mappen `App_Code`. Vyerna (`cshtml`) grupperas med med fördel in på samma sätt som hjälpmetoder (`*Helper.cs`).
 
     &#x2139; EXEMPEL:
     ```html
@@ -955,7 +957,11 @@ Om backendkoden blir lite längre enligt punkt ett ovan, använd functions och h
             return align;
         }
     }
-    ```
+    ```  
+    
+    * <a href="https://stackoverflow.com/questions/6347447/shared-mvc-razor-functions-in-several-views" target="_blank">Shared MVC Razor functions in several views</a>
+    * <a href="https://weblogs.asp.net/scottgu/asp-net-mvc-3-and-the-helper-syntax-within-razor" target="_blank">ASP.NET MVC 3 and the @helper syntax within Razor</a>
+    
 
 1. Små kontrollermetoder  
 Låt kontrollermetoderna vara små vilket gör att det blir enklare att testa logiken med att hämta modell i en separat metod. På det här sättet tydliggörs dessutom Model-View-Controller-konventionen.
