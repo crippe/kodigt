@@ -959,6 +959,9 @@ Om backendkoden blir lite längre enligt punkt ett ovan, använd functions och h
     }
     ```  
     
+    * <a href="https://blogs.msdn.microsoft.com/timlee/2010/07/30/using-functions-in-an-asp-net-page-with-razor-syntax/" target="_blank">Using @functions in an ASP.NET page with Razor Syntax</a>
+    * <a href="https://www.mikesdotnetting.com/article/173/the-difference-between-helpers-and-functions-in-webmatrix" target="_blank">The Difference Between @Helpers and @Functions In WebMatrix</a>
+    * <a href="https://docs.microsoft.com/en-us/aspnet/web-pages/overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site" target="_blank">Creating and Using a Helper in an ASP.NET Web Pages (Razor) Site</a>
     * <a href="https://stackoverflow.com/questions/6347447/shared-mvc-razor-functions-in-several-views" target="_blank">Shared MVC Razor functions in several views</a>
     * <a href="https://weblogs.asp.net/scottgu/asp-net-mvc-3-and-the-helper-syntax-within-razor" target="_blank">ASP.NET MVC 3 and the @helper syntax within Razor</a>
     
