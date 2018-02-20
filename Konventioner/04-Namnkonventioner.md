@@ -106,7 +106,7 @@ Namnge händelser med verb eller verbfraser. Till exempel: `Click`, `Deleted`, `
     | Type Parameter | Pascal | `TView` |  |
     | Property | Pascal | `BackColor` |  |
 
-    I ReSharper är det definierat på detta sätt som standard:  
+    I ReSharper kan det vara definerat på detta sätt som standrad:  
     ![ReSharper Naming Style](Bilder/resharper-naming-style.png?raw=true)
 
 Referenser:
