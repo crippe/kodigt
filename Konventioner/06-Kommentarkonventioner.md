@@ -12,7 +12,8 @@ I möjligaste mån, undvik att skriva kommentarer. Lägg istället energi på at
     * <a href="https://www.daedtech.com/correct-way-comment-code/" target="_blank">Is There a Correct Way to Comment Your Code?</a>
 
     **Undantag till denna rekommendation:**
-1. Märkning av kod som behöver förändras med "TODO".  
+1. TODO   
+Märkning av kod som behöver förändras med "TODO".   
 TODO-kommentarer skrivs enligt mönstret:  
     `[//][mellanslag][TODO:][mellanslag][Text som börjar med stor bokstav och slutar med punkt.]`
 
@@ -22,7 +23,20 @@ TODO-kommentarer skrivs enligt mönstret:
     ```
     * [SA1005: SingleLineCommentsMustBeginWithSingleSpace](http://stylecop.soyuz5.com/SA1005.html)
 
-1. Beskrivning av skeenden, flöden etc som ligger utanför lösningens kontroll och som inte på ett bra och enkelt sätt kan beskrivas i kod.
+1. Tomma interface-implementationer eller överridningar   
+Vid implementation av interface där en eller flera metoder inte behöver användas. Der gäller även när man överrider en metod vid arv.   
+    &#x2139; EXEMPEL:
+
+    ```csharp
+    public override void DoSomething()
+    {
+        // Method intentionally left empty.
+    }
+    ```
+    * [Methods should not be empty](https://rules.sonarsource.com/csharp/RSPEC-1186)
+
+1. Utanför lösningens kontroll   
+Beskrivning av skeenden, flöden etc som ligger utanför lösningens kontroll och som inte på ett bra och enkelt sätt kan beskrivas i kod.
 
 1. Vid skapande av API  
 Om du skapar ett ASP.NET Web API är dokumentation en del av lösningen.
