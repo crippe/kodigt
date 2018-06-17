@@ -29,6 +29,7 @@ Returnera instansierade objekt framför null i metoder. Var noga att kontrollera
     * [Tactical Design Patterns in .NET: Control Flow -&gt; Motivation to Avoid Null Reference](https://app.pluralsight.com/player?course=tactical-design-patterns-dot-net-control-flow&author=zoran-horvat&name=tactical-design-patterns-dot-net-control-flow-m2&clip=0&mode=live)
     * [My takeaways from “Clean Code” -> Don’t Pass Null](https://medium.com/@webprolific/my-takeaways-from-clean-code-a70ca8382884)
     * [Is it Really Better to 'Return an Empty List Instead of null'? / Part 1](https://www.codeproject.com/Articles/794448/Is-it-Really-Better-to-Return-an-Empty-List-Instea), [Part 2](https://www.codeproject.com/Articles/797453/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 3](https://www.codeproject.com/Articles/820066/Is-it-Really-Better-to-Return-an-Empty-List-Inst), [Part 4](https://www.codeproject.com/Articles/834677/Is-it-Really-Better-to-Return-an-Empty-List-Inst)  
+    * [THE LOGICAL DISASTER OF NULL](https://rob.conery.io/2018/05/01/the-logical-disaster-of-null/)
     
 1. Använd alias  
 Deklarera typer på samma sätt genom hela lösningen, dvs använd inbyggda alias. Använd inte både `Int32` och `int` eller `String` och `string`.
