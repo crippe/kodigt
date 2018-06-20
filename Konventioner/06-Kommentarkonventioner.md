@@ -13,7 +13,7 @@ I möjligaste mån, undvik att skriva kommentarer. Lägg istället energi på at
 
     **Undantag till denna rekommendation:**
 1. TODO   
-Märkning av kod som behöver förändras med "TODO".   
+Märk kod som behöver förändras med "TODO".   
 TODO-kommentarer skrivs enligt mönstret:  
     `[//][mellanslag][TODO:][mellanslag][Text som börjar med stor bokstav och slutar med punkt.]`
 
@@ -24,7 +24,7 @@ TODO-kommentarer skrivs enligt mönstret:
     * [SA1005: SingleLineCommentsMustBeginWithSingleSpace](http://stylecop.soyuz5.com/SA1005.html)
 
 1. Tomma interface-implementationer eller överridningar   
-Vid implementation av interface där en eller flera metoder inte behöver användas. Der gäller även när man överrider en metod vid arv.   
+Vid implementation av interface där en eller flera metoder inte behöver användas, skriv en notering om det att det görs med medvetet. Der gäller även när man överrider en metod vid arv.   
     &#x2139; EXEMPEL:
 
     ```csharp
@@ -36,10 +36,10 @@ Vid implementation av interface där en eller flera metoder inte behöver använ
     * [Methods should not be empty](https://rules.sonarsource.com/csharp/RSPEC-1186)
 
 1. Utanför lösningens kontroll   
-Beskrivning av skeenden, flöden etc som ligger utanför lösningens kontroll och som inte på ett bra och enkelt sätt kan beskrivas i kod.
+Använd kommentarer när du behöver förklara skeenden, flöden etc som ligger utanför lösningens kontroll och som inte på ett bra och enkelt sätt kan beskrivas i kod.
 
 1. Vid skapande av API  
-Om du skapar ett ASP.NET Web API är dokumentation en del av lösningen.
+Om du skapar ett ASP.NET Web API är dokumentation en del av lösningen. Skriv kommentarer hur man konsumerar de publika metoderna.
 
     * [Creating Help Pages for ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages) 
     * [Swashbuckle - Swagger for WebApi 5.5.3](https://github.com/domaindrivendev/Swashbuckle)
