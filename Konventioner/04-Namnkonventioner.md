@@ -53,6 +53,18 @@ Namnge medlemmar, parametrar eller variabler efter dess betydelse och inte efter
         Delete() {}
     }
     ```
+    
+1. Klasser som singular   
+Namnge klasser som singular för att undvika förrvirring när man skapar kollektioner. Om man du inte kan ta bort "s" från ett klassnamn kan du lägga till ord som "Model", "Type" eller andra generella namn. Dvs CategoriesModel.   
+
+    &#x274C; UNDVIK:
+    ```csharp
+    var categories = new List<Categories>();
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    var categories = new List<Category>();
+    ```
 
 1. Namnge som i .NET Framework  
 Namnge medlemmar på liknande sätt som medlemmar i .NET Framework-klasser. Om du exempelvis definierar en klass som ska bete sig som en samling, lägg till medlemmar som `Add`, `Remove` och `Count` framför `AddItem`, `Delete` eller `NumberOfItems`.
