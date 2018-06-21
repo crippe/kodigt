@@ -55,7 +55,7 @@ Namnge medlemmar, parametrar eller variabler efter dess betydelse och inte efter
     ```
     
 1. Klasser som singular   
-Namnge klasser som singular för att undvika förrvirring när man skapar kollektioner. Om man du inte kan ta bort "s" från ett klassnamn kan du lägga till ord som "Model", "Type" eller andra generella namn. Dvs CategoriesModel.   
+Namnge klasser som singular för att undvika förrvirring när man skapar kollektioner. Om man du inte kan ta bort `s` från ett klassnamn kan du lägga till ord som `Model`, `Type` eller andra generella namn. Exempel: `CategoriesModel`. Om namnet kommer från ett domänspråk/en integration får det bli en bedömning från fall till fall.   
 
     &#x274C; UNDVIK:
     ```csharp
@@ -65,6 +65,27 @@ Namnge klasser som singular för att undvika förrvirring när man skapar kollek
     ```csharp
     var categories = new List<Category>();
     ```
+    
+1. Verb i klassnamn   
+Använd inte verb i klassnamn.
+
+    &#x274C; UNDVIK:
+    ```csharp
+    public class CreateNewPerson
+    {
+    }
+    ```
+    &#x2705; GÖR SÅ HÄR:
+    ```csharp
+    public class Person
+    {
+    }
+    ```
+    
+1. Enum    
+    * Namnge enum som singular om det inte är frågan om bit-fält (Flag).   
+    * Lägg inte till `Enum` eller `Flag` i namnet.
+    * Upprema inte emnumnamnet i element.
 
 1. Namnge som i .NET Framework  
 Namnge medlemmar på liknande sätt som medlemmar i .NET Framework-klasser. Om du exempelvis definierar en klass som ska bete sig som en samling, lägg till medlemmar som `Add`, `Remove` och `Count` framför `AddItem`, `Delete` eller `NumberOfItems`.
