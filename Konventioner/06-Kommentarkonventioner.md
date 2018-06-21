@@ -13,8 +13,7 @@ I möjligaste mån, undvik att skriva kommentarer. Lägg istället energi på at
 
     **Undantag till denna rekommendation:**
 1. TODO   
-Märk kod som behöver förändras med "TODO".   
-TODO-kommentarer skrivs enligt mönstret:  
+Märk kod som behöver förändras med "TODO". Kommentarer skrivs enligt mönstret:  
     `[//][mellanslag][TODO:][mellanslag][Text som börjar med stor bokstav och slutar med punkt.]`
 
     &#x2139; EXEMPEL:
