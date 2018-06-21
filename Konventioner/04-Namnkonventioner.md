@@ -85,7 +85,7 @@ Använd inte verb i klassnamn.
 1. Enum    
     * Namnge enum som singular om det inte är frågan om bit-fält (Flag).   
     * Lägg inte till `Enum` eller `Flag` i namnet.
-    * Upprema inte emnumnamnet i element.
+    * Upprepa inte emnumnamnet i element.
 
 1. Namnge som i .NET Framework  
 Namnge medlemmar på liknande sätt som medlemmar i .NET Framework-klasser. Om du exempelvis definierar en klass som ska bete sig som en samling, lägg till medlemmar som `Add`, `Remove` och `Count` framför `AddItem`, `Delete` eller `NumberOfItems`.
