@@ -281,6 +281,7 @@ Undvik magiska strängar och tal eftersom det oftast är svårt att förstå des
     * [Difference Between Const, ReadOnly and Static ReadOnly in C#](http://www.c-sharpcorner.com/UploadFile/c210df/difference-between-const-readonly-and-static-readonly-in-C-Sharp/)
     * [Some ways to tame magical strings in .NET and C#](https://danielwertheim.se/some-ways-to-tame-magical-strings-in-net-and-c/) 
     * [10 Key Differences Between C# Constant, ReadOnly & Static ReadOnly](http://www.arungudelli.com/tutorial/c-sharp/10-differences-between-constant-vs-readonly-static-readonly-fields/)  
+    * [Avoiding Magic Strings](http://www.nichesoftware.co.nz/2018/10/06/validation-avoiding-magic-strings.html)
 
  1. Använd as vid typekonvertering  
 Att använda `as` ger bättre prestanda och kräver mindre kod än `try`/`catch`-metoden. Använd inte `is` och `as` i kombination eftersom det inte behövs.
