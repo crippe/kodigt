@@ -124,7 +124,8 @@ Sträva efter att ha en tomrad innan det sista retur-uttrycket i metoder, det g�
 
 1. Radbryningar  
 Om inte ett uttryck får rum på en rad och det inte är möjligt att refaktorera för att göra den kortare, följ dessa generella principer:
-    * Bryt efter operatorer.
+    * Bryt före logiska operatorer (såsom &&, || etc).
+    * Bryt efter alla andra operatorer.
     * Bryt efter komma.
     * Gör alltid indrag efter radbrytning.
 
