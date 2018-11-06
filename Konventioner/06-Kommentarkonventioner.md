@@ -23,7 +23,7 @@ Märk kod som behöver förändras med "TODO". Kommentarer skrivs enligt mönstr
     * [SA1005: SingleLineCommentsMustBeginWithSingleSpace](http://stylecop.soyuz5.com/SA1005.html)
 
 1. Tomma interface-implementationer eller överridningar   
-Vid implementation av interface där en eller flera metoder inte behöver användas, skriv en notering om att det görs med medvetet. Det gäller även när man överrider en metod vid arv.   
+Vid implementation av interface där en eller flera metoder inte behöver användas, skriv en notering om att det görs medvetet. Det gäller även när man överrider en metod vid arv.   
     &#x2139; EXEMPEL:
 
     ```csharp
