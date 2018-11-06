@@ -55,7 +55,7 @@ Namnge medlemmar, parametrar eller variabler efter dess betydelse och inte efter
     ```
     
 1. Klasser som singular   
-Namnge klasser som singular för att undvika förrvirring när man skapar kollektioner. Om man du inte kan ta bort `s` från ett klassnamn kan du lägga till ord som `Model`, `Type` eller andra generella namn. Exempel: `CategoriesModel`. Om namnet kommer från ett domänspråk/en integration får det bli en bedömning från fall till fall.   
+Namnge klasser som singular för att undvika förrvirring när man skapar kollektioner. Om du inte kan ta bort `s` från ett klassnamn kan du lägga till ord som `Model`, `Type` eller andra generella namn. Exempel: `CategoriesModel`. Om namnet kommer från ett domänspråk/en integration får det bli en bedömning från fall till fall.   
 
     &#x274C; UNDVIK:
     ```csharp
