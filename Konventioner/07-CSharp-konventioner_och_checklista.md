@@ -920,6 +920,10 @@ Generellt sätt representerar metoder handlingar och egenskaper data. Egenskaper
     * [Best practices: throwing exceptions from properties](https://stackoverflow.com/questions/1488472/best-practices-throwing-exceptions-from-properties)
     * [Using Properties (C# Programming Guide)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties)
 
+1. Extension-metoder  
+    1. Placcera extension-metoder utifrån typen du utgår ifrån. Är det en sträng-extension, placera metoden i klassen StringExtensions.
+    1. Använd extensionmedorder för att konvertera från en typ till en annan eller enbklare uträkningar. 
+    1. Undvik att lägga affärslogik i extensionmetoder.
 
 #### ASP.NET MVC
 1. Undvik backendkod i vyer  
