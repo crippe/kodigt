@@ -922,7 +922,7 @@ Generellt sätt representerar metoder handlingar och egenskaper data. Egenskaper
 
 1. Extension-metoder  
     1. Placcera extension-metoder utifrån typen du utgår ifrån. Är det en sträng-extension, placera metoden i klassen StringExtensions.
-    1. Använd extensionmedorder för att konvertera från en typ till en annan eller enbklare uträkningar. 
+    1. Använd extensionmedorder för att konvertera från en typ till en annan eller enklare uträkningar. 
     1. Undvik att lägga affärslogik i extensionmetoder.
 
 #### ASP.NET MVC
