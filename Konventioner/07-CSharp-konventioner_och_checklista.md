@@ -1044,6 +1044,14 @@ Om du inte behöver spara undan en vy som en html-sträng i en variabel, använd
 
     * <a href="https://stackoverflow.com/questions/40354465/what-is-difference-between-partial-and-render-partial-view" target="_blank">What is difference between partial and render partial view ?</a>
     * <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/views/partial" target="_blank">Partial Views</a>
+    
+1. Används IHttpActionResult  
+Använd IHtttActionResult som returtyp i api-klasser/metoder.  
+
+    * <a href="https://thuru.net/2015/02/20/httpresponsemessage-vs-ihttpactionresult/" target="_blank">HttpResponseMessage vs IHttpActionResult</a>
+    * <a href="https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/action-results" target="_blank">Action Results in Web API 2</a>
+    * <a href="https://stackoverflow.com/questions/46159197/ihttpactionresult-vs-httpresponsemessage" target="_blank">IHttpActionResult vs HttpResponseMessage</a>
+    * <a href="https://alastaircrabtree.com/choose-the-right-return-type-for-webapi-controllers/" target="_blank">Choose the right return type for WebApi controllers</a>
 
 ***
 <span style="float:left">&#x25C0; <a href="06-Kommentarkonventioner.md">Kommentarkonventioner</a></span>
