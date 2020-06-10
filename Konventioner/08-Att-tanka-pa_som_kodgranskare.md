@@ -29,7 +29,7 @@ Syftet med kodgranskningar är inte att fokusera på att berätta hur kodaren ka
 * **Se till att du har bra kodstandarder att referera.**  
 Granskning har sin grund i företags- och branchstandarder. Standarder syftar till att ha en enig syn för att kunna producera kod med kvalité och som är underhållningsbar. Om en diskussion uppstår, om något som inte finns definierat, då har du arbeta att göra med att lägga till nya delar. Du bör ständigt fråga dig om det som diskuterats finns standardiserat.  
 
-Men, bara för att det är en standard nu behöver det inte betyda att den alltid gäller. Uppdatera standarder i takt med att nya metoder införs och nya ramverk mm släpps.
+  Men, bara för att det är en standard nu behöver det inte betyda att den alltid gäller. Uppdatera standarder i takt med att nya metoder införs och nya ramverk mm släpps.
 
 * **Kom ihåg att inte hasta igenom en kodgranskning - men, du bör göra den snabbt.**  
 Dina kollegor väntar på dig.
