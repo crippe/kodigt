@@ -1,22 +1,22 @@
 # 8. Important to think about as a code reviewer
 
-*	**Criticize code, not humans – be kind to the developer but not to the code.**
+*	**Criticize code, not humans – be kind to the developer but not to the code.**  
 As far as possible, write your comments in a positive spirit and focus on improving the code. Relate comment to team standards, specifications and performance increases.  
 
-*	**Treat people who know and can do less than you with respect, reverence and patience.**
+*	**Treat people who know and can do less than you with respect, reverence and patience.**  
 
-*	**Ask questions instead of making statements.**
+*	**Ask questions instead of making statements.**  
 A statement is accusing. "You haven't followed the standard here" is an attack whether intentional or not. The question "What was the reasoning behind this approach?” is a way of getting more knowledge. Obviously, the question cannot be said with a sarcastic or condescending tone; but if done correctly, it can get the developer to ask for a better solution.  
 
-*	**Try to avoid "why" questions.**
-There is a big difference between "Why didn't you follow the standard here?" And "What was the reasoning behind deviating from the standard here?  
+*	**Try to avoid "why" questions.**  
+There is a big difference between "Why didn't you follow the standard here?" And "What was the reasoning behind deviating from the standard here?
 
-*	**When proposing a change, describe why. **
+*	**When proposing a change, describe why.**  
 
-*	**Use your own examples**
+*	**Use your own examples**  
 Let the developer know that he or she is not the only person who made the mistake. It can be a good way to make the criticism a little more comfortable. "I learned this the hard way when ..." or "I used to do just this way before ..." can be a good way to express oneself.  
 
-*	**All comments do not require action.**
+*	**All comments do not require action.**  
 Comments can also be thought-provoking and doesn’t need to be solved or even answered. But, then it is important that you note it clearly in the text.  
 
 *	**Have you accidentally ended up as a code reviewer?**  
