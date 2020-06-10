@@ -14,11 +14,9 @@ Det är stor skillnad på "Varför följde du inte standarden här?” och “Va
 
 * **När du föreslår en ändring, beskriv varför.**
 
-
 * **Använd egna exempel.**  
 Låt kodaren veta att hen inte är den enda personen som gjort misstaget. Det kan kan vara ett bra sätt att göra kritiken lite mer komfortabel. "Jag lärde mig det här den hårda vägen när…” eller “Jag brukade göra precis på det här sättet…” kan vara bra sätt att uttrycka sig på.
 
- 
 * **Alla kommentarer kräver inte åtgärder.**  
 Kommentarer kan även vara tankeväckande och behöver inte vara något som ska lösas eller ens svaras på. Men, då är det viktigt att du noterar det tydligt i texten.
  
@@ -31,7 +29,7 @@ Syftet med kodgranskningar är inte att fokusera på att berätta hur kodaren ka
 * **Se till att du har bra kodstandarder att referera.**  
 Granskning har sin grund i företags- och branchstandarder. Standarder syftar till att ha en enig syn för att kunna producera kod med kvalité och som är underhållningsbar. Om en diskussion uppstår, om något som inte finns definierat, då har du arbeta att göra med att lägga till nya delar. Du bör ständigt fråga dig om det som diskuterats finns standardiserat.  
 
-    Men, bara för att det är en standard nu behöver det inte betyda att den alltid gäller. Uppdatera standarder i takt med att nya metoder införs och nya ramverk mm släpps.
+Men, bara för att det är en standard nu behöver det inte betyda att den alltid gäller. Uppdatera standarder i takt med att nya metoder införs och nya ramverk mm släpps.
 
 * **Kom ihåg att inte hasta igenom en kodgranskning - men, du bör göra den snabbt.**  
 Dina kollegor väntar på dig.
