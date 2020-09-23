@@ -27,9 +27,7 @@ Om du bjudits in att vara kodgranskare och koden i fråga är utanför din kompe
 Syftet med kodgranskningar är inte att fokusera på att berätta hur kodaren kan bli bättre, och inte nödvändigtvis att de gjort ett bra jobb. Men den mänskliga naturen är sådan att vi vill erkännas för våra framgångar, och inte bli ihågkomna pga brister. Eftersom utveckling är ett kreativt arbete som utvecklare lägger ner sin själ i, är det också nära deras hjärta. Detta gör att det behövs mer beröm än kritik.
  
 * **Se till att du har bra kodstandarder att referera.**  
-Granskning har sin grund i företags- och branchstandarder. Standarder syftar till att ha en enig syn för att kunna producera kod med kvalité och som är underhållningsbar. Om en diskussion uppstår, om något som inte finns definierat, då har du arbeta att göra med att lägga till nya delar. Du bör ständigt fråga dig om det som diskuterats finns standardiserat.  
-
-Men, bara för att det är en standard nu behöver det inte betyda att den alltid gäller. Uppdatera standarder i takt med att nya metoder införs och nya ramverk mm släpps.
+Granskning har sin grund i företags- och branchstandarder. Standarder syftar till att ha en enig syn för att kunna producera kod med kvalité och som är underhållningsbar. Om en diskussion uppstår, om något som inte finns definierat, då har du arbeta att göra med att lägga till nya delar. Du bör ständigt fråga dig om det som diskuterats finns standardiserat. Men, bara för att det är en standard nu behöver det inte betyda att den alltid gäller. Uppdatera standarder i takt med att nya metoder införs och nya ramverk mm släpps.
 
 * **Kom ihåg att inte hasta igenom en kodgranskning - men, du bör göra den snabbt.**  
 Tacka nej till att granska kod om du är upptagen med annat, på så sätt kan någon annan hjälpa till istället. Sträva efter att gå igenom hela koden så mycket som möjligt vid ett och samma tillfälle. På det sättet kan man undeviker man onödiga iterationer (gransking, kommentar, ändring, gransking, kommentar, ändring osv).
