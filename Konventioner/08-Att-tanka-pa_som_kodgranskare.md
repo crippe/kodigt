@@ -29,10 +29,10 @@ Syftet med kodgranskningar är inte att fokusera på att berätta hur kodaren ka
 * **Se till att du har bra kodstandarder att referera.**  
 Granskning har sin grund i företags- och branchstandarder. Standarder syftar till att ha en enig syn för att kunna producera kod med kvalité och som är underhållningsbar. Om en diskussion uppstår, om något som inte finns definierat, då har du arbeta att göra med att lägga till nya delar. Du bör ständigt fråga dig om det som diskuterats finns standardiserat.  
 
-  Men, bara för att det är en standard nu behöver det inte betyda att den alltid gäller. Uppdatera standarder i takt med att nya metoder införs och nya ramverk mm släpps.
+Men, bara för att det är en standard nu behöver det inte betyda att den alltid gäller. Uppdatera standarder i takt med att nya metoder införs och nya ramverk mm släpps.
 
 * **Kom ihåg att inte hasta igenom en kodgranskning - men, du bör göra den snabbt.**  
-Dina kollegor väntar på dig.
+Tacka nej till att granska kod om du är upptagen med annat, på så sätt kan någon annan hjälpa till istället. Sträva efter att gå igenom hela koden så mycket som möjligt vid ett och samma tillfälle. På det sättet kan man undeviker man onödiga iterationer (gransking, kommentar, ändring, gransking, kommentar, ändring osv).
  
 * **Kom ihåg att du har ett ansvar för koden du granskar.**  
 När du granskar en pull request och godkänner så signerar du på att du har tagit ditt ansvar att granska och säkerställa att koden följer uppsatta regler.
