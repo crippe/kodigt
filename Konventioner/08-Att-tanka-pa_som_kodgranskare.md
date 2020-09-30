@@ -1,5 +1,8 @@
 # 8. Att tänka på som kodgranskare
 
+## Inledning
+Denna artikel ugår från att man granskar och kommenterar kod genom det som i Git sammanhang kallas pull request (eller mereg request). 
+
 * **Kritisera kod och inte människor – var snäll mot utvecklaren, inte mot koden.**  
 Så långt det är möjligt, skriv dina kommentarer i en positiv anda och inrikta dig på att förbättra koden. Relatera kommentar till teamstandarder, specifikationer och prestandaökningar.
 
