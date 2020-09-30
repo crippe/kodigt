@@ -1,7 +1,7 @@
 # 8. Att tänka på som kodgranskare
 
 ### Inledning
-Denna artikel ugår från att man granskar och kommenterar kod genom det, som i Git sammanhang, kallas pull request alternativt merge request. 
+Denna artikel ugår från att man granskar och kommenterar kod genom det som, i Git sammanhang, kallas pull request alternativt merge request. 
     
         
 * **Kritisera kod och inte människor – var snäll mot utvecklaren, inte mot koden.**  
