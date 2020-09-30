@@ -5,7 +5,7 @@ Denna artikel ugår från att man granskar och kommenterar kod genom det som, i 
     
     
     
-### Punkter
+### Att tänka på
 * **Kritisera kod och inte människor – var snäll mot utvecklaren, inte mot koden.**  
 Så långt det är möjligt, skriv dina kommentarer i en positiv anda och inrikta dig på att förbättra koden. Relatera kommentar till teamstandarder, specifikationer och prestandaökningar.
  
