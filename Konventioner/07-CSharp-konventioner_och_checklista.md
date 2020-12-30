@@ -396,7 +396,7 @@ Användning av `out`- eller `ref`-parametrar kräver erfarenhet av pekare, förs
     * [CA1021: Avoid out parameters](https://msdn.microsoft.com/en-us/library/ms182131.aspx)
     * [CA1045: Do not pass types by reference](https://msdn.microsoft.com/en-us/library/ms182146.aspx)
     * [Parameter Design -&gt; Parameter Passing](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx)  
-    * [What is the difference between ref and out keyword.](https://dotnetpost.com/2020/08/09/what-is-the-difference-between-ref-and-out-keyword/  
+    * [What is the difference between ref and out keyword.](https://dotnetpost.com/2020/08/09/what-is-the-difference-between-ref-and-out-keyword/)   
 
 1. Any(), Count() > 0 eller Count > 0?  
 Använd `Any()` för läsbarhetens skull, det är ett sätt att förklara sin intension. Om prestandan är superviktig rekommenderas det ofta att använda `Any()` framför `Count()` (extension metoden) men inte framför `Count` (egenskap). Förklaringen är att `Count` (egenskap) hämtar ett `int`-värde som sparats på heapen.
