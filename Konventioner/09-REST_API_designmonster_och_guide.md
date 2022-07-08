@@ -8,8 +8,8 @@ Denna artikel beskriver en målbild för hur man vill att api:er ska se ut och f
 
 Ett REST API är en samling av individuellt adresserbara resurser. Resurser refereras med sina resursnamn och manipuleras genom en uppsättning metoder (även känt som verb eller operationer). 
 
-Resource/resurs = en del av data exmepelvis ett larm (alert)
-Collection/kollektion = en grupp av resurser såsom alerts.
+Resource/resurs = en del av data exmepelvis ett larm (alert)  
+Collection/kollektion = en grupp av resurser såsom alerts.  
 URL = identifierar plasen för en resurs eller kollektion.
 
 ### Praxis
