@@ -8,23 +8,23 @@ Denna artikel beskriver en målbild för hur man vill att api:er ska se ut och f
 
 Ett REST API är en samling av individuellt adresserbara resurser. Resurser refereras med sina resursnamn och manipuleras genom en uppsättning metoder (även känt som verb eller operationer). 
 
-Resource/resurs = en del av data exmepelvis ett larm (alert)  
-Collection/kollektion = en grupp av resurser såsom alerts.  
-URL = identifierar plasen för en resurs eller kollektion.
+Resource/resurs = en del av data exempelvis en "order".  
+Collection/kollektion = en grupp av resurser såsom "orders".  
+URL = identifierar platsen för en resurs eller kollektion.
 
 ### Praxis
 
 1. Använd substantiv för resursnamn.  
 1. Undvik verb i resurs-url:er, använd motsvarande HTTP metod istället. (Vi har dock gjort undantag för det när det gäller Assignment.)
 1. Använd gemener genomgående i url:er.
-1. Använd s.k. “kebab-case”/”spinal-case” med “-” för att separera ord i url:er.
-1. Använd s.k. “camelCase” för att definiera parametrar. Exempel: /orders/{orderId}
+1. Använd s.k. "kebab-case"/"spinal-case" med "-"" för att separera ord i url:er.
+1. Använd s.k. "camelCase” för att definiera parametrar. Exempel: /orders/{orderId}
 1. Använd versionsnummer. Exempel: /v1/orders/{orderId}
 1. Använd header-data för inloggningsinformation (jwt), applikationsversioner, format (json) etc.
 1. Använd plural för att peka ut kollektioner. Exemeplvis: /orders
 1. Använd s.k. query-string för att hämta delmängder av ett större resultat eller för att sortera.
-1. Använd “/” för att navigeria i hirakier, men avsluta utan “/”.
-1. Undvik specialteceken i url:er.
+1. Använd "/"" för att navigeria i hirakier, men avsluta utan "/"".
+1. Undvik specialtecken i url:er.
 
 Mönsterexempel:
 
