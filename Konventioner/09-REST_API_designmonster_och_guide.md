@@ -17,13 +17,13 @@ URL = identifierar platsen för en resurs eller kollektion.
 1. Använd substantiv för resursnamn.  
 1. Undvik verb i resurs-url:er, använd motsvarande HTTP metod istället.
 1. Använd gemener genomgående i url:er.
-1. Använd s.k. "kebab-case"/"spinal-case" med "-"" för att separera ord i url:er.
+1. Använd s.k. "kebab-case"/"spinal-case" med "-" för att separera ord i url:er.
 1. Använd s.k. "camelCase” för att definiera parametrar. Exempel: /orders/{orderId}
 1. Använd versionsnummer. Exempel: /v1/orders/{orderId}
-1. Använd header-data för inloggningsinformation (jwt), applikationsversioner, format (json) etc.
-1. Använd plural för att peka ut kollektioner. Exemeplvis: /orders
+1. Använd header-data för inloggningsinformation (<a href="https://en.wikipedia.org/wiki/JSON_Web_Token" target="_blank">jwt</a>), applikationsversioner, format (json) etc.
+1. Använd plural för att peka ut kollektioner. Exempelvis: /orders
 1. Använd s.k. query-string för att hämta delmängder av ett större resultat eller för att sortera.
-1. Använd "/"" för att navigeria i hirakier, men avsluta utan "/"".
+1. Använd "/" för att navigeria i hirakier, men avsluta utan "/".
 1. Undvik specialtecken i url:er.
 
 Mönsterexempel:
@@ -73,13 +73,13 @@ Mönsterexempel:
 </table>
 
 ### Svarsmeddelanden och felkoder
-Använd HTTP-statuskoder vid alla svar på anrop, och returnera dem som header-info. Returnera data i bodyn, i json-format.
+Använd <a href="https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml" target="_blank">HTTP-statuskoder</a> vid alla svar på anrop, och returnera dem som header-info. Returnera data i bodyn, i json-format.
 
 ### Swagger  
-Använd Swagger/Open API för att, så långt det är möjligt, automatiskt dokumentera API:er. 
+Använd <a href="https://swagger.io/blog/api-strategy/difference-between-swagger-and-openapi/" target="_blank">Swagger/Open API</a> för att, så långt det är möjligt, automatiskt dokumentera API:er. 
 
 ### Version  
-Använd semantisk versionering (major, minor, patch) som grund för att versionera api:er. En ändring i ett api handlar oftast om att man bryter kontrakt och vill stödja flera klientversioner. Använd därför formatet vX i url:er, vilket motsvarar version X.0.0 (en major-ändring).
+Använd <a href="https://en.wikipedia.org/wiki/Software_versioning#Semantic_versioning" target="_blank">semantisk versionering</a> (major, minor, patch) som grund för att versionera api:er. En ändring i ett api handlar oftast om att man bryter kontrakt och vill stödja flera klientversioner. Använd därför formatet vX i url:er, vilket motsvarar version X.0.0 (en major-ändring).
 
 ### Referenser
 
