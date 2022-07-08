@@ -87,4 +87,4 @@ Använd <a href="https://en.wikipedia.org/wiki/Software_versioning#Semantic_vers
 * <a href="https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/" target="_blank"> Best practices for REST API design</a>
 * <a href="https://slack.engineering/how-we-design-our-apis-at-slack/" target="_blank">How We Design Our APIs at Slack</a>
 * <a href="https://cloud.google.com/apis/design" target="_blank">API design guide  |  Cloud APIs  |  Google Cloud</a>
-<a href="https://swagger.io/resources/articles/best-practices-in-api-design/" target="_blank">Best Practices in API Design</a>
+* <a href="https://swagger.io/resources/articles/best-practices-in-api-design/" target="_blank">Best Practices in API Design</a>
