@@ -15,7 +15,7 @@ URL = identifierar platsen för en resurs eller kollektion.
 ### Praxis
 
 1. Använd substantiv för resursnamn.  
-1. Undvik verb i resurs-url:er, använd motsvarande HTTP metod istället. (Vi har dock gjort undantag för det när det gäller Assignment.)
+1. Undvik verb i resurs-url:er, använd motsvarande HTTP metod istället.
 1. Använd gemener genomgående i url:er.
 1. Använd s.k. "kebab-case"/"spinal-case" med "-"" för att separera ord i url:er.
 1. Använd s.k. "camelCase” för att definiera parametrar. Exempel: /orders/{orderId}
